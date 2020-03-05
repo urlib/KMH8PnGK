@@ -1,0 +1,7 @@
+{
+    "name"               : "org.xdown.xmsg",
+    "description"        : "xdown extension helper",
+    "type"               : "stdio",
+    "allowed_extensions" : [ "gatebyebye@outlook.com" ],
+    "path"               : "XDownHosts.exe"
+}
