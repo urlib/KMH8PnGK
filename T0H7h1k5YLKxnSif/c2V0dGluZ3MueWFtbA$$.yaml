@@ -1,0 +1,12 @@
+addr: 127.0.0.1:50559
+autoLaunch: false
+autoReport: true
+lang: zh-CN
+localHTTPToken: b808c67d90cf4bcb792def1895d11874
+pacURL: ""
+proxyAll: false
+socksAddr: 127.0.0.1:50558
+systemProxy: true
+uiAddr: localhost:50556
+userID: 211359800
+userToken: P_qn4rCBU5sp8cZL5Mbf_Sq9D11HODpQLurzkKjhdw0SQfuaJZUIAg
