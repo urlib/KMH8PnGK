@@ -1,0 +1,2 @@
+addr,label,attempts,successes,consec successes,failures,consec failures,est rtt,most recent bandwidth estimate,est bandwidth,est success rate
+165.22.60.168:8275,fp-dosgp1u16-20190618-1340-lampshade (165.22.60.168:8275),172,80,1,92,0,285.56014ms,2019-06-28T19:04:38.3851449+08:00,65767,0.787
