@@ -1,0 +1,3461 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Android Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#3ddc84">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/android/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/touchicon-180.png"><link rel="canonical" href="https://developer.android.google.cn/auto?hl=zh-cn">      
+<title>Android Auto &nbsp;|&nbsp; Android 开发者 &nbsp;|&nbsp; Android Developers</title>
+
+<meta property="og:title" content="Android Auto &nbsp;|&nbsp; Android 开发者 &nbsp;|&nbsp; Android Developers">
+  <meta name="description" content="&lt;!-- hide description --&gt;">
+  <meta property="og:description" content="&lt;!-- hide description --&gt;">
+
+      <meta name="description"                    content="让驾驶员听取并管理您的音乐应用及其他音频应用中的内容。允许驾驶员通过车载控件和屏幕听取您的消息传递服务内容并作出回应。编写应用时，您无需担心车辆特有的硬件差异…">
+          <meta property="og:description" content="让驾驶员听取并管理您的音乐应用及其他音频应用中的内容。允许驾驶员通过车载控件和屏幕听取您的消息传递服务内容并作出回应。编写应用时，您无需担心车辆特有的硬件差异…">
+      
+  <meta property="og:url" content="https://developer.android.google.cn/auto?hl=zh-cn">
+
+  <meta property="og:image" content="https://developer.android.google.cn/images/android-developers.png">
+  <meta property="og:image:secure_url" content="https://developer.android.google.cn/images/android-developers.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale" content="zh_cn">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+
+    </head>
+  <body type="landing"
+        theme="android-theme"
+        class="dac-auto-page dac-platforms-sublandings"
+        
+        layout="docs"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                              </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                            <devsite-tabs class="upper-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/about"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="平台"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 平台"
+   >
+  平台
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/studio"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="androidStudio"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Android Studio"
+   >
+  Android Studio
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="googlePlay"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Google Play"
+   >
+  Google Play
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/jetpack"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="jetpack"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Jetpack"
+   >
+  Jetpack
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/kotlin"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="kotlin"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Kotlin"
+   >
+  Kotlin
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/docs"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="文档"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 文档"
+   >
+  文档
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/news"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="新闻"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 新闻"
+   >
+  新闻
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="Android 开发者"    tenant-name="Android Developers"                >
+  <form class="devsite-search-form" action="https://developer.android.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+          devsite-header-no-lower-tabs
+    ">
+    <div class="devsite-header-background">
+                        <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+                                                                            <div class="devsite-product-description"><!-- hide description --></div>
+  
+                          </div>
+                                                                            </div>
+                                  </div>  </div></div>
+
+  </devsite-header>      <devsite-book-nav scrollbars hidden>
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+        <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                              </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+                  <a href="/about"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 平台"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="平台">
+      <span class="devsite-nav-text" tooltip >
+      平台
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/studio"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Android Studio"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="androidStudio">
+      <span class="devsite-nav-text" tooltip >
+      Android Studio
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/distribute"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Play"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="googlePlay">
+      <span class="devsite-nav-text" tooltip >
+      Google Play
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/jetpack"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Jetpack"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="jetpack">
+      <span class="devsite-nav-text" tooltip >
+      Jetpack
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/kotlin"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Kotlin"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="kotlin">
+      <span class="devsite-nav-text" tooltip >
+      Kotlin
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/docs"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 文档"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="文档">
+      <span class="devsite-nav-text" tooltip >
+      文档
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/news"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 新闻"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="新闻">
+      <span class="devsite-nav-text" tooltip >
+      新闻
+   </span>
+        </a>
+  
+                                        </li>
+                    
+                  </ul>
+          </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+                        has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            Android 开发者
+      
+  </a>
+        </li>
+  </ul>
+          </div>
+
+        
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+      ">
+
+                <section class="devsite-landing-row devsite-landing-row-1-up dac-sublanding-title"
+           
+           >
+
+          <header class="devsite-landing-row-header">
+            <div class="devsite-landing-row-header-text">
+
+                    <h2 id="android-auto">
+      Android Auto</h2>
+    
+    
+
+                  <div class="devsite-landing-row-description">
+            让您在编写应用时无需担心特定于车辆的硬件差异（如屏幕分辨率、软件界面、旋钮和触摸式控件）。用户可以通过手机上的 Android Auto 应用访问您的应用。或者，当连接到兼容车辆时，运行 Android 5.0（或更高版本）的手持设备上的应用可以与通过 Android Auto 投射到车辆的应用进行通信。
+
+          </div>
+              </div>
+      
+          </header>
+    
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+        
+
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/training/auto"
+      class="button dac-button dac-outline-button
+      "
+            >使用入门</a></div>
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up dac-platforms-sublandings-basics"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-label dac-grow-7"
+         background="grey"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+                  <div class="devsite-landing-row-item-labels">
+      <span
+            class="                          "
+            >Auto basics</span></div>
+        
+                    <h3 id="a-hreftrainingautoaudio-a">
+      <a href="/training/auto/audio">
+  构建音频应用
+</a>
+</h3>
+    
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            将音乐、电台和有声读物播放器等音频应用的适用范围扩展到汽车。构建可让用户在汽车内浏览和播放音乐的应用。<img alt src="/images/auto/build-audio-app.svg" class="dac-platforms-img"/>
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/training/auto/audio"
+      class="button dac-button dac-alt-flat-button
+      "
+            >构建适用于 Auto 的音频应用</a></div>
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-label dac-heading-small dac-grow-5"
+         background="grey"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+                  <div class="devsite-landing-row-item-labels">
+      <span
+            class="                          "
+            >Auto basics</span></div>
+        
+                    <h3 id="a-hreftrainingautomessaging-a">
+      <a href="/training/auto/messaging">
+  构建即时通讯应用
+</a>
+</h3>
+    
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            创建即时通讯应用，用于接收传入通知、使用文字转语音功能阅读消息，并能让用户通过 Android Auto 应用或汽车中的语音输入功能进行回复。
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/training/auto/messaging"
+      class="button dac-button dac-alt-flat-button
+      "
+            >构建适用于 Auto 的即时通讯应用</a></div>
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up dac-banner-card dac-landing-row-bg-slate"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-label dac-landing-row-bg-slate dac-grow-4"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+                  <div class="devsite-landing-row-item-labels">
+      <span
+            class="                          "
+            >Android Auto</span></div>
+        
+                    <h3 id="a-hrefhttpsdesignguidelineswithgooglecomandroid-auto-a">
+      <a href="https://designguidelines.withgoogle.com/android-auto/">
+  设计
+</a>
+</h3>
+    
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            Android Auto 提供了适用于所有车辆的标准化界面和用户交互模式。作为设计者，您无需担心车辆特有的硬件差异。<img alt src="/images/auto/auto-design-mobile.svg"/>
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://designguidelines.withgoogle.com/android-auto/"
+      class="button dac-button dac-flat-button
+      "
+            >针对 Android Auto 设计应用</a></div>
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description devsite-landing-row-item-no-media dac-banner-card-bg-img-item dac-grow-8"
+     
+     >
+
+  
+    
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-1-up dac-resource-widget-section"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item"
+     
+     >
+
+      <h3>最新资讯</h3> <devsite-dynamic-content
+    maxresults="4"
+    sortorder="-timestamp"
+    initial-results="4"
+    show-authors="true"
+    dynamic-card-type="card"
+    query="origin:blogger+account:android developers+keyword:featured+keyword:androidauto,origin:medium+keyword:androidauto">
+</devsite-dynamic-content> <div class="dac-resource-widget-more">
+  <a class="button dac-button dac-alt-flat-button" href="https://android-developers.googleblog.com/search/label/Android%20Auto">
+    更多资讯
+  </a>
+</div>
+
+  
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-1-up dac-resource-widget-section"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item"
+     
+     >
+
+      <h3>最新视频</h3> <devsite-dynamic-content
+    maxresults="4"
+    sortorder="-timestamp"
+    initial-results="4"
+    show-authors="true"
+    dynamic-card-type="card"
+    query="origin:youtube+keyword:androidauto,origin:youtube+keyword:auto">
+</devsite-dynamic-content> <div class="dac-resource-widget-more">
+  <a class="button dac-button dac-alt-flat-button" href="https://www.youtube.com/user/androiddevelopers/search?query=%23androidauto%2C%23auto">
+    更多视频
+  </a>
+</div>
+
+  
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-1-up"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+                    <h3 id="">
+      构建生态系统</h3>
+    
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            我们与世界各地的制造商通力合作，将 Android 平台运用到了汽车中。用户还可以下载相关应用来畅享 Android Auto 的神奇体验（就算没有兼容的车辆也没问题）。
+
+          </div>
+        
+        
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.abarth.com/">
+        <img alt=""
+       src="/images/auto/logos/abarth.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/abarth_36.png 36w,https://developer.android.google.cn/images/auto/logos/abarth_48.png 48w,https://developer.android.google.cn/images/auto/logos/abarth_72.png 72w,https://developer.android.google.cn/images/auto/logos/abarth_96.png 96w,https://developer.android.google.cn/images/auto/logos/abarth_480.png 480w,https://developer.android.google.cn/images/auto/logos/abarth_720.png 720w,https://developer.android.google.cn/images/auto/logos/abarth_856.png 856w,https://developer.android.google.cn/images/auto/logos/abarth_960.png 960w,https://developer.android.google.cn/images/auto/logos/abarth_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/abarth_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/abarth_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.acura.com/">
+        <img alt=""
+       src="/images/auto/logos/acura.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/acura_36.png 36w,https://developer.android.google.cn/images/auto/logos/acura_48.png 48w,https://developer.android.google.cn/images/auto/logos/acura_72.png 72w,https://developer.android.google.cn/images/auto/logos/acura_96.png 96w,https://developer.android.google.cn/images/auto/logos/acura_480.png 480w,https://developer.android.google.cn/images/auto/logos/acura_720.png 720w,https://developer.android.google.cn/images/auto/logos/acura_856.png 856w,https://developer.android.google.cn/images/auto/logos/acura_960.png 960w,https://developer.android.google.cn/images/auto/logos/acura_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/acura_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/acura_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.alfaromeo.com/">
+        <img alt=""
+       src="/images/auto/logos/alpharomeo.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/alpharomeo_36.png 36w,https://developer.android.google.cn/images/auto/logos/alpharomeo_48.png 48w,https://developer.android.google.cn/images/auto/logos/alpharomeo_72.png 72w,https://developer.android.google.cn/images/auto/logos/alpharomeo_96.png 96w,https://developer.android.google.cn/images/auto/logos/alpharomeo_480.png 480w,https://developer.android.google.cn/images/auto/logos/alpharomeo_720.png 720w,https://developer.android.google.cn/images/auto/logos/alpharomeo_856.png 856w,https://developer.android.google.cn/images/auto/logos/alpharomeo_960.png 960w,https://developer.android.google.cn/images/auto/logos/alpharomeo_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/alpharomeo_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/alpharomeo_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.audi.com/">
+        <img alt=""
+       src="/images/auto/logos/audi.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/audi_36.png 36w,https://developer.android.google.cn/images/auto/logos/audi_48.png 48w,https://developer.android.google.cn/images/auto/logos/audi_72.png 72w,https://developer.android.google.cn/images/auto/logos/audi_96.png 96w,https://developer.android.google.cn/images/auto/logos/audi_480.png 480w,https://developer.android.google.cn/images/auto/logos/audi_720.png 720w,https://developer.android.google.cn/images/auto/logos/audi_856.png 856w,https://developer.android.google.cn/images/auto/logos/audi_960.png 960w,https://developer.android.google.cn/images/auto/logos/audi_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/audi_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/audi_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.axxera.dualav.com/">
+        <img alt=""
+       src="/images/auto/logos/axxera.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/axxera_36.png 36w,https://developer.android.google.cn/images/auto/logos/axxera_48.png 48w,https://developer.android.google.cn/images/auto/logos/axxera_72.png 72w,https://developer.android.google.cn/images/auto/logos/axxera_96.png 96w,https://developer.android.google.cn/images/auto/logos/axxera_480.png 480w,https://developer.android.google.cn/images/auto/logos/axxera_720.png 720w,https://developer.android.google.cn/images/auto/logos/axxera_856.png 856w,https://developer.android.google.cn/images/auto/logos/axxera_960.png 960w,https://developer.android.google.cn/images/auto/logos/axxera_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/axxera_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/axxera_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.bauhn.com.au/">
+        <img alt=""
+       src="/images/auto/logos/bauhn.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/bauhn_36.png 36w,https://developer.android.google.cn/images/auto/logos/bauhn_48.png 48w,https://developer.android.google.cn/images/auto/logos/bauhn_72.png 72w,https://developer.android.google.cn/images/auto/logos/bauhn_96.png 96w,https://developer.android.google.cn/images/auto/logos/bauhn_480.png 480w,https://developer.android.google.cn/images/auto/logos/bauhn_720.png 720w,https://developer.android.google.cn/images/auto/logos/bauhn_856.png 856w,https://developer.android.google.cn/images/auto/logos/bauhn_960.png 960w,https://developer.android.google.cn/images/auto/logos/bauhn_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/bauhn_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/bauhn_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.bentleymotors.com/">
+        <img alt=""
+       src="/images/auto/logos/bentley.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/bentley_36.png 36w,https://developer.android.google.cn/images/auto/logos/bentley_48.png 48w,https://developer.android.google.cn/images/auto/logos/bentley_72.png 72w,https://developer.android.google.cn/images/auto/logos/bentley_96.png 96w,https://developer.android.google.cn/images/auto/logos/bentley_480.png 480w,https://developer.android.google.cn/images/auto/logos/bentley_720.png 720w,https://developer.android.google.cn/images/auto/logos/bentley_856.png 856w,https://developer.android.google.cn/images/auto/logos/bentley_960.png 960w,https://developer.android.google.cn/images/auto/logos/bentley_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/bentley_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/bentley_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.blaupunkt.com/en/">
+        <img alt=""
+       src="/images/auto/logos/blaupunkt.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/blaupunkt_36.png 36w,https://developer.android.google.cn/images/auto/logos/blaupunkt_48.png 48w,https://developer.android.google.cn/images/auto/logos/blaupunkt_72.png 72w,https://developer.android.google.cn/images/auto/logos/blaupunkt_96.png 96w,https://developer.android.google.cn/images/auto/logos/blaupunkt_480.png 480w,https://developer.android.google.cn/images/auto/logos/blaupunkt_720.png 720w,https://developer.android.google.cn/images/auto/logos/blaupunkt_856.png 856w,https://developer.android.google.cn/images/auto/logos/blaupunkt_960.png 960w,https://developer.android.google.cn/images/auto/logos/blaupunkt_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/blaupunkt_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/blaupunkt_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.borgward.com/">
+        <img alt=""
+       src="/images/auto/logos/borgward.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/borgward_36.png 36w,https://developer.android.google.cn/images/auto/logos/borgward_48.png 48w,https://developer.android.google.cn/images/auto/logos/borgward_72.png 72w,https://developer.android.google.cn/images/auto/logos/borgward_96.png 96w,https://developer.android.google.cn/images/auto/logos/borgward_480.png 480w,https://developer.android.google.cn/images/auto/logos/borgward_720.png 720w,https://developer.android.google.cn/images/auto/logos/borgward_856.png 856w,https://developer.android.google.cn/images/auto/logos/borgward_960.png 960w,https://developer.android.google.cn/images/auto/logos/borgward_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/borgward_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/borgward_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="https://www.bossaudio.com/">
+        <img alt=""
+       src="/images/auto/logos/boss_audio.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/boss_audio_36.png 36w,https://developer.android.google.cn/images/auto/logos/boss_audio_48.png 48w,https://developer.android.google.cn/images/auto/logos/boss_audio_72.png 72w,https://developer.android.google.cn/images/auto/logos/boss_audio_96.png 96w,https://developer.android.google.cn/images/auto/logos/boss_audio_480.png 480w,https://developer.android.google.cn/images/auto/logos/boss_audio_720.png 720w,https://developer.android.google.cn/images/auto/logos/boss_audio_856.png 856w,https://developer.android.google.cn/images/auto/logos/boss_audio_960.png 960w,https://developer.android.google.cn/images/auto/logos/boss_audio_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/boss_audio_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/boss_audio_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.buick.com/">
+        <img alt=""
+       src="/images/auto/logos/buick.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/buick_36.png 36w,https://developer.android.google.cn/images/auto/logos/buick_48.png 48w,https://developer.android.google.cn/images/auto/logos/buick_72.png 72w,https://developer.android.google.cn/images/auto/logos/buick_96.png 96w,https://developer.android.google.cn/images/auto/logos/buick_480.png 480w,https://developer.android.google.cn/images/auto/logos/buick_720.png 720w,https://developer.android.google.cn/images/auto/logos/buick_856.png 856w,https://developer.android.google.cn/images/auto/logos/buick_960.png 960w,https://developer.android.google.cn/images/auto/logos/buick_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/buick_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/buick_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.cadillac.com/">
+        <img alt=""
+       src="/images/auto/logos/cadillac.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/cadillac_36.png 36w,https://developer.android.google.cn/images/auto/logos/cadillac_48.png 48w,https://developer.android.google.cn/images/auto/logos/cadillac_72.png 72w,https://developer.android.google.cn/images/auto/logos/cadillac_96.png 96w,https://developer.android.google.cn/images/auto/logos/cadillac_480.png 480w,https://developer.android.google.cn/images/auto/logos/cadillac_720.png 720w,https://developer.android.google.cn/images/auto/logos/cadillac_856.png 856w,https://developer.android.google.cn/images/auto/logos/cadillac_960.png 960w,https://developer.android.google.cn/images/auto/logos/cadillac_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/cadillac_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/cadillac_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.caskaglobal.com/">
+        <img alt=""
+       src="/images/auto/logos/caska.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/caska_36.png 36w,https://developer.android.google.cn/images/auto/logos/caska_48.png 48w,https://developer.android.google.cn/images/auto/logos/caska_72.png 72w,https://developer.android.google.cn/images/auto/logos/caska_96.png 96w,https://developer.android.google.cn/images/auto/logos/caska_480.png 480w,https://developer.android.google.cn/images/auto/logos/caska_720.png 720w,https://developer.android.google.cn/images/auto/logos/caska_856.png 856w,https://developer.android.google.cn/images/auto/logos/caska_960.png 960w,https://developer.android.google.cn/images/auto/logos/caska_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/caska_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/caska_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.chevrolet.com/">
+        <img alt=""
+       src="/images/auto/logos/chevrolet.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/chevrolet_36.png 36w,https://developer.android.google.cn/images/auto/logos/chevrolet_48.png 48w,https://developer.android.google.cn/images/auto/logos/chevrolet_72.png 72w,https://developer.android.google.cn/images/auto/logos/chevrolet_96.png 96w,https://developer.android.google.cn/images/auto/logos/chevrolet_480.png 480w,https://developer.android.google.cn/images/auto/logos/chevrolet_720.png 720w,https://developer.android.google.cn/images/auto/logos/chevrolet_856.png 856w,https://developer.android.google.cn/images/auto/logos/chevrolet_960.png 960w,https://developer.android.google.cn/images/auto/logos/chevrolet_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/chevrolet_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/chevrolet_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.chrysler.com/">
+        <img alt=""
+       src="/images/auto/logos/chrysler.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/chrysler_36.png 36w,https://developer.android.google.cn/images/auto/logos/chrysler_48.png 48w,https://developer.android.google.cn/images/auto/logos/chrysler_72.png 72w,https://developer.android.google.cn/images/auto/logos/chrysler_96.png 96w,https://developer.android.google.cn/images/auto/logos/chrysler_480.png 480w,https://developer.android.google.cn/images/auto/logos/chrysler_720.png 720w,https://developer.android.google.cn/images/auto/logos/chrysler_856.png 856w,https://developer.android.google.cn/images/auto/logos/chrysler_960.png 960w,https://developer.android.google.cn/images/auto/logos/chrysler_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/chrysler_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/chrysler_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.citroen.com/">
+        <img alt=""
+       src="/images/auto/logos/citroen.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/citroen_36.png 36w,https://developer.android.google.cn/images/auto/logos/citroen_48.png 48w,https://developer.android.google.cn/images/auto/logos/citroen_72.png 72w,https://developer.android.google.cn/images/auto/logos/citroen_96.png 96w,https://developer.android.google.cn/images/auto/logos/citroen_480.png 480w,https://developer.android.google.cn/images/auto/logos/citroen_720.png 720w,https://developer.android.google.cn/images/auto/logos/citroen_856.png 856w,https://developer.android.google.cn/images/auto/logos/citroen_960.png 960w,https://developer.android.google.cn/images/auto/logos/citroen_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/citroen_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/citroen_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.cvte.com/en/">
+        <img alt=""
+       src="/images/auto/logos/cvte.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/cvte_36.png 36w,https://developer.android.google.cn/images/auto/logos/cvte_48.png 48w,https://developer.android.google.cn/images/auto/logos/cvte_72.png 72w,https://developer.android.google.cn/images/auto/logos/cvte_96.png 96w,https://developer.android.google.cn/images/auto/logos/cvte_480.png 480w,https://developer.android.google.cn/images/auto/logos/cvte_720.png 720w,https://developer.android.google.cn/images/auto/logos/cvte_856.png 856w,https://developer.android.google.cn/images/auto/logos/cvte_960.png 960w,https://developer.android.google.cn/images/auto/logos/cvte_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/cvte_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/cvte_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.dacia.co.uk/">
+        <img alt=""
+       src="/images/auto/logos/dacia.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/dacia_36.png 36w,https://developer.android.google.cn/images/auto/logos/dacia_48.png 48w,https://developer.android.google.cn/images/auto/logos/dacia_72.png 72w,https://developer.android.google.cn/images/auto/logos/dacia_96.png 96w,https://developer.android.google.cn/images/auto/logos/dacia_480.png 480w,https://developer.android.google.cn/images/auto/logos/dacia_720.png 720w,https://developer.android.google.cn/images/auto/logos/dacia_856.png 856w,https://developer.android.google.cn/images/auto/logos/dacia_960.png 960w,https://developer.android.google.cn/images/auto/logos/dacia_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/dacia_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/dacia_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="https://www.dodge.com/">
+        <img alt=""
+       src="/images/auto/logos/dodge.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/dodge_36.png 36w,https://developer.android.google.cn/images/auto/logos/dodge_48.png 48w,https://developer.android.google.cn/images/auto/logos/dodge_72.png 72w,https://developer.android.google.cn/images/auto/logos/dodge_96.png 96w,https://developer.android.google.cn/images/auto/logos/dodge_480.png 480w,https://developer.android.google.cn/images/auto/logos/dodge_720.png 720w,https://developer.android.google.cn/images/auto/logos/dodge_856.png 856w,https://developer.android.google.cn/images/auto/logos/dodge_960.png 960w,https://developer.android.google.cn/images/auto/logos/dodge_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/dodge_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/dodge_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.driveds.com/">
+        <img alt=""
+       src="/images/auto/logos/citroen_ds.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/citroen_ds_36.png 36w,https://developer.android.google.cn/images/auto/logos/citroen_ds_48.png 48w,https://developer.android.google.cn/images/auto/logos/citroen_ds_72.png 72w,https://developer.android.google.cn/images/auto/logos/citroen_ds_96.png 96w,https://developer.android.google.cn/images/auto/logos/citroen_ds_480.png 480w,https://developer.android.google.cn/images/auto/logos/citroen_ds_720.png 720w,https://developer.android.google.cn/images/auto/logos/citroen_ds_856.png 856w,https://developer.android.google.cn/images/auto/logos/citroen_ds_960.png 960w,https://developer.android.google.cn/images/auto/logos/citroen_ds_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/citroen_ds_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/citroen_ds_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.dualav.com/">
+        <img alt=""
+       src="/images/auto/logos/dual.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/dual_36.png 36w,https://developer.android.google.cn/images/auto/logos/dual_48.png 48w,https://developer.android.google.cn/images/auto/logos/dual_72.png 72w,https://developer.android.google.cn/images/auto/logos/dual_96.png 96w,https://developer.android.google.cn/images/auto/logos/dual_480.png 480w,https://developer.android.google.cn/images/auto/logos/dual_720.png 720w,https://developer.android.google.cn/images/auto/logos/dual_856.png 856w,https://developer.android.google.cn/images/auto/logos/dual_960.png 960w,https://developer.android.google.cn/images/auto/logos/dual_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/dual_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/dual_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.evusdip.com/">
+        <img alt=""
+       src="/images/auto/logos/evus.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/evus_36.png 36w,https://developer.android.google.cn/images/auto/logos/evus_48.png 48w,https://developer.android.google.cn/images/auto/logos/evus_72.png 72w,https://developer.android.google.cn/images/auto/logos/evus_96.png 96w,https://developer.android.google.cn/images/auto/logos/evus_480.png 480w,https://developer.android.google.cn/images/auto/logos/evus_720.png 720w,https://developer.android.google.cn/images/auto/logos/evus_856.png 856w,https://developer.android.google.cn/images/auto/logos/evus_960.png 960w,https://developer.android.google.cn/images/auto/logos/evus_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/evus_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/evus_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="https://www.fiat.com/">
+        <img alt=""
+       src="/images/auto/logos/fiat.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/fiat_36.png 36w,https://developer.android.google.cn/images/auto/logos/fiat_48.png 48w,https://developer.android.google.cn/images/auto/logos/fiat_72.png 72w,https://developer.android.google.cn/images/auto/logos/fiat_96.png 96w,https://developer.android.google.cn/images/auto/logos/fiat_480.png 480w,https://developer.android.google.cn/images/auto/logos/fiat_720.png 720w,https://developer.android.google.cn/images/auto/logos/fiat_856.png 856w,https://developer.android.google.cn/images/auto/logos/fiat_960.png 960w,https://developer.android.google.cn/images/auto/logos/fiat_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/fiat_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/fiat_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.ford.com/">
+        <img alt=""
+       src="/images/auto/logos/ford.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/ford_36.png 36w,https://developer.android.google.cn/images/auto/logos/ford_48.png 48w,https://developer.android.google.cn/images/auto/logos/ford_72.png 72w,https://developer.android.google.cn/images/auto/logos/ford_96.png 96w,https://developer.android.google.cn/images/auto/logos/ford_480.png 480w,https://developer.android.google.cn/images/auto/logos/ford_720.png 720w,https://developer.android.google.cn/images/auto/logos/ford_856.png 856w,https://developer.android.google.cn/images/auto/logos/ford_960.png 960w,https://developer.android.google.cn/images/auto/logos/ford_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/ford_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/ford_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="https://www.furrion.com/">
+        <img alt=""
+       src="/images/auto/logos/furrion.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/furrion_36.png 36w,https://developer.android.google.cn/images/auto/logos/furrion_48.png 48w,https://developer.android.google.cn/images/auto/logos/furrion_72.png 72w,https://developer.android.google.cn/images/auto/logos/furrion_96.png 96w,https://developer.android.google.cn/images/auto/logos/furrion_480.png 480w,https://developer.android.google.cn/images/auto/logos/furrion_720.png 720w,https://developer.android.google.cn/images/auto/logos/furrion_856.png 856w,https://developer.android.google.cn/images/auto/logos/furrion_960.png 960w,https://developer.android.google.cn/images/auto/logos/furrion_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/furrion_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/furrion_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.genesismotors.com/en/index.html">
+        <img alt=""
+       src="/images/auto/logos/genesis.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/genesis_36.png 36w,https://developer.android.google.cn/images/auto/logos/genesis_48.png 48w,https://developer.android.google.cn/images/auto/logos/genesis_72.png 72w,https://developer.android.google.cn/images/auto/logos/genesis_96.png 96w,https://developer.android.google.cn/images/auto/logos/genesis_480.png 480w,https://developer.android.google.cn/images/auto/logos/genesis_720.png 720w,https://developer.android.google.cn/images/auto/logos/genesis_856.png 856w,https://developer.android.google.cn/images/auto/logos/genesis_960.png 960w,https://developer.android.google.cn/images/auto/logos/genesis_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/genesis_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/genesis_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.gmc.com/">
+        <img alt=""
+       src="/images/auto/logos/gmc.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/gmc_36.png 36w,https://developer.android.google.cn/images/auto/logos/gmc_48.png 48w,https://developer.android.google.cn/images/auto/logos/gmc_72.png 72w,https://developer.android.google.cn/images/auto/logos/gmc_96.png 96w,https://developer.android.google.cn/images/auto/logos/gmc_480.png 480w,https://developer.android.google.cn/images/auto/logos/gmc_720.png 720w,https://developer.android.google.cn/images/auto/logos/gmc_856.png 856w,https://developer.android.google.cn/images/auto/logos/gmc_960.png 960w,https://developer.android.google.cn/images/auto/logos/gmc_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/gmc_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/gmc_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.holden.com/">
+        <img alt=""
+       src="/images/auto/logos/holden.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/holden_36.png 36w,https://developer.android.google.cn/images/auto/logos/holden_48.png 48w,https://developer.android.google.cn/images/auto/logos/holden_72.png 72w,https://developer.android.google.cn/images/auto/logos/holden_96.png 96w,https://developer.android.google.cn/images/auto/logos/holden_480.png 480w,https://developer.android.google.cn/images/auto/logos/holden_720.png 720w,https://developer.android.google.cn/images/auto/logos/holden_856.png 856w,https://developer.android.google.cn/images/auto/logos/holden_960.png 960w,https://developer.android.google.cn/images/auto/logos/holden_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/holden_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/holden_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.honda.com/">
+        <img alt=""
+       src="/images/auto/logos/honda.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/honda_36.png 36w,https://developer.android.google.cn/images/auto/logos/honda_48.png 48w,https://developer.android.google.cn/images/auto/logos/honda_72.png 72w,https://developer.android.google.cn/images/auto/logos/honda_96.png 96w,https://developer.android.google.cn/images/auto/logos/honda_480.png 480w,https://developer.android.google.cn/images/auto/logos/honda_720.png 720w,https://developer.android.google.cn/images/auto/logos/honda_856.png 856w,https://developer.android.google.cn/images/auto/logos/honda_960.png 960w,https://developer.android.google.cn/images/auto/logos/honda_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/honda_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/honda_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.hyundai.com">
+        <img alt=""
+       src="/images/auto/logos/hyundai.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/hyundai_36.png 36w,https://developer.android.google.cn/images/auto/logos/hyundai_48.png 48w,https://developer.android.google.cn/images/auto/logos/hyundai_72.png 72w,https://developer.android.google.cn/images/auto/logos/hyundai_96.png 96w,https://developer.android.google.cn/images/auto/logos/hyundai_480.png 480w,https://developer.android.google.cn/images/auto/logos/hyundai_720.png 720w,https://developer.android.google.cn/images/auto/logos/hyundai_856.png 856w,https://developer.android.google.cn/images/auto/logos/hyundai_960.png 960w,https://developer.android.google.cn/images/auto/logos/hyundai_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/hyundai_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/hyundai_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://inav.ph/">
+        <img alt=""
+       src="/images/auto/logos/inav.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/inav_36.png 36w,https://developer.android.google.cn/images/auto/logos/inav_48.png 48w,https://developer.android.google.cn/images/auto/logos/inav_72.png 72w,https://developer.android.google.cn/images/auto/logos/inav_96.png 96w,https://developer.android.google.cn/images/auto/logos/inav_480.png 480w,https://developer.android.google.cn/images/auto/logos/inav_720.png 720w,https://developer.android.google.cn/images/auto/logos/inav_856.png 856w,https://developer.android.google.cn/images/auto/logos/inav_960.png 960w,https://developer.android.google.cn/images/auto/logos/inav_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/inav_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/inav_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.infiniti.com/">
+        <img alt=""
+       src="/images/auto/logos/infinity.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/infinity_36.png 36w,https://developer.android.google.cn/images/auto/logos/infinity_48.png 48w,https://developer.android.google.cn/images/auto/logos/infinity_72.png 72w,https://developer.android.google.cn/images/auto/logos/infinity_96.png 96w,https://developer.android.google.cn/images/auto/logos/infinity_480.png 480w,https://developer.android.google.cn/images/auto/logos/infinity_720.png 720w,https://developer.android.google.cn/images/auto/logos/infinity_856.png 856w,https://developer.android.google.cn/images/auto/logos/infinity_960.png 960w,https://developer.android.google.cn/images/auto/logos/infinity_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/infinity_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/infinity_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.iveco.com/corporate-en/Pages/Home-Page.aspx">
+        <img alt=""
+       src="/images/auto/logos/iveco.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/iveco_36.png 36w,https://developer.android.google.cn/images/auto/logos/iveco_48.png 48w,https://developer.android.google.cn/images/auto/logos/iveco_72.png 72w,https://developer.android.google.cn/images/auto/logos/iveco_96.png 96w,https://developer.android.google.cn/images/auto/logos/iveco_480.png 480w,https://developer.android.google.cn/images/auto/logos/iveco_720.png 720w,https://developer.android.google.cn/images/auto/logos/iveco_856.png 856w,https://developer.android.google.cn/images/auto/logos/iveco_960.png 960w,https://developer.android.google.cn/images/auto/logos/iveco_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/iveco_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/iveco_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.jaguar.com/index.html">
+        <img alt=""
+       src="/images/auto/logos/jaguar.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/jaguar_36.png 36w,https://developer.android.google.cn/images/auto/logos/jaguar_48.png 48w,https://developer.android.google.cn/images/auto/logos/jaguar_72.png 72w,https://developer.android.google.cn/images/auto/logos/jaguar_96.png 96w,https://developer.android.google.cn/images/auto/logos/jaguar_480.png 480w,https://developer.android.google.cn/images/auto/logos/jaguar_720.png 720w,https://developer.android.google.cn/images/auto/logos/jaguar_856.png 856w,https://developer.android.google.cn/images/auto/logos/jaguar_960.png 960w,https://developer.android.google.cn/images/auto/logos/jaguar_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/jaguar_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/jaguar_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.jeep.com/">
+        <img alt=""
+       src="/images/auto/logos/jeep.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/jeep_36.png 36w,https://developer.android.google.cn/images/auto/logos/jeep_48.png 48w,https://developer.android.google.cn/images/auto/logos/jeep_72.png 72w,https://developer.android.google.cn/images/auto/logos/jeep_96.png 96w,https://developer.android.google.cn/images/auto/logos/jeep_480.png 480w,https://developer.android.google.cn/images/auto/logos/jeep_720.png 720w,https://developer.android.google.cn/images/auto/logos/jeep_856.png 856w,https://developer.android.google.cn/images/auto/logos/jeep_960.png 960w,https://developer.android.google.cn/images/auto/logos/jeep_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/jeep_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/jeep_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.jensenmobile.com/">
+        <img alt=""
+       src="/images/auto/logos/jensen.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/jensen_36.png 36w,https://developer.android.google.cn/images/auto/logos/jensen_48.png 48w,https://developer.android.google.cn/images/auto/logos/jensen_72.png 72w,https://developer.android.google.cn/images/auto/logos/jensen_96.png 96w,https://developer.android.google.cn/images/auto/logos/jensen_480.png 480w,https://developer.android.google.cn/images/auto/logos/jensen_720.png 720w,https://developer.android.google.cn/images/auto/logos/jensen_856.png 856w,https://developer.android.google.cn/images/auto/logos/jensen_960.png 960w,https://developer.android.google.cn/images/auto/logos/jensen_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/jensen_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/jensen_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.jvc.net/">
+        <img alt=""
+       src="/images/auto/logos/jvc.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/jvc_36.png 36w,https://developer.android.google.cn/images/auto/logos/jvc_48.png 48w,https://developer.android.google.cn/images/auto/logos/jvc_72.png 72w,https://developer.android.google.cn/images/auto/logos/jvc_96.png 96w,https://developer.android.google.cn/images/auto/logos/jvc_480.png 480w,https://developer.android.google.cn/images/auto/logos/jvc_720.png 720w,https://developer.android.google.cn/images/auto/logos/jvc_856.png 856w,https://developer.android.google.cn/images/auto/logos/jvc_960.png 960w,https://developer.android.google.cn/images/auto/logos/jvc_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/jvc_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/jvc_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.karmaautomotive.com/">
+        <img alt=""
+       src="/images/auto/logos/karma.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/karma_36.png 36w,https://developer.android.google.cn/images/auto/logos/karma_48.png 48w,https://developer.android.google.cn/images/auto/logos/karma_72.png 72w,https://developer.android.google.cn/images/auto/logos/karma_96.png 96w,https://developer.android.google.cn/images/auto/logos/karma_480.png 480w,https://developer.android.google.cn/images/auto/logos/karma_720.png 720w,https://developer.android.google.cn/images/auto/logos/karma_856.png 856w,https://developer.android.google.cn/images/auto/logos/karma_960.png 960w,https://developer.android.google.cn/images/auto/logos/karma_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/karma_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/karma_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.kenwood.com/">
+        <img alt=""
+       src="/images/auto/logos/kenwood.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/kenwood_36.png 36w,https://developer.android.google.cn/images/auto/logos/kenwood_48.png 48w,https://developer.android.google.cn/images/auto/logos/kenwood_72.png 72w,https://developer.android.google.cn/images/auto/logos/kenwood_96.png 96w,https://developer.android.google.cn/images/auto/logos/kenwood_480.png 480w,https://developer.android.google.cn/images/auto/logos/kenwood_720.png 720w,https://developer.android.google.cn/images/auto/logos/kenwood_856.png 856w,https://developer.android.google.cn/images/auto/logos/kenwood_960.png 960w,https://developer.android.google.cn/images/auto/logos/kenwood_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/kenwood_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/kenwood_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.kia.com/worldwide/">
+        <img alt=""
+       src="/images/auto/logos/kia.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/kia_36.png 36w,https://developer.android.google.cn/images/auto/logos/kia_48.png 48w,https://developer.android.google.cn/images/auto/logos/kia_72.png 72w,https://developer.android.google.cn/images/auto/logos/kia_96.png 96w,https://developer.android.google.cn/images/auto/logos/kia_480.png 480w,https://developer.android.google.cn/images/auto/logos/kia_720.png 720w,https://developer.android.google.cn/images/auto/logos/kia_856.png 856w,https://developer.android.google.cn/images/auto/logos/kia_960.png 960w,https://developer.android.google.cn/images/auto/logos/kia_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/kia_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/kia_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://koenigsegg.com/">
+        <img alt=""
+       src="/images/auto/logos/koenigsegg.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/koenigsegg_36.png 36w,https://developer.android.google.cn/images/auto/logos/koenigsegg_48.png 48w,https://developer.android.google.cn/images/auto/logos/koenigsegg_72.png 72w,https://developer.android.google.cn/images/auto/logos/koenigsegg_96.png 96w,https://developer.android.google.cn/images/auto/logos/koenigsegg_480.png 480w,https://developer.android.google.cn/images/auto/logos/koenigsegg_720.png 720w,https://developer.android.google.cn/images/auto/logos/koenigsegg_856.png 856w,https://developer.android.google.cn/images/auto/logos/koenigsegg_960.png 960w,https://developer.android.google.cn/images/auto/logos/koenigsegg_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/koenigsegg_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/koenigsegg_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.lada.ru/en/">
+        <img alt=""
+       src="/images/auto/logos/lada.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/lada_36.png 36w,https://developer.android.google.cn/images/auto/logos/lada_48.png 48w,https://developer.android.google.cn/images/auto/logos/lada_72.png 72w,https://developer.android.google.cn/images/auto/logos/lada_96.png 96w,https://developer.android.google.cn/images/auto/logos/lada_480.png 480w,https://developer.android.google.cn/images/auto/logos/lada_720.png 720w,https://developer.android.google.cn/images/auto/logos/lada_856.png 856w,https://developer.android.google.cn/images/auto/logos/lada_960.png 960w,https://developer.android.google.cn/images/auto/logos/lada_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/lada_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/lada_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.lamborghini.com/">
+        <img alt=""
+       src="/images/auto/logos/lambo.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/lambo_36.png 36w,https://developer.android.google.cn/images/auto/logos/lambo_48.png 48w,https://developer.android.google.cn/images/auto/logos/lambo_72.png 72w,https://developer.android.google.cn/images/auto/logos/lambo_96.png 96w,https://developer.android.google.cn/images/auto/logos/lambo_480.png 480w,https://developer.android.google.cn/images/auto/logos/lambo_720.png 720w,https://developer.android.google.cn/images/auto/logos/lambo_856.png 856w,https://developer.android.google.cn/images/auto/logos/lambo_960.png 960w,https://developer.android.google.cn/images/auto/logos/lambo_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/lambo_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/lambo_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.landrover.com/">
+        <img alt=""
+       src="/images/auto/logos/landrover.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/landrover_36.png 36w,https://developer.android.google.cn/images/auto/logos/landrover_48.png 48w,https://developer.android.google.cn/images/auto/logos/landrover_72.png 72w,https://developer.android.google.cn/images/auto/logos/landrover_96.png 96w,https://developer.android.google.cn/images/auto/logos/landrover_480.png 480w,https://developer.android.google.cn/images/auto/logos/landrover_720.png 720w,https://developer.android.google.cn/images/auto/logos/landrover_856.png 856w,https://developer.android.google.cn/images/auto/logos/landrover_960.png 960w,https://developer.android.google.cn/images/auto/logos/landrover_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/landrover_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/landrover_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.lifanmotors.net/">
+        <img alt=""
+       src="/images/auto/logos/lifan.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/lifan_36.png 36w,https://developer.android.google.cn/images/auto/logos/lifan_48.png 48w,https://developer.android.google.cn/images/auto/logos/lifan_72.png 72w,https://developer.android.google.cn/images/auto/logos/lifan_96.png 96w,https://developer.android.google.cn/images/auto/logos/lifan_480.png 480w,https://developer.android.google.cn/images/auto/logos/lifan_720.png 720w,https://developer.android.google.cn/images/auto/logos/lifan_856.png 856w,https://developer.android.google.cn/images/auto/logos/lifan_960.png 960w,https://developer.android.google.cn/images/auto/logos/lifan_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/lifan_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/lifan_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.lincoln.com/">
+        <img alt=""
+       src="/images/auto/logos/lincoln.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/lincoln_36.png 36w,https://developer.android.google.cn/images/auto/logos/lincoln_48.png 48w,https://developer.android.google.cn/images/auto/logos/lincoln_72.png 72w,https://developer.android.google.cn/images/auto/logos/lincoln_96.png 96w,https://developer.android.google.cn/images/auto/logos/lincoln_480.png 480w,https://developer.android.google.cn/images/auto/logos/lincoln_720.png 720w,https://developer.android.google.cn/images/auto/logos/lincoln_856.png 856w,https://developer.android.google.cn/images/auto/logos/lincoln_960.png 960w,https://developer.android.google.cn/images/auto/logos/lincoln_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/lincoln_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/lincoln_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.macrom.it/en/">
+        <img alt=""
+       src="/images/auto/logos/macrom.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/macrom_36.png 36w,https://developer.android.google.cn/images/auto/logos/macrom_48.png 48w,https://developer.android.google.cn/images/auto/logos/macrom_72.png 72w,https://developer.android.google.cn/images/auto/logos/macrom_96.png 96w,https://developer.android.google.cn/images/auto/logos/macrom_480.png 480w,https://developer.android.google.cn/images/auto/logos/macrom_720.png 720w,https://developer.android.google.cn/images/auto/logos/macrom_856.png 856w,https://developer.android.google.cn/images/auto/logos/macrom_960.png 960w,https://developer.android.google.cn/images/auto/logos/macrom_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/macrom_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/macrom_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.mahindra.com/">
+        <img alt=""
+       src="/images/auto/logos/mahindra.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/mahindra_36.png 36w,https://developer.android.google.cn/images/auto/logos/mahindra_48.png 48w,https://developer.android.google.cn/images/auto/logos/mahindra_72.png 72w,https://developer.android.google.cn/images/auto/logos/mahindra_96.png 96w,https://developer.android.google.cn/images/auto/logos/mahindra_480.png 480w,https://developer.android.google.cn/images/auto/logos/mahindra_720.png 720w,https://developer.android.google.cn/images/auto/logos/mahindra_856.png 856w,https://developer.android.google.cn/images/auto/logos/mahindra_960.png 960w,https://developer.android.google.cn/images/auto/logos/mahindra_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/mahindra_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/mahindra_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.globalsuzuki.com/automobile/">
+        <img alt=""
+       src="/images/auto/logos/maruti_suzuki.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/maruti_suzuki_36.png 36w,https://developer.android.google.cn/images/auto/logos/maruti_suzuki_48.png 48w,https://developer.android.google.cn/images/auto/logos/maruti_suzuki_72.png 72w,https://developer.android.google.cn/images/auto/logos/maruti_suzuki_96.png 96w,https://developer.android.google.cn/images/auto/logos/maruti_suzuki_480.png 480w,https://developer.android.google.cn/images/auto/logos/maruti_suzuki_720.png 720w,https://developer.android.google.cn/images/auto/logos/maruti_suzuki_856.png 856w,https://developer.android.google.cn/images/auto/logos/maruti_suzuki_960.png 960w,https://developer.android.google.cn/images/auto/logos/maruti_suzuki_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/maruti_suzuki_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/maruti_suzuki_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.maserati.com/">
+        <img alt=""
+       src="/images/auto/logos/maserati.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/maserati_36.png 36w,https://developer.android.google.cn/images/auto/logos/maserati_48.png 48w,https://developer.android.google.cn/images/auto/logos/maserati_72.png 72w,https://developer.android.google.cn/images/auto/logos/maserati_96.png 96w,https://developer.android.google.cn/images/auto/logos/maserati_480.png 480w,https://developer.android.google.cn/images/auto/logos/maserati_720.png 720w,https://developer.android.google.cn/images/auto/logos/maserati_856.png 856w,https://developer.android.google.cn/images/auto/logos/maserati_960.png 960w,https://developer.android.google.cn/images/auto/logos/maserati_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/maserati_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/maserati_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.maxmade-ae.cn/">
+        <img alt=""
+       src="/images/auto/logos/maxmade-ae.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/maxmade-ae_36.png 36w,https://developer.android.google.cn/images/auto/logos/maxmade-ae_48.png 48w,https://developer.android.google.cn/images/auto/logos/maxmade-ae_72.png 72w,https://developer.android.google.cn/images/auto/logos/maxmade-ae_96.png 96w,https://developer.android.google.cn/images/auto/logos/maxmade-ae_480.png 480w,https://developer.android.google.cn/images/auto/logos/maxmade-ae_720.png 720w,https://developer.android.google.cn/images/auto/logos/maxmade-ae_856.png 856w,https://developer.android.google.cn/images/auto/logos/maxmade-ae_960.png 960w,https://developer.android.google.cn/images/auto/logos/maxmade-ae_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/maxmade-ae_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/maxmade-ae_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.mazda.com/">
+        <img alt=""
+       src="/images/auto/logos/mazda.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/mazda_36.png 36w,https://developer.android.google.cn/images/auto/logos/mazda_48.png 48w,https://developer.android.google.cn/images/auto/logos/mazda_72.png 72w,https://developer.android.google.cn/images/auto/logos/mazda_96.png 96w,https://developer.android.google.cn/images/auto/logos/mazda_480.png 480w,https://developer.android.google.cn/images/auto/logos/mazda_720.png 720w,https://developer.android.google.cn/images/auto/logos/mazda_856.png 856w,https://developer.android.google.cn/images/auto/logos/mazda_960.png 960w,https://developer.android.google.cn/images/auto/logos/mazda_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/mazda_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/mazda_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.mercedes-benz.com/">
+        <img alt=""
+       src="/images/auto/logos/mbenz.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/mbenz_36.png 36w,https://developer.android.google.cn/images/auto/logos/mbenz_48.png 48w,https://developer.android.google.cn/images/auto/logos/mbenz_72.png 72w,https://developer.android.google.cn/images/auto/logos/mbenz_96.png 96w,https://developer.android.google.cn/images/auto/logos/mbenz_480.png 480w,https://developer.android.google.cn/images/auto/logos/mbenz_720.png 720w,https://developer.android.google.cn/images/auto/logos/mbenz_856.png 856w,https://developer.android.google.cn/images/auto/logos/mbenz_960.png 960w,https://developer.android.google.cn/images/auto/logos/mbenz_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/mbenz_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/mbenz_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.mitsubishi-motors.com/">
+        <img alt=""
+       src="/images/auto/logos/mitsubishi.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/mitsubishi_36.png 36w,https://developer.android.google.cn/images/auto/logos/mitsubishi_48.png 48w,https://developer.android.google.cn/images/auto/logos/mitsubishi_72.png 72w,https://developer.android.google.cn/images/auto/logos/mitsubishi_96.png 96w,https://developer.android.google.cn/images/auto/logos/mitsubishi_480.png 480w,https://developer.android.google.cn/images/auto/logos/mitsubishi_720.png 720w,https://developer.android.google.cn/images/auto/logos/mitsubishi_856.png 856w,https://developer.android.google.cn/images/auto/logos/mitsubishi_960.png 960w,https://developer.android.google.cn/images/auto/logos/mitsubishi_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/mitsubishi_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/mitsubishi_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="https://mongoose.com.au/">
+        <img alt=""
+       src="/images/auto/logos/mongoose.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/mongoose_36.png 36w,https://developer.android.google.cn/images/auto/logos/mongoose_48.png 48w,https://developer.android.google.cn/images/auto/logos/mongoose_72.png 72w,https://developer.android.google.cn/images/auto/logos/mongoose_96.png 96w,https://developer.android.google.cn/images/auto/logos/mongoose_480.png 480w,https://developer.android.google.cn/images/auto/logos/mongoose_720.png 720w,https://developer.android.google.cn/images/auto/logos/mongoose_856.png 856w,https://developer.android.google.cn/images/auto/logos/mongoose_960.png 960w,https://developer.android.google.cn/images/auto/logos/mongoose_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/mongoose_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/mongoose_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.nakamichicaraudio.com/">
+        <img alt=""
+       src="/images/auto/logos/nakamichi.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/nakamichi_36.png 36w,https://developer.android.google.cn/images/auto/logos/nakamichi_48.png 48w,https://developer.android.google.cn/images/auto/logos/nakamichi_72.png 72w,https://developer.android.google.cn/images/auto/logos/nakamichi_96.png 96w,https://developer.android.google.cn/images/auto/logos/nakamichi_480.png 480w,https://developer.android.google.cn/images/auto/logos/nakamichi_720.png 720w,https://developer.android.google.cn/images/auto/logos/nakamichi_856.png 856w,https://developer.android.google.cn/images/auto/logos/nakamichi_960.png 960w,https://developer.android.google.cn/images/auto/logos/nakamichi_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/nakamichi_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/nakamichi_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.nissan-global.com/">
+        <img alt=""
+       src="/images/auto/logos/nissan.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/nissan_36.png 36w,https://developer.android.google.cn/images/auto/logos/nissan_48.png 48w,https://developer.android.google.cn/images/auto/logos/nissan_72.png 72w,https://developer.android.google.cn/images/auto/logos/nissan_96.png 96w,https://developer.android.google.cn/images/auto/logos/nissan_480.png 480w,https://developer.android.google.cn/images/auto/logos/nissan_720.png 720w,https://developer.android.google.cn/images/auto/logos/nissan_856.png 856w,https://developer.android.google.cn/images/auto/logos/nissan_960.png 960w,https://developer.android.google.cn/images/auto/logos/nissan_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/nissan_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/nissan_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="https://www.norauto.fr/">
+        <img alt=""
+       src="/images/auto/logos/norauto.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/norauto_36.png 36w,https://developer.android.google.cn/images/auto/logos/norauto_48.png 48w,https://developer.android.google.cn/images/auto/logos/norauto_72.png 72w,https://developer.android.google.cn/images/auto/logos/norauto_96.png 96w,https://developer.android.google.cn/images/auto/logos/norauto_480.png 480w,https://developer.android.google.cn/images/auto/logos/norauto_720.png 720w,https://developer.android.google.cn/images/auto/logos/norauto_856.png 856w,https://developer.android.google.cn/images/auto/logos/norauto_960.png 960w,https://developer.android.google.cn/images/auto/logos/norauto_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/norauto_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/norauto_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.opel.com/">
+        <img alt=""
+       src="/images/auto/logos/opel.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/opel_36.png 36w,https://developer.android.google.cn/images/auto/logos/opel_48.png 48w,https://developer.android.google.cn/images/auto/logos/opel_72.png 72w,https://developer.android.google.cn/images/auto/logos/opel_96.png 96w,https://developer.android.google.cn/images/auto/logos/opel_480.png 480w,https://developer.android.google.cn/images/auto/logos/opel_720.png 720w,https://developer.android.google.cn/images/auto/logos/opel_856.png 856w,https://developer.android.google.cn/images/auto/logos/opel_960.png 960w,https://developer.android.google.cn/images/auto/logos/opel_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/opel_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/opel_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.panasonic.net/">
+        <img alt=""
+       src="/images/auto/logos/panasonic.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/panasonic_36.png 36w,https://developer.android.google.cn/images/auto/logos/panasonic_48.png 48w,https://developer.android.google.cn/images/auto/logos/panasonic_72.png 72w,https://developer.android.google.cn/images/auto/logos/panasonic_96.png 96w,https://developer.android.google.cn/images/auto/logos/panasonic_480.png 480w,https://developer.android.google.cn/images/auto/logos/panasonic_720.png 720w,https://developer.android.google.cn/images/auto/logos/panasonic_856.png 856w,https://developer.android.google.cn/images/auto/logos/panasonic_960.png 960w,https://developer.android.google.cn/images/auto/logos/panasonic_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/panasonic_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/panasonic_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.peugeot.com/">
+        <img alt=""
+       src="/images/auto/logos/peugeot.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/peugeot_36.png 36w,https://developer.android.google.cn/images/auto/logos/peugeot_48.png 48w,https://developer.android.google.cn/images/auto/logos/peugeot_72.png 72w,https://developer.android.google.cn/images/auto/logos/peugeot_96.png 96w,https://developer.android.google.cn/images/auto/logos/peugeot_480.png 480w,https://developer.android.google.cn/images/auto/logos/peugeot_720.png 720w,https://developer.android.google.cn/images/auto/logos/peugeot_856.png 856w,https://developer.android.google.cn/images/auto/logos/peugeot_960.png 960w,https://developer.android.google.cn/images/auto/logos/peugeot_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/peugeot_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/peugeot_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.pioneerelectronics.com/">
+        <img alt=""
+       src="/images/auto/logos/pioneer.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/pioneer_36.png 36w,https://developer.android.google.cn/images/auto/logos/pioneer_48.png 48w,https://developer.android.google.cn/images/auto/logos/pioneer_72.png 72w,https://developer.android.google.cn/images/auto/logos/pioneer_96.png 96w,https://developer.android.google.cn/images/auto/logos/pioneer_480.png 480w,https://developer.android.google.cn/images/auto/logos/pioneer_720.png 720w,https://developer.android.google.cn/images/auto/logos/pioneer_856.png 856w,https://developer.android.google.cn/images/auto/logos/pioneer_960.png 960w,https://developer.android.google.cn/images/auto/logos/pioneer_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/pioneer_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/pioneer_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="https://www.planetaudiousa.com/">
+        <img alt=""
+       src="/images/auto/logos/planet_audio.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/planet_audio_36.png 36w,https://developer.android.google.cn/images/auto/logos/planet_audio_48.png 48w,https://developer.android.google.cn/images/auto/logos/planet_audio_72.png 72w,https://developer.android.google.cn/images/auto/logos/planet_audio_96.png 96w,https://developer.android.google.cn/images/auto/logos/planet_audio_480.png 480w,https://developer.android.google.cn/images/auto/logos/planet_audio_720.png 720w,https://developer.android.google.cn/images/auto/logos/planet_audio_856.png 856w,https://developer.android.google.cn/images/auto/logos/planet_audio_960.png 960w,https://developer.android.google.cn/images/auto/logos/planet_audio_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/planet_audio_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/planet_audio_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.prology.ru/">
+        <img alt=""
+       src="/images/auto/logos/prology.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/prology_36.png 36w,https://developer.android.google.cn/images/auto/logos/prology_48.png 48w,https://developer.android.google.cn/images/auto/logos/prology_72.png 72w,https://developer.android.google.cn/images/auto/logos/prology_96.png 96w,https://developer.android.google.cn/images/auto/logos/prology_480.png 480w,https://developer.android.google.cn/images/auto/logos/prology_720.png 720w,https://developer.android.google.cn/images/auto/logos/prology_856.png 856w,https://developer.android.google.cn/images/auto/logos/prology_960.png 960w,https://developer.android.google.cn/images/auto/logos/prology_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/prology_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/prology_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.ramtrucks.com/">
+        <img alt=""
+       src="/images/auto/logos/ram.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/ram_36.png 36w,https://developer.android.google.cn/images/auto/logos/ram_48.png 48w,https://developer.android.google.cn/images/auto/logos/ram_72.png 72w,https://developer.android.google.cn/images/auto/logos/ram_96.png 96w,https://developer.android.google.cn/images/auto/logos/ram_480.png 480w,https://developer.android.google.cn/images/auto/logos/ram_720.png 720w,https://developer.android.google.cn/images/auto/logos/ram_856.png 856w,https://developer.android.google.cn/images/auto/logos/ram_960.png 960w,https://developer.android.google.cn/images/auto/logos/ram_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/ram_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/ram_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.renault.com/">
+        <img alt=""
+       src="/images/auto/logos/renault.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/renault_36.png 36w,https://developer.android.google.cn/images/auto/logos/renault_48.png 48w,https://developer.android.google.cn/images/auto/logos/renault_72.png 72w,https://developer.android.google.cn/images/auto/logos/renault_96.png 96w,https://developer.android.google.cn/images/auto/logos/renault_480.png 480w,https://developer.android.google.cn/images/auto/logos/renault_720.png 720w,https://developer.android.google.cn/images/auto/logos/renault_856.png 856w,https://developer.android.google.cn/images/auto/logos/renault_960.png 960w,https://developer.android.google.cn/images/auto/logos/renault_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/renault_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/renault_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.renaultsamsungm.com/">
+        <img alt=""
+       src="/images/auto/logos/rsm.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/rsm_36.png 36w,https://developer.android.google.cn/images/auto/logos/rsm_48.png 48w,https://developer.android.google.cn/images/auto/logos/rsm_72.png 72w,https://developer.android.google.cn/images/auto/logos/rsm_96.png 96w,https://developer.android.google.cn/images/auto/logos/rsm_480.png 480w,https://developer.android.google.cn/images/auto/logos/rsm_720.png 720w,https://developer.android.google.cn/images/auto/logos/rsm_856.png 856w,https://developer.android.google.cn/images/auto/logos/rsm_960.png 960w,https://developer.android.google.cn/images/auto/logos/rsm_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/rsm_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/rsm_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.seat.com/">
+        <img alt=""
+       src="/images/auto/logos/seat.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/seat_36.png 36w,https://developer.android.google.cn/images/auto/logos/seat_48.png 48w,https://developer.android.google.cn/images/auto/logos/seat_72.png 72w,https://developer.android.google.cn/images/auto/logos/seat_96.png 96w,https://developer.android.google.cn/images/auto/logos/seat_480.png 480w,https://developer.android.google.cn/images/auto/logos/seat_720.png 720w,https://developer.android.google.cn/images/auto/logos/seat_856.png 856w,https://developer.android.google.cn/images/auto/logos/seat_960.png 960w,https://developer.android.google.cn/images/auto/logos/seat_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/seat_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/seat_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.skoda-auto.com/">
+        <img alt=""
+       src="/images/auto/logos/skoda.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/skoda_36.png 36w,https://developer.android.google.cn/images/auto/logos/skoda_48.png 48w,https://developer.android.google.cn/images/auto/logos/skoda_72.png 72w,https://developer.android.google.cn/images/auto/logos/skoda_96.png 96w,https://developer.android.google.cn/images/auto/logos/skoda_480.png 480w,https://developer.android.google.cn/images/auto/logos/skoda_720.png 720w,https://developer.android.google.cn/images/auto/logos/skoda_856.png 856w,https://developer.android.google.cn/images/auto/logos/skoda_960.png 960w,https://developer.android.google.cn/images/auto/logos/skoda_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/skoda_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/skoda_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.skypine.cn/en/Default.aspx">
+        <img alt=""
+       src="/images/auto/logos/skypine.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/skypine_36.png 36w,https://developer.android.google.cn/images/auto/logos/skypine_48.png 48w,https://developer.android.google.cn/images/auto/logos/skypine_72.png 72w,https://developer.android.google.cn/images/auto/logos/skypine_96.png 96w,https://developer.android.google.cn/images/auto/logos/skypine_480.png 480w,https://developer.android.google.cn/images/auto/logos/skypine_720.png 720w,https://developer.android.google.cn/images/auto/logos/skypine_856.png 856w,https://developer.android.google.cn/images/auto/logos/skypine_960.png 960w,https://developer.android.google.cn/images/auto/logos/skypine_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/skypine_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/skypine_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="https://www.smart.com/">
+        <img alt=""
+       src="/images/auto/logos/smartcars.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/smartcars_36.png 36w,https://developer.android.google.cn/images/auto/logos/smartcars_48.png 48w,https://developer.android.google.cn/images/auto/logos/smartcars_72.png 72w,https://developer.android.google.cn/images/auto/logos/smartcars_96.png 96w,https://developer.android.google.cn/images/auto/logos/smartcars_480.png 480w,https://developer.android.google.cn/images/auto/logos/smartcars_720.png 720w,https://developer.android.google.cn/images/auto/logos/smartcars_856.png 856w,https://developer.android.google.cn/images/auto/logos/smartcars_960.png 960w,https://developer.android.google.cn/images/auto/logos/smartcars_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/smartcars_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/smartcars_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.smartautotech.com/en/">
+        <img alt=""
+       src="/images/auto/logos/smartautotech.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/smartautotech_36.png 36w,https://developer.android.google.cn/images/auto/logos/smartautotech_48.png 48w,https://developer.android.google.cn/images/auto/logos/smartautotech_72.png 72w,https://developer.android.google.cn/images/auto/logos/smartautotech_96.png 96w,https://developer.android.google.cn/images/auto/logos/smartautotech_480.png 480w,https://developer.android.google.cn/images/auto/logos/smartautotech_720.png 720w,https://developer.android.google.cn/images/auto/logos/smartautotech_856.png 856w,https://developer.android.google.cn/images/auto/logos/smartautotech_960.png 960w,https://developer.android.google.cn/images/auto/logos/smartautotech_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/smartautotech_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/smartautotech_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.sony.com/">
+        <img alt=""
+       src="/images/auto/logos/sony.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/sony_36.png 36w,https://developer.android.google.cn/images/auto/logos/sony_48.png 48w,https://developer.android.google.cn/images/auto/logos/sony_72.png 72w,https://developer.android.google.cn/images/auto/logos/sony_96.png 96w,https://developer.android.google.cn/images/auto/logos/sony_480.png 480w,https://developer.android.google.cn/images/auto/logos/sony_720.png 720w,https://developer.android.google.cn/images/auto/logos/sony_856.png 856w,https://developer.android.google.cn/images/auto/logos/sony_960.png 960w,https://developer.android.google.cn/images/auto/logos/sony_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/sony_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/sony_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.smotor.com/">
+        <img alt=""
+       src="/images/auto/logos/ssangyong.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/ssangyong_36.png 36w,https://developer.android.google.cn/images/auto/logos/ssangyong_48.png 48w,https://developer.android.google.cn/images/auto/logos/ssangyong_72.png 72w,https://developer.android.google.cn/images/auto/logos/ssangyong_96.png 96w,https://developer.android.google.cn/images/auto/logos/ssangyong_480.png 480w,https://developer.android.google.cn/images/auto/logos/ssangyong_720.png 720w,https://developer.android.google.cn/images/auto/logos/ssangyong_856.png 856w,https://developer.android.google.cn/images/auto/logos/ssangyong_960.png 960w,https://developer.android.google.cn/images/auto/logos/ssangyong_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/ssangyong_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/ssangyong_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.subaru-global.com/">
+        <img alt=""
+       src="/images/auto/logos/subaru.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/subaru_36.png 36w,https://developer.android.google.cn/images/auto/logos/subaru_48.png 48w,https://developer.android.google.cn/images/auto/logos/subaru_72.png 72w,https://developer.android.google.cn/images/auto/logos/subaru_96.png 96w,https://developer.android.google.cn/images/auto/logos/subaru_480.png 480w,https://developer.android.google.cn/images/auto/logos/subaru_720.png 720w,https://developer.android.google.cn/images/auto/logos/subaru_856.png 856w,https://developer.android.google.cn/images/auto/logos/subaru_960.png 960w,https://developer.android.google.cn/images/auto/logos/subaru_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/subaru_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/subaru_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.globalsuzuki.com/automobile/">
+        <img alt=""
+       src="/images/auto/logos/suzuki.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/suzuki_36.png 36w,https://developer.android.google.cn/images/auto/logos/suzuki_48.png 48w,https://developer.android.google.cn/images/auto/logos/suzuki_72.png 72w,https://developer.android.google.cn/images/auto/logos/suzuki_96.png 96w,https://developer.android.google.cn/images/auto/logos/suzuki_480.png 480w,https://developer.android.google.cn/images/auto/logos/suzuki_720.png 720w,https://developer.android.google.cn/images/auto/logos/suzuki_856.png 856w,https://developer.android.google.cn/images/auto/logos/suzuki_960.png 960w,https://developer.android.google.cn/images/auto/logos/suzuki_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/suzuki_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/suzuki_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.tatamotors.com/">
+        <img alt=""
+       src="/images/auto/logos/tata.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/tata_36.png 36w,https://developer.android.google.cn/images/auto/logos/tata_48.png 48w,https://developer.android.google.cn/images/auto/logos/tata_72.png 72w,https://developer.android.google.cn/images/auto/logos/tata_96.png 96w,https://developer.android.google.cn/images/auto/logos/tata_480.png 480w,https://developer.android.google.cn/images/auto/logos/tata_720.png 720w,https://developer.android.google.cn/images/auto/logos/tata_856.png 856w,https://developer.android.google.cn/images/auto/logos/tata_960.png 960w,https://developer.android.google.cn/images/auto/logos/tata_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/tata_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/tata_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.unimax.com.tw/">
+        <img alt=""
+       src="/images/auto/logos/unimax.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/unimax_36.png 36w,https://developer.android.google.cn/images/auto/logos/unimax_48.png 48w,https://developer.android.google.cn/images/auto/logos/unimax_72.png 72w,https://developer.android.google.cn/images/auto/logos/unimax_96.png 96w,https://developer.android.google.cn/images/auto/logos/unimax_480.png 480w,https://developer.android.google.cn/images/auto/logos/unimax_720.png 720w,https://developer.android.google.cn/images/auto/logos/unimax_856.png 856w,https://developer.android.google.cn/images/auto/logos/unimax_960.png 960w,https://developer.android.google.cn/images/auto/logos/unimax_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/unimax_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/unimax_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.vauxhall.co.uk/">
+        <img alt=""
+       src="/images/auto/logos/vauxhall.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/vauxhall_36.png 36w,https://developer.android.google.cn/images/auto/logos/vauxhall_48.png 48w,https://developer.android.google.cn/images/auto/logos/vauxhall_72.png 72w,https://developer.android.google.cn/images/auto/logos/vauxhall_96.png 96w,https://developer.android.google.cn/images/auto/logos/vauxhall_480.png 480w,https://developer.android.google.cn/images/auto/logos/vauxhall_720.png 720w,https://developer.android.google.cn/images/auto/logos/vauxhall_856.png 856w,https://developer.android.google.cn/images/auto/logos/vauxhall_960.png 960w,https://developer.android.google.cn/images/auto/logos/vauxhall_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/vauxhall_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/vauxhall_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.volkswagen.com/">
+        <img alt=""
+       src="/images/auto/logos/volkswagen.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/volkswagen_36.png 36w,https://developer.android.google.cn/images/auto/logos/volkswagen_48.png 48w,https://developer.android.google.cn/images/auto/logos/volkswagen_72.png 72w,https://developer.android.google.cn/images/auto/logos/volkswagen_96.png 96w,https://developer.android.google.cn/images/auto/logos/volkswagen_480.png 480w,https://developer.android.google.cn/images/auto/logos/volkswagen_720.png 720w,https://developer.android.google.cn/images/auto/logos/volkswagen_856.png 856w,https://developer.android.google.cn/images/auto/logos/volkswagen_960.png 960w,https://developer.android.google.cn/images/auto/logos/volkswagen_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/volkswagen_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/volkswagen_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.volvocars.com/intl">
+        <img alt=""
+       src="/images/auto/logos/volvo.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/volvo_36.png 36w,https://developer.android.google.cn/images/auto/logos/volvo_48.png 48w,https://developer.android.google.cn/images/auto/logos/volvo_72.png 72w,https://developer.android.google.cn/images/auto/logos/volvo_96.png 96w,https://developer.android.google.cn/images/auto/logos/volvo_480.png 480w,https://developer.android.google.cn/images/auto/logos/volvo_720.png 720w,https://developer.android.google.cn/images/auto/logos/volvo_856.png 856w,https://developer.android.google.cn/images/auto/logos/volvo_960.png 960w,https://developer.android.google.cn/images/auto/logos/volvo_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/volvo_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/volvo_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="http://www.zenec.com/">
+        <img alt=""
+       src="/images/auto/logos/zenec.png"
+       srcset="https://developer.android.google.cn/images/auto/logos/zenec_36.png 36w,https://developer.android.google.cn/images/auto/logos/zenec_48.png 48w,https://developer.android.google.cn/images/auto/logos/zenec_72.png 72w,https://developer.android.google.cn/images/auto/logos/zenec_96.png 96w,https://developer.android.google.cn/images/auto/logos/zenec_480.png 480w,https://developer.android.google.cn/images/auto/logos/zenec_720.png 720w,https://developer.android.google.cn/images/auto/logos/zenec_856.png 856w,https://developer.android.google.cn/images/auto/logos/zenec_960.png 960w,https://developer.android.google.cn/images/auto/logos/zenec_1440.png 1440w,https://developer.android.google.cn/images/auto/logos/zenec_1920.png 1920w,https://developer.android.google.cn/images/auto/logos/zenec_2880.png 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up dac-featured-cards"
+           
+           >
+
+      
+          <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-linked"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="https://android-developers.googleblog.com/">
+        <h3 id="">
+      博文</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            在我们的博客中阅读更多有关 Android Auto 开发的信息。只需搜索“Android Auto”即可。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://android-developers.googleblog.com/"
+      class="button dac-button dac-flat-button
+      "
+            >Android 开发者博客</a></div>
+              </div>
+    </div>
+      
+</div>
+                      <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+        
+
+                  <div class="devsite-landing-row-item-description-content">
+            <img alt="" src="/images/blogger.png">
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://android-developers.googleblog.com/"
+      class="button dac-button dac-flat-button
+      "
+            >Android 开发者博客</a></div>
+              </div>
+    </div>
+      
+</div>
+                  </div>
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-linked"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="http://g.co/androidautodev">
+        <h3 id="google">
+      Google+ 社群</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            在 Google+ 上关注我们，及时了解有关 Android Auto 开发的最新信息并参与讨论！
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="http://g.co/androidautodev"
+      class="button dac-button dac-flat-button
+      "
+            >+Android Auto 开发者</a></div>
+              </div>
+    </div>
+      
+</div>
+                      <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+        
+
+                  <div class="devsite-landing-row-item-description-content">
+            <img alt="" src="/images/gplus-128.png">
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="http://g.co/androidautodev"
+      class="button dac-button dac-flat-button
+      "
+            >+Android Auto 开发者</a></div>
+              </div>
+    </div>
+      
+</div>
+                  </div>
+            </div>
+
+        
+  
+  </section>
+
+          </div>
+
+    
+    
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Content and code samples on this page are subject to the licenses described in the <a href="/license">Content License</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>  <p>Last updated 2020-01-07.</p></devsite-content-footer>
+
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="//developers.google.cn/china/#follow-google-developers-on-wechat"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-modal-toggle="wechat"
+                data-label="Footer WeChat Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="/_static/android/images/logo-wechat.png"
+             alt="微信">
+                微信
+      </a>
+      <div class="devsite-footer-promo-description">在微信上关注“Google Developers”</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//twitter.com/AndroidDev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-label="Footer Twitter Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="/_static/android/images/logo-twitter.svg"
+             alt="Twitter">
+                Twitter
+      </a>
+      <div class="devsite-footer-promo-description">在 Twitter 上关注 @AndroidDev</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//www.youtube.com/user/androiddevelopers"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-label="Footer YouTube Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="//www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png"
+             alt="YouTube">
+                YouTube
+      </a>
+      <div class="devsite-footer-promo-description">在 YouTube 上访问“Android Developers”频道</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">关于 Android</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Android
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/enterprise/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            Enterprise
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/security-center/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            安全
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//source.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            源代码
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">支持</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//issuetracker.google.com/issues/new?component=190923&amp;template=841312"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            报告平台错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//issuetracker.google.com/issues/new?component=192697"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            报告文档错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//support.google.com/googleplay/android-developer"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Google Play support
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://google.qualtrics.com/jfe/form/SV_ewWXIoEVLBcyp7f??reserved=1&amp;utm_source=FooterLink&amp;Q_Language=en&amp;utm_medium=own_srch&amp;utm_campaign=developer.android.com&amp;utm_term=0&amp;utm_content=0&amp;productTag=reg&amp;campaignDate=may19&amp;pType=devel&amp;referral_code=gV420370"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            参加调查研究
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">文档</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/guide"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            开发者指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/design"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            设计指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/reference"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            API 参考
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/samples"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            示例
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/studio/intro"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 5)"           >
+            Android Studio
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="/_static/images/lockup-developers.svg"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developers.google.cn/products/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+                    data-cookie-policy="//policies.google.cn/technologies/cookies"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/license"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer License link"
+         >
+          许可
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/distribute/marketing-tools/brand-guidelines"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Brand guidelines link"
+         >
+          品牌指南
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">通过电子邮件接收资讯和提示</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/newsletter/#subscribe"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   data-cookie-policy="//policies.google.cn/technologies/cookies"
+                  ></devsite-snackbar>
+    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Android \u5f00\u53d1\u8005", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-5831155-3"}]</script>
+<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "language": {"requested": "zh-cn", "served": "zh-cn"}, "projectName": "Android \u5f00\u53d1\u8005", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}, "tags": ["GTM-KMSWPCJ"]}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[3,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android","https://android-dot-google-developers.gonglchuangl.net",1,null,["/_pwa/android/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
