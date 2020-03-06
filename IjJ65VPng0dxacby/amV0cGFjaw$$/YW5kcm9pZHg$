@@ -1,0 +1,1436 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Android Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#3ddc84">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/android/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/touchicon-180.png"><link rel="canonical" href="https://developer.android.google.cn/jetpack/androidx?hl=zh-cn">      
+<title>AndroidX 概览 &nbsp;|&nbsp; Android 开发者 &nbsp;|&nbsp; Android Developers</title>
+
+<meta property="og:title" content="AndroidX 概览 &nbsp;|&nbsp; Android 开发者 &nbsp;|&nbsp; Android Developers">
+
+
+  <meta property="og:url" content="https://developer.android.google.cn/jetpack/androidx?hl=zh-cn">
+
+  <meta property="og:image" content="https://developer.android.google.cn/images/android-developers.png">
+  <meta property="og:image:secure_url" content="https://developer.android.google.cn/images/android-developers.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale" content="zh_cn">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    
+    
+    
+  
+
+    </head>
+  <body type="article"
+        theme="android-theme"
+        class=""
+        
+        layout="docs"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                              </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                            <devsite-tabs class="upper-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/about"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="平台"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 平台"
+   >
+  平台
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/studio"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="androidStudio"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Android Studio"
+   >
+  Android Studio
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="googlePlay"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Google Play"
+   >
+  Google Play
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/jetpack"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="jetpack"
+   aria-label="Jetpack, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: Jetpack"
+   >
+  Jetpack
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/kotlin"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="kotlin"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Kotlin"
+   >
+  Kotlin
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/docs"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="文档"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 文档"
+   >
+  文档
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/news"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="新闻"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 新闻"
+   >
+  新闻
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="Android 开发者"    tenant-name="Android Developers"                >
+  <form class="devsite-search-form" action="https://developer.android.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+                        <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+                                                <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/jetpack"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Lower Header"
+              data-value="1"
+          >
+            Jetpack
+      
+  </a>
+        </li>
+  </ul>
+                                                        </div>
+                                                                            </div>
+                                      <div class="devsite-doc-set-nav-row">
+                                                      <devsite-tabs class="lower-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/jetpack"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="概览"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 概览"
+   >
+  概览
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/jetpack/docs/getting-started"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="库"
+   aria-label="库, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: 库"
+   >
+  库
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/jetpack/docs/feedback"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="社区"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 社区"
+   >
+  社区
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/jetpack/compose"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="compose"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Compose"
+   >
+  Compose
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                            </div>
+          </div>  </div></div>
+  
+
+  </devsite-header>      <devsite-book-nav scrollbars >
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+        <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                              </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+                  <a href="/about"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 平台"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="平台">
+      <span class="devsite-nav-text" tooltip >
+      平台
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/studio"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Android Studio"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="androidStudio">
+      <span class="devsite-nav-text" tooltip >
+      Android Studio
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/distribute"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Play"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="googlePlay">
+      <span class="devsite-nav-text" tooltip >
+      Google Play
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/jetpack"
+           class="devsite-nav-title gc-analytics-event
+                            devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Jetpack"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="jetpack">
+      <span class="devsite-nav-text" tooltip >
+      Jetpack
+   </span>
+        </a>
+  
+                                            <ul class="devsite-nav-responsive-tabs">
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/jetpack"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 概览"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="概览">
+      <span class="devsite-nav-text" tooltip >
+      概览
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/jetpack/docs/getting-started"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 库"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="库">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      库
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/jetpack/docs/feedback"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 社区"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="社区">
+      <span class="devsite-nav-text" tooltip >
+      社区
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/jetpack/compose"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Compose"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="compose">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      Compose
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                  </ul>
+                          </li>
+                      <li class="devsite-nav-item">
+                  <a href="/kotlin"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Kotlin"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="kotlin">
+      <span class="devsite-nav-text" tooltip >
+      Kotlin
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/docs"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 文档"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="文档">
+      <span class="devsite-nav-text" tooltip >
+      文档
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/news"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 新闻"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="新闻">
+      <span class="devsite-nav-text" tooltip >
+      新闻
+   </span>
+        </a>
+  
+                                        </li>
+                    
+                  </ul>
+          </div>
+          <div class="devsite-mobile-nav-bottom">
+                            <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/jetpack/docs/getting-started"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android Jetpack 使用入门</span></a></li>
+  <li class="devsite-nav-item"><a href="/jetpack/docs/guide"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>应用架构指南</span></a></li>
+  <li class="devsite-nav-item"><a href="/jetpack/androidx"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>AndroidX 概览</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>迁移到 AndroidX</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/jetpack/androidx/migrate"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/migrate/artifact-mappings"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>支持库工件映射</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/migrate/class-mappings"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>支持库类对应关系</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>库版本</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/jetpack/androidx/versions"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/versions/all-channel"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>所有版本</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/versions/stable-channel"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>稳定版</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/versions/rc-channel"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>RC 版</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/versions/beta-channel"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>测试版</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/versions/alpha-channel"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Alpha 版</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>版本说明</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/activity"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.activity</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/ads"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.ads</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/annotation"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.annotation</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/appcompat"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.appcompat</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/arch"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.arch</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/asynclayoutinflater"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.asynclayoutinflater</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/autofill"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.autofill</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/benchmark"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.benchmark</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/biometric"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.biometric</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/browser"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.browser</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/camera"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.camera</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/car"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.car</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/cardview"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.cardview</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/collection"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.collection</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/compose"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.compose</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/concurrent"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.concurrent</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/constraintlayout"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.constraintlayout</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/contentpager"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.contentpager</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/coordinatorlayout"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.coordinatorlayout</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/core"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.core</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/cursoradapter"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.cursoradapter</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/customview"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.customview</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/databinding"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.databinding</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/documentfile"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.documentfile</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/drawerlayout"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.drawerlayout</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/dynamicanimation"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.dynamicanimation</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/emoji"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.emoji</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/enterprise"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.enterprise</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/exifinterface"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.exifinterface</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/fragment"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.fragment</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/gridlayout"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.gridlayout</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/heifwriter"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.heifwriter</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/interpolator"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.interpolator</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/leanback"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.leanback</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/legacy"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.legacy</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/lifecycle"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.lifecycle</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/loader"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.loader</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/localbroadcastmanager"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.localbroadcastmanager</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/media"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.media</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/media2"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.media2</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/mediarouter"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.mediarouter</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/multidex"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.multidex</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/navigation"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.navigation</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/paging"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.paging</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/palette"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.palette</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/percentlayout"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.percentlayout</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/preference"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.preference</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/print"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.print</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/recommendation"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.recommendation</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/recyclerview"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.recyclerview</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/remotecallback"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.remotecallback</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/room"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.room</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/savedstate"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.savedstate</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/security"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.security</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/sharetarget"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.sharetarget</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/slice"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.slice</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/slidingpanelayout"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.slidingpanelayout</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/sqlite"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.sqlite</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/swiperefreshlayout"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.swiperefreshlayout</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/test"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.test</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/textclassifier"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.textclassifier</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/transition"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.transition</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/tvprovider"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.tvprovider</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/ui"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.ui</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/vectordrawable"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.vectordrawable</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/versionedparcelable"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.versionedparcelable</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/viewpager"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.viewpager</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/viewpager2"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.viewpager2</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/wear"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.wear</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/webkit"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.webkit</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/work"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>androidx.work</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/jetifier"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>tools.build.jetifier</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>版本说明归档</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/archive"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/archive/test"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>测试</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/archive/arch"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>架构组件</span></a></li><li class="devsite-nav-item"><a href="/jetpack/androidx/releases/archive/androidx"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>AndroidX</span></a></li></ul></devsite-expandable-nav></li>
+          </ul>
+                                                                                                                                                                                                  </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            Android 开发者
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/jetpack"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            Jetpack
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/jetpack/docs/getting-started"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="3"
+          >
+            库
+      
+  </a>
+        </li>
+  </ul>
+               <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+          </div>
+
+              <h1 class="devsite-page-title">AndroidX 概览</h1>
+    
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+      ">
+
+              
+
+    <p><code translate="no" dir="ltr">androidx</code> 命名空间中的工件包含 Android <a href="/jetpack">Jetpack</a> 库。与支持库一样，<code translate="no" dir="ltr">androidx</code> 命名空间中的库与 Android 平台分开提供，并向后兼容各个 Android 版本。</p>
+
+    <p>AndroidX 对原始 Android <a href="/topic/libraries/support-library">支持库</a>进行了重大改进，后者现在已不再维护。<code translate="no" dir="ltr">androidx</code> 软件包完全取代了支持库，不仅提供同等的功能，而且提供了新的库。</p>
+
+    <p>此外，AndroidX 还包括以下功能：</p>
+
+    <ul>
+    <li><p>AndroidX 中的所有软件包都使用一致的命名空间，以字符串 <code translate="no" dir="ltr">androidx</code> 开头。支持库软件包已映射到对应的 <code translate="no" dir="ltr">androidx.*</code> 软件包。有关所有旧类到新类以及旧构建工件到新构建工件的完整映射，请参阅<a href="/jetpack/androidx/refactor">软件包重构</a>页面。</p></li>
+    <li><p>与支持库不同，<code translate="no" dir="ltr">androidx</code> 软件包会单独维护和更新。从版本 1.0.0 开始，<code translate="no" dir="ltr">androidx</code> 软件包使用严格的<a href="https://semver.org/" class="external">语义版本控制</a>。您可以单独更新项目中的各个 AndroidX 库。</p></li>
+    <li><p><a href="/topic/libraries/support-library/revisions#28-0-0">版本 28.0.0</a> 是支持库的最后一个版本。我们将不再发布 <code translate="no" dir="ltr">android.support</code> 库版本。所有新功能都将在 <code translate="no" dir="ltr">androidx</code> 命名空间中开发。</p></li>
+    </ul>
+
+    <h2 id="using_androidx_libraries_in_your_project">在项目中使用 <code translate="no" dir="ltr">androidx</code> 库</h2>
+
+    <p>如需了解如何迁移现有项目，请参阅<a href="/jetpack/androidx/migrate">迁移到 AndroidX</a>。</p>
+
+    <p>如果要在新项目中使用命名空间为 <code translate="no" dir="ltr">androidx</code> 的库，则需要将编译 SDK 设置为 Android 9.0（API 级别 28）或更高版本，并在 <a href="/studio/build#properties-files"><code translate="no" dir="ltr">gradle.properties</code></a> 文件中将以下两个 Android Gradle 插件标记设置为 <code translate="no" dir="ltr">true</code>。</p>
+
+    <ul>
+    <li><code translate="no" dir="ltr">android.useAndroidX</code>：该标记设置为 <code translate="no" dir="ltr">true</code> 时，Android 插件会使用对应的 AndroidX 库，而非支持库。如果未指定，则该标记默认为 <code translate="no" dir="ltr">false</code>。</li>
+    <li><code translate="no" dir="ltr">android.enableJetifier</code>：该标记设置为 <code translate="no" dir="ltr">true</code> 时，Android 插件会通过重写其二进制文件来自动迁移现有的第三方库，以使用 AndroidX 依赖项。如果未指定，该标记默认为 <code translate="no" dir="ltr">false</code>。</li>
+    </ul>
+
+    <h2 id="api_reference">API 参考文档</h2>
+
+    <p>有关 <code translate="no" dir="ltr">androidx</code> 命名空间中的所有软件包和类，请参阅 <a href="/reference/androidx/packages">AndroidX 参考文档部分</a>。</p>
+
+    <h2 id="additional_resources">其他资源</h2>
+
+    <p>如需详细了解相关组件，请参阅 Jetpack <a href="/jetpack">首页</a>。如需详细了解如何将软件包从支持库重构为 <code translate="no" dir="ltr">androidx</code>，请阅读与该主题相关的<a href="https://android-developers.googleblog.com/2018/05/hello-world-androidx.html">这篇博文</a>。</p>
+
+
+          </div>
+
+    
+                   <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+                   
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Content and code samples on this page are subject to the licenses described in the <a href="/license">Content License</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>  <p>Last updated 2020-02-21.</p></devsite-content-footer>
+
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="//developers.google.cn/china/#follow-google-developers-on-wechat"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-modal-toggle="wechat"
+                data-label="Footer WeChat Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="/_static/android/images/logo-wechat.png"
+             alt="微信">
+                微信
+      </a>
+      <div class="devsite-footer-promo-description">在微信上关注“Google Developers”</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//twitter.com/AndroidDev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-label="Footer Twitter Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="/_static/android/images/logo-twitter.svg"
+             alt="Twitter">
+                Twitter
+      </a>
+      <div class="devsite-footer-promo-description">在 Twitter 上关注 @AndroidDev</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//www.youtube.com/user/androiddevelopers"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-label="Footer YouTube Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="//www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png"
+             alt="YouTube">
+                YouTube
+      </a>
+      <div class="devsite-footer-promo-description">在 YouTube 上访问“Android Developers”频道</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">关于 Android</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Android
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/enterprise/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            Enterprise
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/security-center/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            安全
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//source.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            源代码
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">支持</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//issuetracker.google.com/issues/new?component=190923&amp;template=841312"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            报告平台错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//issuetracker.google.com/issues/new?component=192697"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            报告文档错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//support.google.com/googleplay/android-developer"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Google Play support
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://google.qualtrics.com/jfe/form/SV_ewWXIoEVLBcyp7f??reserved=1&amp;utm_source=FooterLink&amp;Q_Language=en&amp;utm_medium=own_srch&amp;utm_campaign=developer.android.com&amp;utm_term=0&amp;utm_content=0&amp;productTag=reg&amp;campaignDate=may19&amp;pType=devel&amp;referral_code=gV420370"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            参加调查研究
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">文档</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/guide"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            开发者指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/design"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            设计指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/reference"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            API 参考
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/samples"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            示例
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/studio/intro"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 5)"           >
+            Android Studio
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="/_static/images/lockup-developers.svg"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developers.google.cn/products/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+                    data-cookie-policy="//policies.google.cn/technologies/cookies"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/license"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer License link"
+         >
+          许可
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/distribute/marketing-tools/brand-guidelines"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Brand guidelines link"
+         >
+          品牌指南
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">通过电子邮件接收资讯和提示</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/newsletter/#subscribe"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   data-cookie-policy="//policies.google.cn/technologies/cookies"
+                  ></devsite-snackbar>
+    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Android \u5f00\u53d1\u8005", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-5831155-3"}]</script>
+<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "language": {"requested": "zh-cn", "served": "zh-cn"}, "projectName": "Android \u5f00\u53d1\u8005", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}, "tags": ["GTM-KMSWPCJ"]}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[3,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android","https://android-dot-google-developers.gonglchuangl.net",1,null,["/_pwa/android/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
