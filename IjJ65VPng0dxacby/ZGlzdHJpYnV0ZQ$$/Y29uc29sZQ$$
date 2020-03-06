@@ -1,0 +1,2679 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Android Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#3ddc84">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/android/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/touchicon-180.png"><link rel="canonical" href="https://developer.android.google.cn/distribute/console?hl=zh-cn">      
+<title>Google Play &nbsp;|&nbsp; Android Developers</title>
+
+<meta property="og:title" content="Google Play &nbsp;|&nbsp; Android Developers">
+
+      <meta name="description"                    content="使用 Google Play 管理中心发布应用和游戏，并在 Google Play 上拓展业务。利用各项功能提高应用的质量、吸引受众群体以及赚取收入等。
+">
+          <meta property="og:description" content="使用 Google Play 管理中心发布应用和游戏，并在 Google Play 上拓展业务。利用各项功能提高应用的质量、吸引受众群体以及赚取收入等。
+">
+      
+  <meta property="og:url" content="https://developer.android.google.cn/distribute/console?hl=zh-cn">
+
+  <meta property="og:locale" content="zh_cn">
+
+
+
+
+
+
+    </head>
+  <body type="landing"
+        theme="android-theme"
+        class="dac-play-console-page dac-play-sublandings"
+        
+        layout="full"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+                              </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                            <devsite-tabs class="upper-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/about"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="平台"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 平台"
+   >
+  平台
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/studio"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="androidStudio"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Android Studio"
+   >
+  Android Studio
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/distribute"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="googlePlay"
+   aria-label="Google Play, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: Google Play"
+   >
+  Google Play
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/jetpack"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="jetpack"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Jetpack"
+   >
+  Jetpack
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/kotlin"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="kotlin"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Kotlin"
+   >
+  Kotlin
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/docs"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="文档"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 文档"
+   >
+  文档
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/news"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="新闻"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 新闻"
+   >
+  新闻
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="Google Play"    tenant-name="Android Developers"                >
+  <form class="devsite-search-form" action="https://developer.android.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+                        <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+                                                <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/distribute"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Lower Header"
+              data-value="1"
+          >
+            Google Play
+      
+  </a>
+        </li>
+  </ul>
+                                                              <div class="devsite-product-description"></div>
+  
+                          </div>
+                                                                      <div class="devsite-product-button-row">
+      <a href="//play.google.com/apps/publish/"
+      class="button dac-button
+      "
+            >启动 Play 管理中心</a></div>
+                                    </div>
+                                      <div class="devsite-doc-set-nav-row">
+                                                      <devsite-tabs class="lower-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/distribute"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="概览"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 概览"
+   >
+  概览
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/distribute/console"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="play管理中心"
+   aria-label="Play 管理中心, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: Play 管理中心"
+   >
+  Play 管理中心
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute/google-play"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="play商店"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Play 商店"
+   >
+  Play 商店
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute/play-billing"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="play结算服务"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Play 结算服务"
+   >
+  Play 结算服务
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute/play-policies"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="play政策"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Play 政策"
+   >
+  Play 政策
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute/play-services"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="play服务"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Play 服务"
+   >
+  Play 服务
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute/games"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="游戏"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 游戏"
+   >
+  游戏
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute/best-practices"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="指南"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 指南"
+   >
+  指南
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute/marketing-tools"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="资源"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 资源"
+   >
+  资源
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/stories"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="案例"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 案例"
+   >
+  案例
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                            </div>
+          </div>  </div></div>
+  
+
+  </devsite-header>      <devsite-book-nav scrollbars hidden>
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+        <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+                              </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+                  <a href="/about"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 平台"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="平台">
+      <span class="devsite-nav-text" tooltip >
+      平台
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/studio"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Android Studio"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="androidStudio">
+      <span class="devsite-nav-text" tooltip >
+      Android Studio
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/distribute"
+           class="devsite-nav-title gc-analytics-event
+                            devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Play"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="googlePlay">
+      <span class="devsite-nav-text" tooltip >
+      Google Play
+   </span>
+        </a>
+  
+                                            <ul class="devsite-nav-responsive-tabs">
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/distribute"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 概览"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="概览">
+      <span class="devsite-nav-text" tooltip >
+      概览
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/distribute/console"
+           class="devsite-nav-title gc-analytics-event
+                            devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Play 管理中心"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="play管理中心">
+      <span class="devsite-nav-text" tooltip >
+      Play 管理中心
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/distribute/google-play"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Play 商店"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="play商店">
+      <span class="devsite-nav-text" tooltip >
+      Play 商店
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/distribute/play-billing"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Play 结算服务"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="play结算服务">
+      <span class="devsite-nav-text" tooltip >
+      Play 结算服务
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/distribute/play-policies"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Play 政策"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="play政策">
+      <span class="devsite-nav-text" tooltip >
+      Play 政策
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/distribute/play-services"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Play 服务"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="play服务">
+      <span class="devsite-nav-text" tooltip >
+      Play 服务
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/distribute/games"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 游戏"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="游戏">
+      <span class="devsite-nav-text" tooltip >
+      游戏
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/distribute/best-practices"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 指南"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="指南">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      指南
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/distribute/marketing-tools"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 资源"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="资源">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      资源
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/stories"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 案例"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="案例">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      案例
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                  </ul>
+                          </li>
+                      <li class="devsite-nav-item">
+                  <a href="/jetpack"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Jetpack"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="jetpack">
+      <span class="devsite-nav-text" tooltip >
+      Jetpack
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/kotlin"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Kotlin"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="kotlin">
+      <span class="devsite-nav-text" tooltip >
+      Kotlin
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/docs"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 文档"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="文档">
+      <span class="devsite-nav-text" tooltip >
+      文档
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/news"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 新闻"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="新闻">
+      <span class="devsite-nav-text" tooltip >
+      新闻
+   </span>
+        </a>
+  
+                                        </li>
+                    
+                  </ul>
+          </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+                        >
+          <devsite-toc class="devsite-nav"
+            disabled></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">          <div class="devsite-banner devsite-banner-announcement"
+           >
+        <div class="devsite-banner-message">
+          <div class="devsite-banner-message-text">
+            参加一系列免费在线讲座，学习知识和经验，拓展在 Google Play 上的业务。<a href="https://developersonair.withgoogle.com/">立即报名</a>
+          </div>
+        </div>
+      </div>
+        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            Google Play
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/distribute/console"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            Play 管理中心
+      
+  </a>
+        </li>
+  </ul>
+          </div>
+
+        
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 disabled>
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+              devsite-no-page-title
+      ">
+
+                <section class="devsite-landing-row devsite-landing-row-1-up dac-sublandings-hero"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item dac-sublandings-hero-copy"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <iframe class="devsite-embedded-youtube-video"
+        allowfullscreen=""
+        data-autohide="1"
+        data-showinfo="0"
+        data-video-id="q5PU85zTEBg"
+        frameborder="0"></iframe>
+  </div>
+
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+        
+
+                  <div class="devsite-landing-row-item-description-content">
+            <img alt src="/images/distribute/play-console-icon.svg" class="dac-icon"/> <h1>Google Play 管理中心</h1> <p>
+  使用 Google Play 管理中心发布您的应用和游戏，并在 Google Play 上拓展业务。利用各项功能来协助您提高应用的质量、吸引受众群体以及赚取收入等。
+</p>
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="//play.google.com/apps/publish/"
+      class="button dac-button dac-outline-button
+      "
+            >登录</a>    <a href="https://android-developers.googleblog.com/2019/05/whats-new-in-play.html"
+      class="button dac-button dac-alt-flat-button
+      "
+            >新功能</a></div>
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up dac-top-spacing dac-sublandings-section-header dac-no-top-margin"
+               background="grey"
+  
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+                    <h3 id="">
+      关注质量</h3>
+    
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            要通过 Google Play 获得成功，首要的一点就是质量。最优质的应用和游戏具有更高的评分、更多的安装量和更高的吸引力。您可以通过 Play 管理中心测试并了解应用在每个阶段的效果。
+
+          </div>
+        
+        
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item dac-label dac-success-story dac-landing-row-bg-yellow"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <iframe class="devsite-embedded-youtube-video"
+        allowfullscreen=""
+        data-autohide="1"
+        data-showinfo="0"
+        data-video-id="qRXkEQOtQ98"
+        frameborder="0"></iframe>
+  </div>
+
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+                  <div class="devsite-landing-row-item-labels">
+      <span
+            class="                          "
+            >成功案例</span></div>
+        
+        
+
+                  <div class="devsite-landing-row-item-description-content">
+            <h4>
+  《疯狂大厨》利用开放式 Beta 版测试将崩溃率降低了 21%，并将留存率提高了 7%
+</h4> <p><strong>Big Fish Games</strong> 推出的《疯狂大厨》</p>
+
+          </div>
+        
+        
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-1-up dac-banner-img"
+               background="grey"
+  
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-bottom-spacing"
+               background="grey"
+  
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="white"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="/distribute/best-practices/launch/test-tracks">
+        <h3 id="">
+      使用封闭式和开放式测试轨道</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            在发布应用和游戏之前，通过内部版、封闭式和开放式测试轨道收集测试人员的反馈，从而反复改进想法并提高应用和游戏的质量。您还可以按国家/地区定位每个版本。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/distribute/best-practices/launch/test-tracks"
+      class="button dac-button dac-flat-button
+      "
+            >使用封闭式/开放式测试轨道</a></div>
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="white"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="/distribute/best-practices/launch/pre-launch-crash-reports">
+        <h3 id="">
+      发布前测试报告</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            查看在由 Firebase 测试实验室提供支持的热门实体设备上针对您的 Alpha 和 Beta 版 APK 执行的自动化测试的结果。了解所遇到的任何崩溃、显示问题和性能问题，以及安全漏洞。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/distribute/best-practices/launch/pre-launch-crash-reports"
+      class="button dac-button dac-flat-button
+      "
+            >使用发布前测试报告</a></div>
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="white"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="/topic/performance/vitals/">
+        <h3 id="android-vitals">
+      Android Vitals</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            了解并改善应用的性能和质量。查看稳定性、呈现时间、电池使用情况、启动时间和权限等方面的指标。为了协助进行调试，崩溃数据会与发布前测试报告相关联。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/topic/performance/vitals"
+      class="button dac-button dac-flat-button
+      "
+            >了解 Android Vitals</a></div>
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="white"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="/distribute/best-practices/engage/user-reviews">
+        <h3 id="">
+      评价分析</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            浏览和分析用户评价，找出有助于您改进应用或游戏的趋势和主题。您可以回复评价，与您的用户互动。了解您的回复对应用评分的影响。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/distribute/best-practices/engage/user-reviews"
+      class="button dac-button dac-flat-button
+      "
+            >分析用户评价</a></div>
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up dac-top-spacing dac-sublandings-section-header"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+                    <h3 id="">
+      放心发布</h3>
+    
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            当您准备好发布应用时，可以通过 Play 管理中心放心地发布应用和版本更新。您可以使用精细的控制功能和分发选项，并全面了解发布期间和之后的应用数据。
+
+          </div>
+        
+        
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item dac-label dac-success-story dac-landing-row-bg-mint"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <iframe class="devsite-embedded-youtube-video"
+        allowfullscreen=""
+        data-autohide="1"
+        data-showinfo="0"
+        data-video-id="1Iw7Tg_afKk"
+        frameborder="0"></iframe>
+  </div>
+
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+                  <div class="devsite-landing-row-item-labels">
+      <span
+            class="                          "
+            >成功案例</span></div>
+        
+        
+
+                  <div class="devsite-landing-row-item-description-content">
+            <h4>Wooga 利用 Google Play 的快速迭代功能，率先在 Android 平台推出新功能。</h4>
+
+          </div>
+        
+        
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-cards-1-1 dac-heading-medium dac-heading-linked"
+         background="grey"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="//support.google.com/googleplay/android-developer/answer/7383463">
+        <h3 id="">
+      版本信息中心</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            在某个版本推出后对其进行跟踪，查看该版本对应用重要指标的影响。将数据与之前的版本进行比较。在发生异常情况时及时暂停分阶段发布。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="//support.google.com/googleplay/android-developer/answer/7383463"
+      class="button dac-button dac-flat-button
+      "
+            >跟踪版本</a></div>
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="grey"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="https://support.google.com/googleplay/android-developer/answer/6346149">
+        <h3 id="">
+      分阶段发布</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            逐步面向越来越多的用户发布更新的应用和游戏，以便找出遗漏的问题。您可以根据需要暂停和恢复分阶段发布，以便及时发现和解决问题。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://support.google.com/googleplay/android-developer/answer/6346149"
+      class="button dac-button dac-flat-button
+      "
+            >分阶段发布</a></div>
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up dac-bottom-spacing dac-bg-img-in-row"
+           
+           >
+
+      
+          <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="grey"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="//support.google.com/googleplay/android-developer/answer/7353455">
+        <h3 id="">
+      设备目录</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            您可以在各种设备上提供出色的用户体验，在丰富的设备数据中搜索和过滤每个经过 Google 认证的设备，并保存搜索选项。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="//support.google.com/googleplay/android-developer/answer/7353455"
+      class="button dac-button dac-flat-button
+      "
+            >目标设备</a></div>
+              </div>
+    </div>
+      
+</div>
+                      <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="grey"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="//support.google.com/googleplay/android-developer/answer/7381861">
+        <h3 id="">
+      免安装应用</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            
+
+您可以快速反复改进，并通过受信任的用户测试预发布版的免安装应用。一旦您发布免安装应用，Google Play 免安装体验便可让用户从任何链接体验您的应用（只需点按一次，而无需事先安装）。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="//support.google.com/googleplay/android-developer/answer/7381861"
+      class="button dac-button dac-flat-button
+      "
+            >发布免安装应用</a></div>
+              </div>
+    </div>
+      
+</div>
+                  </div>
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-description devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+      
+</div>
+                  </div>
+            </div>
+
+        
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up dac-top-spacing dac-sublandings-section-header"
+               background="grey"
+  
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+                    <h3 id="">
+      拓展业务</h3>
+    
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            当您想扩大受众群体并赚取更多收入时，可以利用 Play 管理中心的各种实用工具。您可以了解用户如何找到您的应用、对商品详情进行实验、将效果与同类应用的效果进行比较以及开展广告活动。您还可以调整定价、管理应用内商品和订阅以及开展促销活动等。
+
+          </div>
+        
+        
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item dac-label dac-success-story dac-landing-row-bg-blue"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+    <a href="/stories/games/hashcube">
+        <img alt=""
+       src="/images/branding/partners/icons/sudoku-quest.png"
+       srcset="https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_36.png 36w,https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_48.png 48w,https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_72.png 72w,https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_96.png 96w,https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_480.png 480w,https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_720.png 720w,https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_856.png 856w,https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_960.png 960w,https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_1440.png 1440w,https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_1920.png 1920w,https://developer.android.google.cn/images/branding/partners/icons/sudoku-quest_2880.png 2880w"
+       sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 708px">
+  
+  </a>
+  </figure>
+  </div>
+
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+                  <div class="devsite-landing-row-item-labels">
+      <span
+            class="                          "
+            >成功案例</span></div>
+        
+        
+
+                  <div class="devsite-landing-row-item-description-content">
+            <h4>
+  HashCube 利用商品详情实验使《数独探秘无偿地》在 Google Play 上的安装量提升了 88%。
+</h4> <p><strong>HashCube</strong> 推出的《数独探秘无偿地》</p>
+
+          </div>
+        
+        
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-3-up dac-cards-1-1-2"
+               background="grey"
+  
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="white"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="/distribute/best-practices/grow/store-listing-experiments">
+        <h3 id="">
+      商品详情实验</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            找出哪个版本的商品详情内容最能提升安装量。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/distribute/best-practices/grow/store-listing-experiments"
+      class="button dac-button dac-flat-button
+      "
+            >提升安装量</a></div>
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="white"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="/distribute/best-practices/grow/install-ads">
+        <h3 id="google-ads">
+      Google Ads 广告系列</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            创建应用广告系列，从而通过 Google 搜索、Play 商店搜索和推荐、YouTube 和 Google 展示广告网络提高有价值的应用安装量。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/distribute/best-practices/grow/install-ads"
+      class="button dac-button dac-flat-button
+      "
+            >开始使用 Google Ads</a></div>
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="white"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="/distribute/best-practices/grow/user-aquisition">
+        <h3 id="">
+      流量获取报告</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            通过报告了解应用或游戏获取用户的成效。我们提供多种细分数据和对比方式，还可以按渠道和国家/地区进行过滤。了解哪些渠道能够随时间推移不断吸引保留应用的用户和买家。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/distribute/best-practices/grow/user-aquisition"
+      class="button dac-button dac-flat-button
+      "
+            >了解获取情况</a></div>
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up dac-bottom-spacing dac-bg-img-in-column"
+               background="grey"
+  
+           >
+
+      
+          <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-description devsite-landing-row-item-no-media dac-full-height"
+     
+     >
+
+  
+    
+
+      
+</div>
+                  </div>
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="white"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="//support.google.com/googleplay/android-developer/answer/3125566">
+        <h3 id="">
+      翻译服务</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            请求合格的第三方翻译服务为您的应用或游戏、应用内商品和广告系列提供翻译。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="//support.google.com/googleplay/android-developer/answer/3125566"
+      class="button dac-button dac-flat-button
+      "
+            >请求翻译</a></div>
+              </div>
+    </div>
+      
+</div>
+                      <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked"
+         background="white"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="//developers.google.com/games/services/">
+        <h3 id="">
+      游戏服务</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            了解有关玩家的详情，包括玩家的来源、游戏进度以及购买应用内商品的情况等等。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="//developers.google.com/games/services/"
+      class="button dac-button dac-flat-button
+      "
+            >获取游戏统计信息</a></div>
+              </div>
+    </div>
+      
+</div>
+                      <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked dac-grow-2"
+         background="white"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="/distribute/best-practices/earn/subscriptions">
+        <h3 id="">
+      订阅信息中心</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            查看订阅项目的效果，并做出更明智的业务拓展决策。您还可以从多个维度了解和分析订阅者总数、收入、留存率和用户流失率。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/distribute/best-practices/earn/subscriptions"
+      class="button dac-button dac-flat-button
+      "
+            >管理订阅</a></div>
+              </div>
+    </div>
+      
+</div>
+                  </div>
+            </div>
+
+        
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-1-up dac-cta dac-top-spacing dac-bottom-spacing"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-center"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+                    <h3 id="play">
+      立即开始使用 Play 管理中心</h3>
+    
+    
+
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="//play.google.com/apps/publish/"
+      class="button dac-button dac-outline-button
+      "
+            >登录</a></div>
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-1-up dac-top-spacing dac-resources-heading"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-center"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+                    <h3 id="">
+      资源</h3>
+    
+    
+
+        
+        
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked dac-landing-row-item-invert dac-landing-row dac-landing-row-bg-slate dac-landing-row-item-icon-container-left dac-landing-row-item-icon-container-bg-red"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+             icon-position="left"
+  >
+
+          <a href="//play.google.com/store/apps/details?id=com.google.android.apps.playconsole">
+      <div class="devsite-landing-row-item-icon-container"
+       
+       >
+      <img class="devsite-landing-row-item-icon"
+         alt=""
+         src="/images/distribute/console-app.svg"
+         srcset=""
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="//play.google.com/store/apps/details?id=com.google.android.apps.playconsole">
+        <h3 id="play">
+      Play 管理中心应用</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            快速访问应用的统计信息，获取重要更新的通知以及回复评价。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="//play.google.com/store/apps/details?id=com.google.android.apps.playconsole"
+      class="button dac-button dac-flat-button
+      "
+            >从 Google Play 下载</a></div>
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked dac-landing-row-bg-slate dac-landing-row-item-icon-container-left dac-landing-row-item-icon-container-bg-green"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+             icon-position="left"
+  >
+
+          <a href="//play.google.com/about/developer-content-policy/">
+      <div class="devsite-landing-row-item-icon-container"
+       
+       >
+      <img class="devsite-landing-row-item-icon"
+         alt=""
+         src="/images/distribute/policy-center.svg"
+         srcset=""
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="//play.google.com/about/developer-content-policy/">
+        <h3 id="">
+      政策中心</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            了解 Google Play 的开发者政策并向全球受众群体提供值得信赖的应用。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="//play.google.com/about/developer-content-policy/"
+      class="button dac-button dac-flat-button
+      "
+            >政策中心</a></div>
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up"
+           
+           >
+
+      
+          <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked dac-landing-row dac-landing-row-bg-slate dac-landing-row-item-icon-container-left dac-landing-row-item-icon-container-bg-yellow"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+             icon-position="left"
+  >
+
+          <a href="//support.google.com/googleplay/android-developer/">
+      <div class="devsite-landing-row-item-icon-container"
+       
+       >
+      <img class="devsite-landing-row-item-icon"
+         alt=""
+         src="/images/distribute/help-center.svg"
+         srcset=""
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="//support.google.com/googleplay/android-developer/">
+        <h3 id="">
+      帮助中心</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            请访问帮助中心，了解如何使用 Google Play 管理中心并与开发者支持团队联系。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="//support.google.com/googleplay/android-developer/"
+      class="button dac-button dac-flat-button
+      "
+            >帮助中心</a></div>
+              </div>
+    </div>
+      
+</div>
+                      <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-medium dac-heading-linked dac-landing-row-item-invert dac-landing-row dac-landing-row-bg-slate dac-landing-row-item-icon-container-left dac-landing-row-item-icon-container-bg-blue"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+             icon-position="left"
+  >
+
+          <a href="/google-play/academy/">
+      <div class="devsite-landing-row-item-icon-container"
+       
+       >
+      <img class="devsite-landing-row-item-icon"
+         alt=""
+         src="/images/distribute/academy-app-success-resource-icon.svg"
+         srcset=""
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="/google-play/academy/">
+        <h3 id="">
+      应用开发学习学院</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            快速了解如何充分利用 Play 管理中心、了解 Play 政策以及使用最佳做法。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/google-play/academy"
+      class="button dac-button dac-flat-button
+      "
+            >应用成功学院</a></div>
+              </div>
+    </div>
+      
+</div>
+                  </div>
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-list-wrapped dac-landing-row-bg-blue dac-grow-1 dac-landing-row-item-buttons-right"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+                    <h3 id="">
+      更多资源</h3>
+    
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            可协助您备妥宣传资源以用于营销的工具和资源。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="/distribute/marketing-tools"
+      class="dac-chevron-right
+      "
+            ></a></div>
+              </div>
+    </div>
+      
+</div>
+                  </div>
+            </div>
+
+        
+  
+  </section>
+
+          </div>
+
+    
+    
+          </article>
+</article>
+
+
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="https://twitter.com/GooglePlayDev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 1)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/_static/android/images/logo-twitter.svg"
+             alt="Twitter">
+                Twitter
+      </a>
+      <div class="devsite-footer-promo-description">关注 @GooglePlayDev，获取相关资讯和支持</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="https://medium.com/googleplaydev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 2)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/images/footer/logo-medium-round.svg"
+             alt="中等">
+                中等
+      </a>
+      <div class="devsite-footer-promo-description">阅读由 Play 团队提供的报道和行业观点</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="https://www.linkedin.com/company/googleplaydev/"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 3)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/images/footer/logo-linkedin.svg"
+             alt="LinkedIn">
+                LinkedIn
+      </a>
+      <div class="devsite-footer-promo-description">与 Google Play 应用和游戏团队联系</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="https://m.me/googleplaydev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 4)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/images/footer/logo-facebook-messenger.svg"
+             alt="Messenger">
+                Messenger
+      </a>
+      <div class="devsite-footer-promo-description">如需开发者支持，请向 @GooglePlayDev 发送消息</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">关于 Android</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://www.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Android
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://www.android.com/enterprise/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            企业
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://www.android.com/security-center/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            安全性
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://source.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            源代码
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">支持</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://issuetracker.google.com/issues/new?component=190923&amp;template=841312"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            报告平台错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://issuetracker.google.com/issues/new?component=192697"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            报告文档错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://source.android.com/setup/community"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            社区论坛
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://support.google.com/googleplay/android-developer"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            Google Play 支持
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 5)"           >
+            参与用户调查
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">文档</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/guide"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            开发者指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/design"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            设计指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/reference"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            API 参考
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/samples"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            示例
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/studio/intro"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 5)"           >
+            Android Studio
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="/_static/images/lockup-developers.svg"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developers.google.cn/products/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+                    data-cookie-policy="//policies.google.cn/technologies/cookies"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/license"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer License link"
+         >
+          许可
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/distribute/marketing-tools/brand-guidelines"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Brand guidelines link"
+         >
+          品牌指南
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">通过电子邮件接收资讯和提示</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/newsletter/#subscribe"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   data-cookie-policy="//policies.google.cn/technologies/cookies"
+                  ></devsite-snackbar>
+    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Google Play", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-5831155-3"}]</script>
+<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "language": {"requested": "zh-cn", "served": "zh-cn"}, "projectName": "Google Play", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}, "tags": ["GTM-KMSWPCJ"]}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[3,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android","https://android-dot-google-developers.gonglchuangl.net",1,null,["/_pwa/android/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
