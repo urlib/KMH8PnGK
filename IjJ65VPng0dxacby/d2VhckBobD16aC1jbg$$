@@ -1,0 +1,2667 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Android Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#3ddc84">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/android/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/touchicon-180.png"><link rel="canonical" href="https://developer.android.google.cn/wear?hl=zh-cn">      
+<title>Android 开发者 &nbsp;|&nbsp; Android Developers</title>
+
+<meta property="og:title" content="Android 开发者 &nbsp;|&nbsp; Android Developers">
+
+      <meta name="description"                    content="面向 Wear OS 开发者和设计人员的官方网站。Wear OS by Google 谷歌是由 Google 推出的一款人人皆宜的穿戴式设备操作系统。
+">
+          <meta property="og:description" content="面向 Wear OS 开发者和设计人员的官方网站。Wear OS by Google 谷歌是由 Google 推出的一款人人皆宜的穿戴式设备操作系统。
+">
+      
+  <meta property="og:url" content="https://developer.android.google.cn/wear?hl=zh-cn">
+
+  <meta property="og:image" content="https://developer.android.google.cn/images/android-developers.png">
+  <meta property="og:image:secure_url" content="https://developer.android.google.cn/images/android-developers.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale" content="zh_cn">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+
+    </head>
+  <body type="landing"
+        theme="android-theme"
+        class="dac-wear-page dac-platforms-sublandings"
+        
+        layout="docs"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+  <a href="https://developer.android.google.cn/?hl=zh-cn" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                              </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                            <devsite-tabs class="upper-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  active>
+            <a href="https://developer.android.google.cn/about?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="平台"
+   aria-label="平台, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: 平台"
+   >
+  平台
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/studio?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="androidStudio"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Android Studio"
+   >
+  Android Studio
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/distribute?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="googlePlay"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Google Play"
+   >
+  Google Play
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/jetpack?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="jetpack"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Jetpack"
+   >
+  Jetpack
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/kotlin?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="kotlin"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Kotlin"
+   >
+  Kotlin
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/docs?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="文档"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 文档"
+   >
+  文档
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/news?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="新闻"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 新闻"
+   >
+  新闻
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="Android 开发者"    tenant-name="Android Developers"                >
+  <form class="devsite-search-form" action="https://developer.android.google.cn/s/results?hl=zh-cn" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+                        <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+                                                <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="https://developer.android.google.cn/about?hl=zh-cn"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Lower Header"
+              data-value="1"
+          >
+            平台简介
+      
+  </a>
+        </li>
+  </ul>
+                                                              <div class="devsite-product-description"></div>
+  
+                          </div>
+                                                                            </div>
+                                      <div class="devsite-doc-set-nav-row">
+                                                      <devsite-tabs class="lower-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="https://developer.android.google.cn/about?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="概览"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 概览"
+   >
+  概览
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="https://developer.android.google.cn/preview?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="版本"
+   aria-label="版本, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: 版本"
+   >
+  版本
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/guide/platform?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="技术"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 技术"
+   >
+  技术
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/topic/libraries/support-library?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="库"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 库"
+   >
+  库
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/games?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="游戏"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 游戏"
+   >
+  游戏
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/ml?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="机器学习"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 机器学习"
+   >
+  机器学习
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="https://developer.android.google.cn/privacy?hl=zh-cn"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="隐私设置"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 隐私设置"
+   >
+  隐私设置
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                            </div>
+          </div>  </div></div>
+  
+
+  </devsite-header>      <devsite-book-nav scrollbars >
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+        <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                              </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+                  <a href="/about"
+           class="devsite-nav-title gc-analytics-event
+                            devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 平台"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="平台">
+      <span class="devsite-nav-text" tooltip >
+      平台
+   </span>
+        </a>
+  
+                                            <ul class="devsite-nav-responsive-tabs">
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/about"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 概览"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="概览">
+      <span class="devsite-nav-text" tooltip >
+      概览
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/preview"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 版本"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="版本">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      版本
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/guide/platform"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 技术"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="技术">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      技术
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/topic/libraries/support-library"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 库"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="库">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      库
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/games"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 游戏"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="游戏">
+      <span class="devsite-nav-text" tooltip >
+      游戏
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/ml"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 机器学习"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="机器学习">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      机器学习
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/privacy"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 隐私设置"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="隐私设置">
+      <span class="devsite-nav-text" tooltip >
+      隐私设置
+   </span>
+        </a>
+  </li>
+
+                                  </ul>
+                          </li>
+                      <li class="devsite-nav-item">
+                  <a href="/studio"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Android Studio"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="androidStudio">
+      <span class="devsite-nav-text" tooltip >
+      Android Studio
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/distribute"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Play"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="googlePlay">
+      <span class="devsite-nav-text" tooltip >
+      Google Play
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/jetpack"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Jetpack"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="jetpack">
+      <span class="devsite-nav-text" tooltip >
+      Jetpack
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/kotlin"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Kotlin"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="kotlin">
+      <span class="devsite-nav-text" tooltip >
+      Kotlin
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/docs"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 文档"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="文档">
+      <span class="devsite-nav-text" tooltip >
+      文档
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/news"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 新闻"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="新闻">
+      <span class="devsite-nav-text" tooltip >
+      新闻
+   </span>
+        </a>
+  
+                                        </li>
+                    
+                  </ul>
+          </div>
+          <div class="devsite-mobile-nav-bottom">
+                            <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>版本</span></div></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Android Developer Preview</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/preview"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>首页</span></a></li><li class="devsite-nav-item"><a href="/preview/overview"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览和时间表</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>隐私权更新</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/preview/privacy"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/preview/privacy/storage"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>存储</span></a></li><li class="devsite-nav-item"><a href="/preview/privacy/permissions"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>权限</span></a></li><li class="devsite-nav-item"><a href="/preview/privacy/location"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>位置信息</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>功能和 API</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/preview/features"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/preview/features/shared-datasets"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>安全共享大型数据集</span></a></li><li class="devsite-nav-item"><a href="/preview/features/conversations"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>对话</span></a></li><li class="devsite-nav-item"><a href="/preview/work"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>在企业中使用 Android</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>影响应用的行为变更</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/preview/behavior-changes-all"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>所有应用</span></a></li><li class="devsite-nav-item"><a href="/preview/behavior-changes-11"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>以 Android 11 为目标平台的应用</span></a></li><li class="devsite-nav-item"><a href="/preview/non-sdk-11"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>非 SDK 限制</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>开始开发 Android 11 应用</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/preview/get"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>获取 Android 11 系统映像</span></a></li><li class="devsite-nav-item"><a href="/preview/download"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>下载 Pixel 系统映像</span></a></li><li class="devsite-nav-item"><a href="/preview/setup-sdk"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>设置 SDK</span></a></li><li class="devsite-nav-item"><a href="/preview/migration"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>迁移应用</span></a></li><li class="devsite-nav-item"><a href="/preview/test-changes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>测试应用兼容性</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/preview/release-notes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>版本说明</span></a></li><li class="devsite-nav-item"><a href="/preview/feedback"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>反馈和问题</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Android 10</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/about/versions/10"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>首页</span></a></li><li class="devsite-nav-item"><a href="/about/versions/10/highlights"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 10 亮点</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>隐私权和位置信息</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/about/versions/10/privacy"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/about/versions/10/privacy/changes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>隐私权变更</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>影响应用的行为变更</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/about/versions/10/behavior-changes-all"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>所有应用</span></a></li><li class="devsite-nav-item"><a href="/about/versions/10/behavior-changes-10"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>以 API 29+ 为目标平台的应用</span></a></li><li class="devsite-nav-item"><a href="/about/versions/10/non-sdk-q"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>非 SDK 限制</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/about/versions/10/features"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>功能和 API</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Android 10 使用入门</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/about/versions/10/migration"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>迁移指南</span></a></li><li class="devsite-nav-item"><a href="/about/versions/10/setup-sdk"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>设置 SDK</span></a></li><li class="devsite-nav-item"><a href="/about/versions/10/get"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>获取 Android 10</span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Pie</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/about/versions/pie"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/about/versions/pie/android-9.0"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>功能和 API</span></a></li><li class="devsite-nav-item"><a href="/about/versions/pie/android-9.0-changes-all"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>针对所有应用的行为变更</span></a></li><li class="devsite-nav-item"><a href="/about/versions/pie/android-9.0-changes-28"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>针对 API 28+ 应用的行为变更</span></a></li><li class="devsite-nav-item"><a href="/about/versions/pie/android-9.0-migration"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>迁移至 Android 9</span></a></li><li class="devsite-nav-item"><a href="/about/versions/pie/power"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>电源管理</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Oreo</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/about/versions/oreo"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/about/versions/oreo/android-8.0"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 8.0 功能和 API</span></a></li><li class="devsite-nav-item"><a href="/about/versions/oreo/android-8.0-changes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 8.0 行为变更</span></a></li><li class="devsite-nav-item"><a href="/about/versions/oreo/android-8.0-migration"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>迁移到 Android 8.0</span></a></li><li class="devsite-nav-item"><a href="/about/versions/oreo/android-8.0-samples"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 8.0 示例</span></a></li><li class="devsite-nav-item"><a href="/about/versions/oreo/background"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>后台执行限制</span></a></li><li class="devsite-nav-item"><a href="/about/versions/oreo/background-location-limits"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>后台位置信息限制</span></a></li><li class="devsite-nav-item"><a href="/about/versions/oreo/android-8.1"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 8.1 功能和 API</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Nougat</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/about/versions/nougat"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/about/versions/nougat/android-7.0"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 7.0 开发者版本</span></a></li><li class="devsite-nav-item"><a href="/about/versions/nougat/android-7.0-changes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 7.0 行为变更</span></a></li><li class="devsite-nav-item"><a href="/about/versions/nougat/android-7.0-samples"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 7.0 示例</span></a></li><li class="devsite-nav-item"><a href="/about/versions/nougat/android-7.1"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 7.1 开发者版本</span></a></li><li class="devsite-nav-item"><a href="/about/versions/nougat/android-7.1-samples"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 7.1 示例</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Marshmallow</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/about/versions/marshmallow"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/about/versions/marshmallow/android-6.0"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 6.0 API</span></a></li><li class="devsite-nav-item"><a href="/about/versions/marshmallow/android-6.0-changes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 6.0 变更</span></a></li><li class="devsite-nav-item"><a href="/about/versions/marshmallow/android-6.0-samples"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 6.0 示例</span></a></li><li class="devsite-nav-item"><a href="/about/versions/marshmallow/android-6.0-testing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 6.0 测试</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Lollipop</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/about/versions/lollipop"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/about/versions/android-5.1"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 5.1 API</span></a></li><li class="devsite-nav-item"><a href="/about/versions/android-5.0"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 5.0 API</span></a></li><li class="devsite-nav-item"><a href="/about/versions/android-5.0-changes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 5.0 变更</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>KitKat</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/about/versions/kitkat"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/about/versions/android-4.4"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 4.4 API</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item"><a href="/about/dashboards"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>信息中心</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>设备</span></div></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Wear OS</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/wear"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/wear/releases"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>版本说明</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item"><a href="/tv"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android TV</span></a></li>
+  <li class="devsite-nav-item"><a href="/cars"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 汽车应用</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Android Things</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/things"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/things/faq"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>常见问题解答</span></a></li><li class="devsite-nav-item"><a href="/things/versions/things-1.0"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android Things 1.0 功能和 API</span></a></li><li class="devsite-nav-item"><a href="/things/versions/releases"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>版本说明</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item"><a href="/chrome-os"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Chrome 操作系统设备</span></a></li>
+          </ul>
+                                                                                                                                                                                                  </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="https://developer.android.google.cn/?hl=zh-cn"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            Android 开发者
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="https://developer.android.google.cn/about?hl=zh-cn"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            平台
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="https://developer.android.google.cn/preview?hl=zh-cn"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="3"
+          >
+            版本
+      
+  </a>
+        </li>
+  </ul>
+          </div>
+
+        
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+              devsite-no-page-title
+      ">
+
+                <section class="devsite-landing-row devsite-landing-row-1-up dac-sublandings-hero"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-sublandings-hero-copy"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+        
+
+                  <div class="devsite-landing-row-item-description-content">
+            <h1>Wear OS by Google 谷歌</h1> <p>借助 Wear OS by Google 谷歌利用好每一分钟。智能手表可让您随时了解自己的健康状况、与关心的人保持联系，查看您所关注的信息，以及与 Google 助理互动；所有这些操作都能通过手表完成。</p>
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://developer.android.google.cn/training/building-wearables?hl=zh-cn"
+      class="button dac-button dac-outline-button
+      "
+            >开始使用</a></div>
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up dac-platforms-sublandings-basics"
+           
+           >
+
+      
+          <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-label dac-full-height"
+         background="grey"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+                  <div class="devsite-landing-row-item-labels">
+      <span
+            class="                          "
+            >Wear OS 基础知识</span></div>
+        
+              <a href="https://developer.android.google.cn/training/wearables/apps/?hl=zh-cn">
+        <h3 id="">
+      构建穿戴式设备应用</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            穿戴式设备应用可以直接在手表上运行，方便您使用传感器和 GPU 等硬件。穿戴式设备应用与使用 Android SDK 的其他应用类似，但在设计和功能方面有所不同。<img alt src="https://developer.android.google.cn/images/wear/build-wearable-app.svg?hl=zh-cn" class="dac-platforms-img"/>
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://developer.android.google.cn/training/wearables/apps?hl=zh-cn"
+      class="button dac-button dac-alt-flat-button
+      "
+            >构建穿戴式设备应用</a></div>
+              </div>
+    </div>
+      
+</div>
+                  </div>
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-label dac-heading-small dac-grow-1"
+         background="grey"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+                  <div class="devsite-landing-row-item-labels">
+      <span
+            class="                          "
+            >Wear OS 基础知识</span></div>
+        
+              <a href="https://developer.android.google.cn/training/wearables/watch-faces/?hl=zh-cn">
+        <h3 id="">
+      制作表盘主题</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            利用可加入颜色、动画及上下文信息的动态数字画布自定义表盘主题。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://developer.android.google.cn/training/wearables/watch-faces?hl=zh-cn"
+      class="button dac-button dac-alt-flat-button
+      "
+            >制作表盘主题</a></div>
+              </div>
+    </div>
+      
+</div>
+                      <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-label dac-heading-small dac-grow-1"
+         background="grey"
+  
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+                  <div class="devsite-landing-row-item-labels">
+      <span
+            class="                          "
+            >Wear OS 基础知识</span></div>
+        
+              <a href="https://developer.android.google.cn/training/wearables/data-providers/?hl=zh-cn">
+        <h3 id="wear-os">
+      使用您的数据丰富 Wear OS</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            表盘主题可以显示数据提供器所提供的数据。数据提供器应用可以为表盘主题提供文字、图片等内容。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://developer.android.google.cn/training/wearables/data-providers?hl=zh-cn"
+      class="button dac-button dac-alt-flat-button
+      "
+            >将数据显示在表盘主题上</a></div>
+              </div>
+    </div>
+      
+</div>
+                  </div>
+            </div>
+
+        
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-2-up dac-label dac-banner-card dac-landing-row-bg-slate"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-grow-4"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+                  <div class="devsite-landing-row-item-labels">
+      <span
+            class="                          "
+            >Wear OS by Google 谷歌</span></div>
+        
+              <a href="https://designguidelines.withgoogle.com/android-wear/">
+        <h3 id="">
+      设计</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            适用于 Wear OS 的 Material Design 可以帮助您设计引人入胜的用户体验。它涵盖了 Wear OS 设计系统、界面组件、用户体验模式以及样式。<img alt src="https://developer.android.google.cn/images/wear/wear-os-design-mobile.svg?hl=zh-cn"/>
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://designguidelines.withgoogle.com/android-wear/"
+      class="button dac-button dac-flat-button
+      "
+            >针对 Wear OS 设计应用</a></div>
+              </div>
+    </div>
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description devsite-landing-row-item-no-media dac-banner-card-bg-img-item dac-grow-8"
+     
+     >
+
+  
+    
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-1-up dac-dynamic-content-section dac-dynamic-content-no-img"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item"
+     
+     >
+
+      <h3>最新资讯</h3> <devsite-dynamic-content
+  query="origin:blogger+keyword:wearos,origin:blogger+keyword:androidwear,origin:blogger+keyword:wear"
+  initial-results="4"
+  max-results="4"
+  show-authors="true"
+  sortorder="-timestamp">
+</devsite-dynamic-content>
+<div class="dac-dynamic-content-more">
+  <a class="button dac-button dac-alt-flat-button"
+    href="https://android-developers.googleblog.com/search/label/Wear%20OS">
+    更多资讯
+  </a>
+</div>
+
+  
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-1-up dac-dynamic-content-section"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item"
+     
+     >
+
+      <h3>最新视频</h3> <devsite-dynamic-content
+  query="origin:youtube+keyword:wearos,origin:youtube+keyword:wear,origin:youtube+keyword:androidwear"
+  initial-results="4"
+  max-results="4"
+  show-authors="true"
+  sortorder="-timestamp">
+</devsite-dynamic-content>
+<div class="dac-dynamic-content-more">
+  <a class="button dac-button dac-alt-flat-button"
+    href="https://www.youtube.com/user/androiddevelopers/search?query=%23wearos%2C%23wear%2C%23androidwear&hl=zh-cn">
+    更多视频
+  </a>
+</div>
+
+  
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-1-up"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+                    <h3 id="">
+      构建生态系统</h3>
+    
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            我们正在与世界各地的制造商一起努力打造由 Wear OS 强力驱动的手表！
+
+          </div>
+        
+        
+              </div>
+    </div>
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/arm.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/arm_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/arm_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/arm_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/arm_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/arm_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/arm_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/arm_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/arm_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/arm_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/arm_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/arm_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/asus.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/asus_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/asus_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/asus_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/asus_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/asus_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/asus_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/asus_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/asus_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/asus_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/asus_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/asus_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/boss.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/boss_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/boss_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/boss_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/boss_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/boss_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/boss_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/boss_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/boss_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/boss_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/boss_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/boss_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/broadcom.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/broadcom_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/broadcom_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/broadcom_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/broadcom_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/broadcom_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/broadcom_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/broadcom_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/broadcom_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/broadcom_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/broadcom_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/broadcom_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/casio.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/casio_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/casio_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/casio_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/casio_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/casio_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/casio_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/casio_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/casio_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/casio_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/casio_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/casio_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/diesel.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/diesel_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/diesel_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/diesel_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/diesel_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/diesel_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/diesel_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/diesel_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/diesel_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/diesel_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/diesel_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/diesel_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/ea_connected.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/ea_connected_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/ea_connected_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/ea_connected_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/ea_connected_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/ea_connected_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/ea_connected_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/ea_connected_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/ea_connected_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/ea_connected_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/ea_connected_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/ea_connected_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/fossil.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/fossil_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/fossil_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/fossil_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/fossil_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/fossil_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/fossil_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/fossil_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/fossil_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/fossil_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/fossil_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/fossil_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/gc.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/gc_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/gc_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/gc_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/gc_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/gc_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/gc_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/gc_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/gc_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/gc_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/gc_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/gc_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/guess.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/guess_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/guess_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/guess_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/guess_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/guess_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/guess_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/guess_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/guess_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/guess_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/guess_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/guess_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/intel.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/intel_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/intel_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/intel_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/intel_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/intel_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/intel_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/intel_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/intel_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/intel_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/intel_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/intel_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/katespadeny.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/katespadeny_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/katespadeny_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/katespadeny_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/katespadeny_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/katespadeny_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/katespadeny_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/katespadeny_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/katespadeny_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/katespadeny_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/katespadeny_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/katespadeny_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/lg.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/lg_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/lg_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/lg_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/lg_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/lg_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/lg_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/lg_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/lg_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/lg_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/lg_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/lg_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/lv.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/lv_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/lv_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/lv_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/lv_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/lv_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/lv_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/lv_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/lv_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/lv_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/lv_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/lv_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/mediatek.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/mediatek_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/mediatek_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/mediatek_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/mediatek_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/mediatek_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/mediatek_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/mediatek_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/mediatek_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/mediatek_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/mediatek_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/mediatek_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/mkors.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/mkors_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/mkors_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/mkors_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/mkors_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/mkors_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/mkors_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/mkors_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/mkors_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/mkors_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/mkors_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/mkors_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/mips.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/mips_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/mips_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/mips_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/mips_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/mips_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/mips_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/mips_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/mips_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/mips_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/mips_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/mips_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/misfit.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/misfit_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/misfit_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/misfit_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/misfit_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/misfit_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/misfit_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/misfit_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/misfit_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/misfit_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/misfit_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/misfit_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/mobvoi.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/mobvoi_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/mobvoi_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/mobvoi_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/mobvoi_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/mobvoi_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/mobvoi_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/mobvoi_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/mobvoi_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/mobvoi_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/mobvoi_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/mobvoi_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/montblanc.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/montblanc_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/montblanc_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/montblanc_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/montblanc_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/montblanc_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/montblanc_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/montblanc_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/montblanc_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/montblanc_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/montblanc_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/montblanc_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/motorola.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/motorola_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/motorola_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/motorola_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/motorola_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/motorola_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/motorola_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/motorola_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/motorola_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/motorola_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/motorola_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/motorola_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/movado.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/movado_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/movado_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/movado_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/movado_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/movado_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/movado_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/movado_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/movado_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/movado_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/movado_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/movado_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/nb.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/nb_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/nb_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/nb_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/nb_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/nb_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/nb_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/nb_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/nb_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/nb_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/nb_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/nb_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/nixon.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/nixon_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/nixon_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/nixon_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/nixon_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/nixon_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/nixon_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/nixon_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/nixon_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/nixon_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/nixon_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/nixon_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/polar.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/polar_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/polar_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/polar_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/polar_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/polar_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/polar_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/polar_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/polar_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/polar_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/polar_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/polar_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/qualcomm.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/qualcomm_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/qualcomm_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/qualcomm_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/qualcomm_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/qualcomm_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/qualcomm_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/qualcomm_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/qualcomm_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/qualcomm_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/qualcomm_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/qualcomm_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/samsung.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/samsung_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/samsung_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/samsung_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/samsung_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/samsung_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/samsung_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/samsung_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/samsung_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/samsung_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/samsung_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/samsung_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/skagendenmark.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/skagendenmark_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/skagendenmark_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/skagendenmark_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/skagendenmark_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/skagendenmark_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/skagendenmark_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/skagendenmark_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/skagendenmark_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/skagendenmark_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/skagendenmark_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/skagendenmark_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/sony.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/sony_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/sony_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/sony_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/sony_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/sony_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/sony_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/sony_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/sony_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/sony_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/sony_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/sony_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/tagheuer.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/tagheuer_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/tagheuer_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/tagheuer_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/tagheuer_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/tagheuer_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/tagheuer_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/tagheuer_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/tagheuer_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/tagheuer_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/tagheuer_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/tagheuer_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/tmobile.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/tmobile_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/tmobile_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/tmobile_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/tmobile_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/tmobile_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/tmobile_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/tmobile_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/tmobile_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/tmobile_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/tmobile_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/tmobile_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/th.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/th_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/th_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/th_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/th_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/th_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/th_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/th_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/th_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/th_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/th_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/th_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-4-up dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"
+           
+           >
+
+      
+    
+      <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description"
+     
+     >
+
+  
+    <div class="devsite-landing-row-item-media
+            ">
+      <figure class="devsite-landing-row-item-image">
+          <img alt=""
+       src="https://developer.android.google.cn/images/wear/oems/verizon.png?hl=zh-cn"
+       srcset="https://developer.android.google.cn/images/wear/oems/verizon_36.png?hl=zh-cn 36w,https://developer.android.google.cn/images/wear/oems/verizon_48.png?hl=zh-cn 48w,https://developer.android.google.cn/images/wear/oems/verizon_72.png?hl=zh-cn 72w,https://developer.android.google.cn/images/wear/oems/verizon_96.png?hl=zh-cn 96w,https://developer.android.google.cn/images/wear/oems/verizon_480.png?hl=zh-cn 480w,https://developer.android.google.cn/images/wear/oems/verizon_720.png?hl=zh-cn 720w,https://developer.android.google.cn/images/wear/oems/verizon_856.png?hl=zh-cn 856w,https://developer.android.google.cn/images/wear/oems/verizon_960.png?hl=zh-cn 960w,https://developer.android.google.cn/images/wear/oems/verizon_1440.png?hl=zh-cn 1440w,https://developer.android.google.cn/images/wear/oems/verizon_1920.png?hl=zh-cn 1920w,https://developer.android.google.cn/images/wear/oems/verizon_2880.png?hl=zh-cn 2880w"
+       sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px">
+  
+  </figure>
+  </div>
+
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+      
+</div>
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-description devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+      
+</div>
+            </div>
+    
+  
+  </section>
+  <section class="devsite-landing-row devsite-landing-row-1-up dac-featured-cards"
+           
+           >
+
+      
+          <div class="devsite-landing-row-group">
+              <div class="devsite-landing-row-column">
+          
+                                <div class="devsite-landing-row-item devsite-landing-row-item-no-media dac-heading-linked"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+              <a href="https://android-developers.googleblog.com/">
+        <h3 id="">
+      博文</h3>
+    
+  </a>
+    
+
+                  <div class="devsite-landing-row-item-description-content">
+            在我们的博客中阅读更多有关 Wear OS by Google 谷歌开发的信息。只需搜索“Wear OS by Google 谷歌”即可。
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://android-developers.googleblog.com/"
+      class="button dac-button dac-flat-button
+      "
+            >Android 开发者博客</a></div>
+              </div>
+    </div>
+      
+</div>
+                      <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     >
+
+  
+    
+
+        <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+        
+
+                  <div class="devsite-landing-row-item-description-content">
+            <img alt="" src="https://developer.android.google.cn/images/blogger.png?hl=zh-cn">
+
+          </div>
+        
+        
+                  <div class="devsite-landing-row-item-buttons">
+      <a href="https://android-developers.googleblog.com/"
+      class="button dac-button dac-flat-button
+      "
+            >Android 开发者博客</a></div>
+              </div>
+    </div>
+      
+</div>
+                  </div>
+            </div>
+
+        
+  
+  </section>
+
+          </div>
+
+    
+    
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Content and code samples on this page are subject to the licenses described in the <a href="https://developer.android.google.cn/license?hl=zh-cn">Content License</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>  <p>Last updated 2019-12-27.</p></devsite-content-footer>
+
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="//developers.google.cn/china/?hl=zh-cn#follow-google-developers-on-wechat"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-modal-toggle="wechat"
+                data-label="Footer WeChat Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="https://developer.android.google.cn/_static/android/images/logo-wechat.png?hl=zh-cn"
+             alt="微信">
+                微信
+      </a>
+      <div class="devsite-footer-promo-description">在微信上关注“Google Developers”</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//twitter.com/AndroidDev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-label="Footer Twitter Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="https://developer.android.google.cn/_static/android/images/logo-twitter.svg?hl=zh-cn"
+             alt="Twitter">
+                Twitter
+      </a>
+      <div class="devsite-footer-promo-description">在 Twitter 上关注 @AndroidDev</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//www.youtube.com/user/androiddevelopers?hl=zh-cn"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-label="Footer YouTube Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="//www.gstatic.cn/images/icons/material/product/2x/youtube_48dp.png"
+             alt="YouTube">
+                YouTube
+      </a>
+      <div class="devsite-footer-promo-description">在 YouTube 上访问“Android Developers”频道</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">关于 Android</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Android
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/enterprise/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            Enterprise
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/security-center/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            安全
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//source.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            源代码
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">支持</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//issuetracker.google.com/issues/new?component=190923&amp;template=841312"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            报告平台错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//issuetracker.google.com/issues/new?component=192697"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            报告文档错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//support.google.com/googleplay/android-developer"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Google Play support
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://google.qualtrics.com/jfe/form/SV_ewWXIoEVLBcyp7f??reserved=1&amp;utm_source=FooterLink&amp;Q_Language=en&amp;utm_medium=own_srch&amp;utm_campaign=developer.android.com&amp;utm_term=0&amp;utm_content=0&amp;productTag=reg&amp;campaignDate=may19&amp;pType=devel&amp;referral_code=gV420370"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            参加调查研究
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">文档</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/guide"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            开发者指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/design"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            设计指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/reference"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            API 参考
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/samples"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            示例
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/studio/intro"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 5)"           >
+            Android Studio
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/?hl=zh-cn"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="https://developer.android.google.cn/_static/images/lockup-developers.svg?hl=zh-cn"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn?hl=zh-cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn?hl=zh-cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com?hl=zh-cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developers.google.cn/products/?hl=zh-cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy?hl=zh-cn"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+                    data-cookie-policy="//policies.google.cn/technologies/cookies"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="https://developer.android.google.cn/license?hl=zh-cn"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer License link"
+         >
+          许可
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="https://developer.android.google.cn/distribute/marketing-tools/brand-guidelines?hl=zh-cn"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Brand guidelines link"
+         >
+          品牌指南
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">通过电子邮件接收资讯和提示</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="https://developer.android.google.cn/newsletter/?hl=zh-cn#subscribe"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   data-cookie-policy="//policies.google.cn/technologies/cookies"
+                  ></devsite-snackbar>
+    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Android \u5f00\u53d1\u8005", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-5831155-3"}]</script>
+<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "language": {"requested": "zh-cn", "served": "zh-cn"}, "projectName": "Android \u5f00\u53d1\u8005", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}, "tags": ["GTM-KMSWPCJ"]}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[3,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android","https://android-dot-google-developers.gonglchuangl.net",1,null,["/_pwa/android/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
