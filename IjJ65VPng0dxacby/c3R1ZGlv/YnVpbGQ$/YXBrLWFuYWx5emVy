@@ -1,0 +1,1646 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Android Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#3ddc84">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/android/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/touchicon-180.png"><link rel="canonical" href="https://developer.android.google.cn/studio/build/apk-analyzer?hl=zh-cn">      
+<title>使用 APK 分析器分析您的构建 &nbsp;|&nbsp; Android 开发者 &nbsp;|&nbsp; Android Developers</title>
+
+<meta property="og:title" content="使用 APK 分析器分析您的构建 &nbsp;|&nbsp; Android 开发者 &nbsp;|&nbsp; Android Developers">
+  <meta name="description" content="Android Studio 包含一个 APK 分析器，可让您在编译流程完成后立即了解 APK 的组成。">
+  <meta property="og:description" content="Android Studio 包含一个 APK 分析器，可让您在编译流程完成后立即了解 APK 的组成。">
+
+
+  <meta property="og:url" content="https://developer.android.google.cn/studio/build/apk-analyzer?hl=zh-cn">
+
+  <meta property="og:image" content="https://developer.android.google.cn/images/android-developers.png">
+  <meta property="og:image:secure_url" content="https://developer.android.google.cn/images/android-developers.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale" content="zh_cn">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    
+    
+    
+    
+  
+
+    </head>
+  <body type="article"
+        theme="android-theme"
+        class=""
+        
+        layout="docs"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                              </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                            <devsite-tabs class="upper-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/about"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="平台"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 平台"
+   >
+  平台
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/studio"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="androidStudio"
+   aria-label="Android Studio, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: Android Studio"
+   >
+  Android Studio
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="googlePlay"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Google Play"
+   >
+  Google Play
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/jetpack"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="jetpack"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Jetpack"
+   >
+  Jetpack
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/kotlin"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="kotlin"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Kotlin"
+   >
+  Kotlin
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/docs"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="文档"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 文档"
+   >
+  文档
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/news"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="新闻"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 新闻"
+   >
+  新闻
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="Android 开发者"    tenant-name="Android Developers"                >
+  <form class="devsite-search-form" action="https://developer.android.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+                        <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+                                                <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/studio"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Lower Header"
+              data-value="1"
+          >
+            Android Studio
+      
+  </a>
+        </li>
+  </ul>
+                                                        </div>
+                                                                            </div>
+                                      <div class="devsite-doc-set-nav-row">
+                                                      <devsite-tabs class="lower-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/studio"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="下载"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 下载"
+   >
+  下载
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/studio/features"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="新变化"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 新变化"
+   >
+  新变化
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/studio/intro"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="用户指南"
+   aria-label="用户指南, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: 用户指南"
+   >
+  用户指南
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/studio/preview"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="预览"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 预览"
+   >
+  预览
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                            </div>
+          </div>  </div></div>
+  
+
+  </devsite-header>      <devsite-book-nav scrollbars >
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+        <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                              </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+                  <a href="/about"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 平台"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="平台">
+      <span class="devsite-nav-text" tooltip >
+      平台
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/studio"
+           class="devsite-nav-title gc-analytics-event
+                            devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Android Studio"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="androidStudio">
+      <span class="devsite-nav-text" tooltip >
+      Android Studio
+   </span>
+        </a>
+  
+                                            <ul class="devsite-nav-responsive-tabs">
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/studio"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 下载"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="下载">
+      <span class="devsite-nav-text" tooltip >
+      下载
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/studio/features"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 新变化"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="新变化">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      新变化
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/studio/intro"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 用户指南"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="用户指南">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      用户指南
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/studio/preview"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 预览"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="预览">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      预览
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                  </ul>
+                          </li>
+                      <li class="devsite-nav-item">
+                  <a href="/distribute"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Play"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="googlePlay">
+      <span class="devsite-nav-text" tooltip >
+      Google Play
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/jetpack"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Jetpack"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="jetpack">
+      <span class="devsite-nav-text" tooltip >
+      Jetpack
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/kotlin"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Kotlin"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="kotlin">
+      <span class="devsite-nav-text" tooltip >
+      Kotlin
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/docs"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 文档"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="文档">
+      <span class="devsite-nav-text" tooltip >
+      文档
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/news"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 新闻"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="新闻">
+      <span class="devsite-nav-text" tooltip >
+      新闻
+   </span>
+        </a>
+  
+                                        </li>
+                    
+                  </ul>
+          </div>
+          <div class="devsite-mobile-nav-bottom">
+                            <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>探索 Android Studio</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/intro"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/install"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>安装 Android Studio</span></a></li><li class="devsite-nav-item"><a href="/studio/intro/migrate"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>迁移至 Android Studio</span></a></li><li class="devsite-nav-item"><a href="/studio/intro/studio-config"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>配置 IDE</span></a></li><li class="devsite-nav-item"><a href="/studio/intro/keyboard-shortcuts"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>键盘快捷键</span></a></li><li class="devsite-nav-item"><a href="/studio/intro/accessibility"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>无障碍功能</span></a></li><li class="devsite-nav-item"><a href="/studio/intro/update"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>更新 IDE 和工具</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item"><a href="/studio/workflow"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>工作流基础知识</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>管理项目</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/projects"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/create-project"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>创建项目</span></a></li><li class="devsite-nav-item"><a href="/guide/app-bundle/dynamic-delivery"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Dynamic Delivery 简介</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>添加 C 和 C++ 代码</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/projects/add-native-code"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/install-ndk"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>安装 NDK 和 CMake</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/configure-cmake"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>配置 CMake</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/gradle-external-native-builds"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>关联 Gradle</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/studio/projects/android-library"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>创建 Android 库</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/continuous-integration"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>设置持续集成</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>编写您的应用</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/write"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/templates"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>从模板添加代码</span></a></li><li class="devsite-nav-item"><a href="/studio/write/sample-code"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>查找示例代码</span></a></li><li class="devsite-nav-item"><a href="/studio/projects/add-app-module"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>为新设备添加模块</span></a></li><li class="devsite-nav-item"><a href="/studio/write/create-java-class"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>创建 Java 类或类型</span></a></li><li class="devsite-nav-item"><a href="/studio/write/java8-support"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用 Java 8 语言功能</span></a></li><li class="devsite-nav-item"><a href="/studio/write/add-resources"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>添加应用资源</span></a></li><li class="devsite-nav-item"><a href="/studio/write/layout-editor"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用 Layout Editor 构建界面</span></a></li><li class="devsite-nav-item"><a href="/studio/write/resource-manager"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>管理您应用的界面资源</span></a></li><li class="devsite-nav-item"><a href="/studio/write/theme-editor"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>设计应用主题背景</span></a></li><li class="devsite-nav-item"><a href="/studio/write/vector-asset-studio"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>添加多密度矢量图形</span></a></li><li class="devsite-nav-item"><a href="/studio/write/image-asset-studio"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用 Image Asset Studio 创建图标</span></a></li><li class="devsite-nav-item"><a href="/studio/write/draw9patch"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>创建可调整大小的位图 (9-Patch)</span></a></li><li class="devsite-nav-item"><a href="/studio/write/convert-webp"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>创建 WebP 图片</span></a></li><li class="devsite-nav-item"><a href="/studio/write/translations-editor"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>本地化界面</span></a></li><li class="devsite-nav-item"><a href="/studio/write/app-link-indexing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>添加 Android 应用链接</span></a></li><li class="devsite-nav-item"><a href="/studio/write/firebase"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>连接到 Firebase</span></a></li><li class="devsite-nav-item"><a href="/studio/write/lint"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用 Lint 检查改进您的代码</span></a></li><li class="devsite-nav-item"><a href="/studio/write/annotations"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用注解改进代码检查</span></a></li><li class="devsite-nav-item"><a href="/studio/write/tool-attributes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>工具属性参考</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>编译和运行您的应用</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/run"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>在模拟器上运行应用</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/run/emulator"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/run/managing-avds"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>创建和管理虚拟设备</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-commandline"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>从命令行启动模拟器</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-console"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>发送模拟器控制台命令</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-networking"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>设置模拟器网络</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-acceleration"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>配置硬件加速</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-comparison"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>模拟器功能比较</span></a></li><li class="devsite-nav-item"><a href="/studio/run/emulator-troubleshooting"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>对模拟器进行问题排查</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>在硬件设备上运行应用</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/run/device"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/run/oem-usb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>安装原始设备制造商 (OEM) USB 驱动程序</span></a></li><li class="devsite-nav-item"><a href="/studio/run/win-usb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>获取 Google USB 驱动程序</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/studio/run/rundebugconfig"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>创建运行/调试配置</span></a></li><li class="devsite-nav-item"><a href="/studio/build/building-cmdline"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>从命令行编译您的应用</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>配置编译版本</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/build"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/build/application-id"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>设置应用 ID</span></a></li><li class="devsite-nav-item"><a href="/studio/build/dependencies"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>添加编译依赖项</span></a></li><li class="devsite-nav-item"><a href="/studio/build/optimize-your-build"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>优化您的构建速度</span></a></li><li class="devsite-nav-item"><a href="/studio/build/build-cache"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用构建缓存</span></a></li><li class="devsite-nav-item"><a href="/studio/build/build-variants"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>配置编译变体</span></a></li><li class="devsite-nav-item"><a href="/studio/build/configure-apk-splits"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>构建多个 APK</span></a></li><li class="devsite-nav-item"><a href="/studio/build/manifest-merge"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>合并多个清单</span></a></li><li class="devsite-nav-item"><a href="/studio/build/manifest-build-variables"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>将构建变量注入清单</span></a></li><li class="devsite-nav-item"><a href="/studio/build/shrink-code"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>压缩您的应用</span></a></li><li class="devsite-nav-item"><a href="/studio/build/multidex"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>启用多 dex 处理</span></a></li><li class="devsite-nav-item"><a href="/studio/build/apk-analyzer"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用 APK 分析器分析您的构建</span></a></li><li class="devsite-nav-item"><a href="/studio/build/gradle-tips"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Gradle 提示与诀窍</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>调试应用</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/debug"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/dev-options"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>配置开发者选项</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/am-logcat"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>写入和查看日志</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/stacktraces"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>分析堆栈轨迹</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/layout-inspector"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用布局检查器调试您的布局</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/pixel-perfect"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用“精美像素风格”验证您的设计</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/device-file-explorer"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>查看设备上的文件</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/am-screenshot"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>截取屏幕截图</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/am-video"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>录制视频</span></a></li><li class="devsite-nav-item"><a href="/studio/debug/bug-report"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>获取并阅读错误报告</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>测试应用</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/test"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/test/command-line"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>从命令行进行测试</span></a></li><li class="devsite-nav-item"><a href="/studio/test/espresso-test-recorder"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用 Espresso 测试记录器创建界面测试</span></a></li><li class="devsite-nav-item"><a href="/studio/test/monkey"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>UI/App Exerciser Monkey</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>monkeyrunner 参考</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/test/monkeyrunner"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/test/monkeyrunner/MonkeyDevice"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>MonkeyDevice</span></a></li><li class="devsite-nav-item"><a href="/studio/test/monkeyrunner/MonkeyImage"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>MonkeyImage</span></a></li><li class="devsite-nav-item"><a href="/studio/test/monkeyrunner/MonkeyRunner"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>MonkeyRunner</span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>剖析应用性能</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/profile"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/android-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>衡量应用效果</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>为您的应用设置基准</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/profile/benchmark"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/build-benchmarks-without-gradle"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>在不使用 Gradle 的情况下编译基准</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/run-benchmarks-in-ci"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>在持续集成中运行基准</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/studio/debug/apk-debugger"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>分析和调试预编译 APK</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>检查 CPU 活动</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/profile/cpu-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/generate-trace-logs"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>通过检测您的应用生成跟踪日志</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/studio/profile/memory-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>查看堆和内存分配</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/network-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>检查网络活动</span></a></li><li class="devsite-nav-item"><a href="/studio/profile/energy-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>检查能耗情况</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>发布应用</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/publish"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/publish/preparing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>准备发布</span></a></li><li class="devsite-nav-item"><a href="/studio/publish/versioning"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>对您的应用进行版本控制</span></a></li><li class="devsite-nav-item"><a href="/studio/publish/app-signing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>对应用进行签名</span></a></li><li class="devsite-nav-item"><a href="/studio/publish/upload-bundle"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>上传应用</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>命令行工具</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/studio/command-line"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/aapt2"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>aapt2</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/adb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>adb</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/apkanalyzer"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>apkanalyzer</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/apksigner"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>apksigner</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/avdmanager"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>avdmanager</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/bmgr"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>bmgr</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/bundletool"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>bundletool</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/d8"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>d8</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/dmtracedump"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>dmtracedump</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/dumpsys"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>dumpsys</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/etc1tool"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>etc1tool</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/jobb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>jobb</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/jetifier"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>jetifier-standalone</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/logcat"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>logcat</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/mksdcard"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>mksdcard</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/sdkmanager"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>sdkmanager</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/systrace"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>systrace</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/perfetto"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>perfetto</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/zipalign"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>zipalign</span></a></li><li class="devsite-nav-item"><a href="/studio/command-line/variables"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>环境变量</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item"><a href="/studio/troubleshoot"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>问题排查</span></a></li>
+  <li class="devsite-nav-item"><a href="/studio/known-issues"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>已知问题</span></a></li>
+  <li class="devsite-nav-item"><a href="/studio/report-bugs"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>报告错误</span></a></li>
+          </ul>
+                                                                                                                                                                                                  </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            Android 开发者
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/studio"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            Android Studio
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/studio/intro"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="3"
+          >
+            用户指南
+      
+  </a>
+        </li>
+  </ul>
+               <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+          </div>
+
+              <h1 class="devsite-page-title">使用 APK 分析器分析您的构建</h1>
+    
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+      ">
+
+              
+
+    <p>Android Studio 包含一个 APK 分析器，可让您在构建流程完成后立即了解 APK 的组成。使用 APK 分析器可以减少调试应用的 DEX 文件和资源相关问题所用的时间，并且有助于减小 APK 的大小。您也可以使用 <a href="/studio/command-line/apkanalyzer"><code translate="no" dir="ltr">apkanalyzer</code></a> 从命令行运行该工具。</p>
+
+    <div class="video-wrapper-left">
+      <iframe class="devsite-embedded-youtube-video" data-video-id="qR8FeCQR7L0" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+    <p>通过 APK 分析器，您可以完成以下操作：</p>
+
+    <ul>
+    <li>查看 APK 中的文件（如 DEX 和 Android 资源文件）的绝对大小和相对大小。</li>
+    <li>了解 DEX 文件的组成。</li>
+    <li>快速查看 APK 中的文件（如 <code translate="no" dir="ltr">AndroidManifest.xml</code> 文件）的最终版本。</li>
+    <li>对两个 APK 进行并排比较。</li>
+    </ul>
+
+    <p>当某个项目处于打开状态时，您可以通过以下三种方式访问 APK 分析器：</p>
+
+    <ul>
+    <li>将 APK 拖动到 Android Studio 的 <strong>Editor</strong> 窗口中。</li>
+    <li>在 <strong>Project</strong> 窗口中切换到 <strong>Project</strong> 透视图，然后在默认的 <code translate="no" dir="ltr">build/output/apks/</code> 目录中双击相应 APK。</li>
+    <li>在菜单栏中依次选择 <b>Build > Analyze APK</b>，然后选择您的 APK。</li>
+    </ul>
+
+    <h2 id="view_file_and_size_information">查看文件和大小信息</h2>
+
+    <p>APK 是遵循 ZIP 文件格式的文件。APK 分析器将每个文件或文件夹显示为一个实体，这些实体具有可用于导航到文件夹中的展开功能。这些实体的层次结构反映了 APK 中的文件和文件夹的结构。</p>
+
+    <p>APK 分析器会显示每个实体的原始文件大小和下载文件大小值，如图 1 所示。<strong>Raw File Size</strong> 表示实体在磁盘上未经压缩时的大小，而 <strong>Download Size</strong> 则表示实体由 Google Play 提供时估计压缩后的大小。<strong>% of Total Download Size</strong> 表示实体占 APK 总下载大小的百分比。</p>
+
+    <p><img src="/studio/images/build/apk-file-sizes_2x.png" width="942" alt/>
+    </p><p class="img-caption"><b>图 1.</b> APK 分析器中的文件大小</p><p></p>
+
+    <h2 id="view_the_androidmanifestxml">查看 AndroidManifest.xml</h2>
+
+    <p>如果您的项目包含多个 <code translate="no" dir="ltr">AndroidManifest.xml</code> 文件（如产品变种的清单文件）或者包含的库也提供清单文件，这些文件会在您的 APK 中合并成一个文件。此清单文件在 APK 中通常是二进制文件，但在 APK 分析器中选择此文件后，会重构并呈现此实体的 XML 格式。在此查看器中，您可以了解在构建期间可能对您的应用所做的任何更改。例如，您可以看到应用所依赖的某个库中的 <code translate="no" dir="ltr">AndroidManifest.xml</code> 文件是如何合并到最终 <code translate="no" dir="ltr">AndroidManifest.xml</code> 文件中的。</p>
+
+    <p>此外，此查看器还提供了一些 Lint 功能，并且会在右上角显示相关警告或错误。图 2 显示了正在报告选定清单文件中的一条错误。</p>
+
+    <p><img src="/studio/images/build/apk-manifest-error_2x.png" width="941" alt/>
+    </p><p class="img-caption"><b>图 2.</b> 选定清单文件的右侧空白处显示了一个错误图标</p><p></p>
+
+    <h2 id="view_dex_files">查看 DEX 文件</h2>
+
+    <p>在 APK 分析器的 DEX 文件查看器中，您可以立即查看应用的 DEX 文件中的底层信息。该查看器中提供了类、软件包、总引用和声明计数，这有助于决定是否使用多 dex 文件或如何移除依赖项以低于 <a href="/studio/build/multidex">64K DEX 限制</a>。</p>
+
+    <p>图 3 描绘了一个低于 64k DEX 限制的中等大小的应用。<strong>Defined Methods</strong> 和 <strong>Referenced Methods</strong> 列中列出了 DEX 文件中每个软件包、类和方法的相关计数。<strong>Referenced Methods</strong> 列统计由 DEX 文件引用的所有方法。这通常包括在您的代码和依赖项库中定义的方法，以及在代码使用的标准 Java 和 Android 软件包中定义的方法 - 这些方法计入每个 DEX 文件中的 64k 方法限制。<strong>Defined Methods</strong> 列仅统计在某一个 DEX 文件中定义的方法，所以此数字是 <strong>Referenced Methods</strong> 的子集。请注意，如果将某个依赖项打包在 APK 中，这两个方法计数都会加上在该依赖项中定义的方法。另请注意，缩减大小和<a href="/studio/build/shrink-code">代码缩减</a>功能也会在源代码经过编译后显著改变 DEX 文件的内容。</p>
+
+    <p><img src="/studio/images/build/apk-over-64k-limit_2x.png" width="941" alt/>
+    </p><p class="img-caption"><b>图 3.</b> 一个中等大小的应用</p><p></p>
+
+    <h2 id="filter_the_dex_file_tree_view">过滤 DEX 文件树状视图</h2>
+
+    <p>在 <strong>Class</strong> 列表正上方，APK 分析器提供了用于查看选定 DEX 文件内容的过滤器。</p>
+
+    <p><img src="/studio/images/build/apk-filter-tree-view_2x.png" width="940" alt/>
+    </p><p class="img-caption"><b>图 4.</b> 设置 DEX 过滤器来显示 <code translate="no" dir="ltr">BuildConfig</code> 的字段和方法</p><p></p>
+
+    <p>要使用过滤器来显示某个类中的所有方法和字段，请执行以下操作：</p>
+
+    <ol>
+    <li>在 <strong>File</strong> 列表中，选择 <code translate="no" dir="ltr">classes.dex</code> 文件。</li>
+    <li>在 <strong>Class</strong> 列表中，导航到一个类并选择该类。</li>
+    <li>展开您选择的类。</li>
+    <li>切换 <strong>Show fields</strong> 图标 <img src="/studio/images/buttons/apk-fields.png" class="inline-icon" alt/> 以显示或隐藏类字段。</li>
+    <li>切换 <strong>Show methods</strong> 图标 <img src="/studio/images/buttons/apk-methods.png" class="inline-icon" alt/> 以显示或隐藏类方法。</li>
+    <li><p>切换 <strong>Show all referenced methods or fields</strong> 图标 <img src="/studio/images/buttons/apk-methods-fields.png" class="inline-icon" alt/> 以显示或隐藏引用的软件包、类、方法和字段。在树状视图中，斜体节点是在选定 DEX 文件中没有定义的引用。</p>
+
+    <p>DEX 文件可以引用在其他文件中定义的方法和字段。例如，<code translate="no" dir="ltr">System.out.println()</code> 是对 Android 框架中的 <code translate="no" dir="ltr">println()</code> 方法的引用。</p></li>
+    </ol>
+
+    <h2 id="load_proguard_mappings">加载 ProGuard 映射</h2>
+
+    <p>过滤器图标旁边是 ProGuard 映射图标。它们处于灰显状态，直到您加载一组 ProGuard 映射文件来向 DEX 查看器添加一些功能，如对名称进行反混淆处理 (<code translate="no" dir="ltr">mapping.txt</code>)、显示已移除的节点 (<code translate="no" dir="ltr">usage.txt</code>)，以及指示无法移除的节点 (<code translate="no" dir="ltr">seeds.txt</code>)。您导入的 ProGuard 映射文件的构建版本必须与启用了代码缩减功能后生成的 APK 的构建版本相同。要了解详情，请参阅<a href="/studio/build/shrink-code">压缩、混淆和优化应用</a>。</p>
+
+    <p><img src="/studio/images/build/apk-proguard-mappings_2x.png" width="321" alt/>
+    </p><p class="img-caption"><b>图 5.</b> 加载 ProGuard 映射</p><p></p>
+
+    <p>要加载 ProGuard 映射文件，请执行以下操作：</p>
+
+    <ol>
+    <li>点击 <strong>Load Proguard Mappings</strong>。</li>
+    <li><p>导航到包含映射文件的项目文件夹，然后加载所有文件、文件的任意组合或包含文件的文件夹。</p>
+
+    <p>映射文件通常位于 <code translate="no" dir="ltr"><var>project</var>/<var>app</var>/build/outputs/mappings/release/</code>。如果文件选择器检测到此项目结构，会默认选择 <strong>release</strong> 文件夹。首先，文件选择器会检查与 <code translate="no" dir="ltr">mapping.txt</code>、<code translate="no" dir="ltr">seeds.txt</code> 和 <code translate="no" dir="ltr">usage.txt</code> 完全匹配的文件名。接下来，文件选择器会检查在任意位置包含文本 <code translate="no" dir="ltr">mapping</code>、<code translate="no" dir="ltr">usage</code> 或 <code translate="no" dir="ltr">seeds</code> 且以<code translate="no" dir="ltr">.txt</code> 结尾的文件名。例如，<code translate="no" dir="ltr">release-seeds-1.10.15.txt</code> 就是一个匹配项。</p></li>
+    </ol>
+
+    <p>以下列表介绍了映射文件：</p>
+
+    <ul>
+    <li><code translate="no" dir="ltr">seeds.txt</code>：ProGuard 配置阻止在压缩过程中移除的节点以粗体显示。</li>
+    <li><code translate="no" dir="ltr">mapping.txt</code>：启用 <strong>Deobfuscate names</strong>（点击 <img src="/studio/images/buttons/apk-deobfuscate-names.png" alt class="inline-icon"/> 图标），以便恢复由 R8 进行了混淆处理的节点的原始名称。例如，可以将 <code translate="no" dir="ltr">a</code>、<code translate="no" dir="ltr">b</code>、<code translate="no" dir="ltr">c</code> 之类进行了混淆处理的节点名称恢复为 <code translate="no" dir="ltr">MyClass</code>、<code translate="no" dir="ltr">MainActivity</code> 和 <code translate="no" dir="ltr">myMethod()</code>。</li>
+    <li><p><code translate="no" dir="ltr">usage.txt</code>：启用 <strong>Show removed nodes</strong>（点击 <img src="/studio/images/buttons/apk-show-removed-nodes.png" alt class="inline-icon"/> 图标），以便显示 R8 在压缩过程中移除的类、方法和字段。恢复的节点带删除线。</p>
+
+    <p>如需详细了解如何使用 R8 对代码进行混淆处理并最大限度地减小其大小，请参阅<a href="/studio/build/shrink-code">压缩、混淆和优化应用</a>。</p></li>
+    </ul>
+
+    <h2 id="show_bytecode_find_usages_and_generate_keep_rule">显示字节码、查找用法以及生成 Keep 规则</h2>
+
+    <p><b>Class</b> 列表视图中的节点具有一个上下文菜单，其中包含以下选项，可用于查看字节码、查找用法以及显示一个对话框（其中显示了您可以为选定节点复制并粘贴的 ProGuard 规则）。右键点击 <b>Class</b> 列表视图中的任意节点即可显示其上下文菜单。</p>
+
+    <p><strong>Show bytecode</strong>：对选定的类、方法或字段进行反编译，并在对话框中显示 smali 字节码（而不是 Java 代码）表示形式，如下所示：</p>
+
+    <p><img src="/studio/images/build/apk-byte-code_2x.png" width="429" alt/>
+    </p><p class="img-caption"><b>图 6.</b> <code translate="no" dir="ltr">init</code> 方法的 DEX 字节码</p><p></p>
+
+    <p><strong>Find usages</strong>：显示 DEX 代码的哪些其他部分对选定的类或方法进行了引用（图 7）。如果加载了 <code translate="no" dir="ltr">seeds.txt</code>，以粗体显示的节点表示 Proguard 配置阻止在压缩过程中移除这些节点：</p>
+
+    <p><img src="/studio/images/build/apk-references_2x.png" width="608" alt/>
+    </p><p class="img-caption"><b>图 7.</b> 对 <code translate="no" dir="ltr">MyClass</code> 的引用</p><p></p>
+
+    <p><strong>Generate Proguard Keep rule</strong>：显示您可以复制并粘贴到项目 Proguard 配置文件中的 Proguard 规则，这些规则可阻止在代码缩减阶段移除给定的软件包、类、方法或字段（图 8）。如需了解详情，请参阅<a href="/studio/build/shrink-code#keep-code">自定义要保留的代码</a>。</p>
+
+    <p><img src="/studio/images/build/apk-proguard-keep-rule_2x.png" width="728" alt/></p>
+
+    <p class="img-caption"><b>图 8.</b> 您可以从对话框复制到 Proguard 配置文件中的 Proguard 规则</p>
+
+    <h2 id="view_code_and_resource_entities">查看代码和资源实体</h2>
+
+    <p>各种构建任务会更改 APK 文件中的最终实体。例如，Proguard 压缩规则可以改变您的最终代码，而图片资源可以由<a href="/studio/build/build-variants#product-flavors">产品变种</a>中的资源替换。使用 APK 分析器可以轻松查看文件的最终版本：只需点击相应实体，下方便会显示文本或图片实体的预览，如图 9 所示。</p>
+
+    <p><img src="/studio/images/build/apk-image-preview_2x.png" width="1077" alt/>
+    </p><p class="img-caption"><b>图 9.</b> 最终图片资源的预览
+    </p><p></p>
+
+    <p>APK 分析器还可以显示各种文本和二进制文件。例如，在 <code translate="no" dir="ltr">resources.arsc</code> 实体查看器中，您可以查看配置专用的值，如字符串资源的语言翻译。在图 10 中，您可以看到每个字符串资源的翻译。</p>
+
+    <p><img src="/studio/images/build/apk-strings_2x.png" width="1077" alt/>
+    </p><p class="img-caption"><b>图 10.</b> 已翻译字符串资源的预览
+    </p><p></p>
+
+    <h2 id="compare_apk_files">比较 APK 文件</h2>
+
+    <p>APK 分析器可以比较两个不同 APK 文件中的实体大小。当您需要了解为什么您的应用较之先前版本有所增大时，这非常有用。在发布经过更新的 APK 之前，请执行以下操作：</p>
+
+    <ol>
+    <li>将要发布的 APK 版本加载到 APK 分析器中。</li>
+    <li>点击 APK 分析器右上角的 <strong>Compare With</strong>。</li>
+    <li><p>在选择对话框中，找到上次向用户发布的 APK，然后点击 <strong>OK</strong>。</p>
+
+    <p>此时将显示一个类似于图 11 中的对话框，帮助您评估更新可能会对用户产生的影响。</p></li>
+    </ol>
+
+    <p>图 11 显示了特定应用的调试版本和发布版本之间的差异。这两种版本类型使用不同的构建选项，因而会以不同的方式改变底层实体。</p>
+
+    <p><img src="/studio/images/build/apk-compare_2x.png" width="831" alt/>
+    </p><p class="img-caption"><b>图 11.</b> 调试版本 APK 和发布版本 APK 之间的差异</p><p></p>
+
+
+          </div>
+
+    
+                   <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+                   
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Content and code samples on this page are subject to the licenses described in the <a href="/license">Content License</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>  <p>Last updated 2020-02-24.</p></devsite-content-footer>
+
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="//developers.google.cn/china/#follow-google-developers-on-wechat"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-modal-toggle="wechat"
+                data-label="Footer WeChat Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="/_static/android/images/logo-wechat.png"
+             alt="微信">
+                微信
+      </a>
+      <div class="devsite-footer-promo-description">在微信上关注“Google Developers”</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//twitter.com/AndroidDev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-label="Footer Twitter Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="/_static/android/images/logo-twitter.svg"
+             alt="Twitter">
+                Twitter
+      </a>
+      <div class="devsite-footer-promo-description">在 Twitter 上关注 @AndroidDev</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//www.youtube.com/user/androiddevelopers"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-label="Footer YouTube Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="//www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png"
+             alt="YouTube">
+                YouTube
+      </a>
+      <div class="devsite-footer-promo-description">在 YouTube 上访问“Android Developers”频道</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">关于 Android</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Android
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/enterprise/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            Enterprise
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/security-center/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            安全
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//source.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            源代码
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">支持</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//issuetracker.google.com/issues/new?component=190923&amp;template=841312"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            报告平台错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//issuetracker.google.com/issues/new?component=192697"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            报告文档错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//support.google.com/googleplay/android-developer"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Google Play support
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://google.qualtrics.com/jfe/form/SV_ewWXIoEVLBcyp7f??reserved=1&amp;utm_source=FooterLink&amp;Q_Language=en&amp;utm_medium=own_srch&amp;utm_campaign=developer.android.com&amp;utm_term=0&amp;utm_content=0&amp;productTag=reg&amp;campaignDate=may19&amp;pType=devel&amp;referral_code=gV420370"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            参加调查研究
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">文档</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/guide"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            开发者指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/design"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            设计指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/reference"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            API 参考
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/samples"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            示例
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/studio/intro"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 5)"           >
+            Android Studio
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="/_static/images/lockup-developers.svg"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developers.google.cn/products/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+                    data-cookie-policy="//policies.google.cn/technologies/cookies"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/license"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer License link"
+         >
+          许可
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/distribute/marketing-tools/brand-guidelines"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Brand guidelines link"
+         >
+          品牌指南
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">通过电子邮件接收资讯和提示</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/newsletter/#subscribe"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   data-cookie-policy="//policies.google.cn/technologies/cookies"
+                  ></devsite-snackbar>
+    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Android \u5f00\u53d1\u8005", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-5831155-3"}]</script>
+<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "language": {"requested": "zh-cn", "served": "zh-cn"}, "projectName": "Android \u5f00\u53d1\u8005", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}, "tags": ["GTM-KMSWPCJ"]}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[3,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android","https://android-dot-google-developers.gonglchuangl.net",null,null,["/_pwa/android/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
