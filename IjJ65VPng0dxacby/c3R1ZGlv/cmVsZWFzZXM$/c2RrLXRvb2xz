@@ -1,0 +1,3024 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Android Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#3ddc84">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/android/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/touchicon-180.png"><link rel="canonical" href="https://developer.android.google.cn/studio/releases/sdk-tools?hl=zh-cn">      
+<title>SDK 工具版本说明 &nbsp;|&nbsp; Android 开发者 &nbsp;|&nbsp; Android Developers</title>
+
+<meta property="og:title" content="SDK 工具版本说明 &nbsp;|&nbsp; Android 开发者 &nbsp;|&nbsp; Android Developers">
+  <meta name="description" content="了解 Android SDK 的 Android SDK Tools 组件。">
+  <meta property="og:description" content="了解 Android SDK 的 Android SDK Tools 组件。">
+
+
+  <meta property="og:url" content="https://developer.android.google.cn/studio/releases/sdk-tools?hl=zh-cn">
+
+  <meta property="og:image" content="https://developer.android.google.cn/images/android-developers.png">
+  <meta property="og:image:secure_url" content="https://developer.android.google.cn/images/android-developers.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale" content="zh_cn">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    
+    
+    
+    
+  
+
+    </head>
+  <body type="article"
+        theme="android-theme"
+        class=""
+        
+        layout="docs"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                              </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                            <devsite-tabs class="upper-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/about"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="平台"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 平台"
+   >
+  平台
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/studio"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="androidStudio"
+   aria-label="Android Studio, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: Android Studio"
+   >
+  Android Studio
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/distribute"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="googlePlay"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Google Play"
+   >
+  Google Play
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/jetpack"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="jetpack"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Jetpack"
+   >
+  Jetpack
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/kotlin"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="kotlin"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Kotlin"
+   >
+  Kotlin
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/docs"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="文档"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 文档"
+   >
+  文档
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/news"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="新闻"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 新闻"
+   >
+  新闻
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="Android 开发者"    tenant-name="Android Developers"                >
+  <form class="devsite-search-form" action="https://developer.android.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+                        <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+                                                <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/studio"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Lower Header"
+              data-value="1"
+          >
+            Android Studio
+      
+  </a>
+        </li>
+  </ul>
+                                                        </div>
+                                                                            </div>
+                                      <div class="devsite-doc-set-nav-row">
+                                                      <devsite-tabs class="lower-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/studio"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="下载"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 下载"
+   >
+  下载
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/studio/features"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="新变化"
+   aria-label="新变化, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: 新变化"
+   >
+  新变化
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/studio/intro"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="用户指南"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 用户指南"
+   >
+  用户指南
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/studio/preview"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="预览"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 预览"
+   >
+  预览
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                            </div>
+          </div>  </div></div>
+  
+
+  </devsite-header>      <devsite-book-nav scrollbars >
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="androidDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  <img src="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers">
+</a>
+        <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                              </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+                  <a href="/about"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 平台"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="平台">
+      <span class="devsite-nav-text" tooltip >
+      平台
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/studio"
+           class="devsite-nav-title gc-analytics-event
+                            devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Android Studio"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="androidStudio">
+      <span class="devsite-nav-text" tooltip >
+      Android Studio
+   </span>
+        </a>
+  
+                                            <ul class="devsite-nav-responsive-tabs">
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/studio"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 下载"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="下载">
+      <span class="devsite-nav-text" tooltip >
+      下载
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/studio/features"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 新变化"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="新变化">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      新变化
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/studio/intro"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 用户指南"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="用户指南">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      用户指南
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/studio/preview"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 预览"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="预览">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      预览
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                  </ul>
+                          </li>
+                      <li class="devsite-nav-item">
+                  <a href="/distribute"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Google Play"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="googlePlay">
+      <span class="devsite-nav-text" tooltip >
+      Google Play
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/jetpack"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Jetpack"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="jetpack">
+      <span class="devsite-nav-text" tooltip >
+      Jetpack
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/kotlin"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Kotlin"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="kotlin">
+      <span class="devsite-nav-text" tooltip >
+      Kotlin
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/docs"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 文档"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="文档">
+      <span class="devsite-nav-text" tooltip >
+      文档
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/news"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 新闻"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="新闻">
+      <span class="devsite-nav-text" tooltip >
+      新闻
+   </span>
+        </a>
+  
+                                        </li>
+                    
+                  </ul>
+          </div>
+          <div class="devsite-mobile-nav-bottom">
+                            <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/studio/features"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>功能概览</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>版本说明</span></div></li>
+  <li class="devsite-nav-item"><a href="/studio/releases"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android Studio</span></a></li>
+  <li class="devsite-nav-item"><a href="/studio/releases/sdk-tools"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>SDK 工具</span></a></li>
+  <li class="devsite-nav-item"><a href="/studio/releases/emulator"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android 模拟器</span></a></li>
+  <li class="devsite-nav-item"><a href="/studio/releases/build-tools"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>SDK 构建工具</span></a></li>
+  <li class="devsite-nav-item"><a href="/studio/releases/gradle-plugin"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android Gradle 插件</span></a></li>
+  <li class="devsite-nav-item"><a href="/studio/releases/platforms"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>SDK 平台</span></a></li>
+  <li class="devsite-nav-item"><a href="/studio/releases/platform-tools"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>SDK 平台工具</span></a></li>
+          </ul>
+                                                                                                                                                                                                  </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            Android 开发者
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/studio"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            Android Studio
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/studio/features"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="3"
+          >
+            新变化
+      
+  </a>
+        </li>
+  </ul>
+               <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+          </div>
+
+              <h1 class="devsite-page-title">SDK 工具版本说明</h1>
+    
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+      ">
+
+              
+
+    <p>Android SDK 工具是 Android SDK 的一个组件。它包含一整套适用于 Android 的开发和调试工具，并且内置在 Android Studio 中。</p>
+
+    <h2 id="notes">修订版本</h2>
+
+    <p>以下各部分提供了关于 SDK 工具各个版本（以版本号指明）的说明。要确保您使用的是最新版本，请查看 <a href="/studio/intro/update#sdk-manager">SDK 管理器</a>以获取更新。
+    </p>
+
+    <section class="expandable expanded">
+      <p class="expand-control">SDK 工具，修订版 26.1.1（2017 年 9 月）<em></em></p>
+        <dl>
+        <dt>变更：</dt>
+        <dd>
+          <ul>
+          <li>在 <code translate="no" dir="ltr">tools/bin/apkanalyzer</code> 中添加了 APK 分析器的命令行版本。它提供与 Android Studio 中的 APK 分析器相同的功能，并且可以集成到构建/CI 服务器和脚本中，用于跟踪大小回归情况、生成报告等。
+          </li>
+          <li>Android Plugin for Gradle 不再使用 tools/proguard 下的 ProGuard 规则文件。添加了注释以解释这一点。
+          </li>
+          </ul>
+       </dd>
+       </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 26.0.2（2017 年 4 月）<em></em></p>
+        <dl>
+        <dt>变更：</dt>
+        <dd>
+          <ul>
+          <li>在使用 <code translate="no" dir="ltr">avdmanager</code> 创建 AVD 时，如果 <code translate="no" dir="ltr">--package</code> 指定的软件包仅包含一个映像（就像目前由 Google 分发的所有映像的情况一样），则无需再指定 <code translate="no" dir="ltr">--tag</code>。
+          </li>
+          </ul>
+       </dd>
+       </dl>
+
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 26.0.1（2017 年 3 月）<em></em></p>
+        <dl>
+        <dt>变更：</dt>
+        <dd>
+          <ul>
+          <li>Hierarchy Viewer 和 Pixel Perfect 工具已重新添加到 <a href="/studio/profile/monitor">Android Device Monitor</a> 中（截至修订版 25.3.0，命令行版本仍处于已移除状态）</li>
+          </ul>
+         </dd>
+         </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 26.0.0（2017 年 3 月）<em></em></p>
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 24 或更高版本。</li>
+          </ul>
+        </dd>
+        <dt>变更：</dt>
+        <dd>
+          <ul>
+          <li>在 25.3.0 版之前的工具中，<code translate="no" dir="ltr">tools/android</code> 现在会尝试通过调用新工具来重现 <code translate="no" dir="ltr">android</code> 的功能。
+            <ul>
+              <li>所有 <code translate="no" dir="ltr">avd</code>、<code translate="no" dir="ltr">target</code> 和 <code translate="no" dir="ltr">device</code> 命令都应该像以前一样工作。</li>
+              <li>系统会尽可能使用 <code translate="no" dir="ltr">tools/bin/sdkmanager</code> 将 <code translate="no" dir="ltr">sdk</code> 命令转换为类似命令。</li>
+            </ul>
+          </li>
+          <li><code translate="no" dir="ltr">tools/bin/avdmanager</code> 现在支持 <code translate="no" dir="ltr">list target</code> 命令。</li>
+          </ul>
+         </dd>
+         </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 25.3.0（2017 年 3 月）<em></em></p>
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 24 或更高版本。</li>
+          </ul>
+        </dd>
+        <dt>变更：</dt>
+        <dd>
+          <ul>
+          <li>Android 模拟器已从此软件包中移除，并移至其他 SDK 目录。请参阅新的 <a href="/studio/releases/emulator">Android 模拟器版本说明</a>。此变更可向后兼容旧版 Android Studio。</li>
+            <li><code translate="no" dir="ltr">android avd</code> 命令行功能已被替换为新的 <a href="/studio/command-line/avdmanager"><code translate="no" dir="ltr">avdmanager</code></a> 工具。</li>
+      <li>移除了已过时/已弃用的工具：
+        <ul>
+          <li><code translate="no" dir="ltr">android</code></li>
+          <li><code translate="no" dir="ltr">ddms</code>（请改为参阅<a href="/studio/profile/ddms">使用 DDMS</a>）</li>
+          <li><code translate="no" dir="ltr">draw9patch</code>（请改为参阅 <a href="/studio/write/draw9patch">Draw 9-patch</a>）</li>
+          <li><code translate="no" dir="ltr">hierarchyviewer</code>（请改为参阅<a href="/studio/profile/hierarchy-viewer">使用 Hierarchy Viewer 剖析您的布局</a>）</li>
+          <li><code translate="no" dir="ltr">traceview</code>（请改为参阅<a href="/studio/profile/traceview">使用 Traceview 和 dmtracedump 剖析性能</a>）</li>
+          <li><code translate="no" dir="ltr">ant</code> 脚本</li>
+          <li>项目和 Activity 模板</li>
+        </ul>
+            </li>
+            <li>可执行文件已移至 <code translate="no" dir="ltr">bin/</code>：
+              <ul>
+                <li><code translate="no" dir="ltr">jobb</code></li>
+                <li><code translate="no" dir="ltr">lint</code></li>
+                <li><code translate="no" dir="ltr">monkeyrunner</code></li>
+                <li><code translate="no" dir="ltr">screenshot2</code></li>
+                <li><code translate="no" dir="ltr">Uiautomatorviewer</code></li>
+              </ul>
+            </li>
+            <li>增强了 <a href="/studio/command-line/sdkmanager"><code translate="no" dir="ltr">sdkmanager</code></a>：
+              <ul>
+                <li>从命令行查看并接受所有许可</li>
+                <li>改进了详细模式软件包列表</li>
+              </ul>
+            </li>
+          </ul>
+         </dd>
+         </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 25.2.5（2017 年 1 月）<em></em></p>
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 24 或更高版本。</li>
+          </ul>
+        </dd>
+        <dt>Android 模拟器错误修复：</dt>
+        <dd>
+          <ul>
+          <li>修复了重新连接异步套接字时发生崩溃的问题。</li>
+          <li>修复了 Mac 上在销毁相应上下文后调用 <code translate="no" dir="ltr">glDeleteTextures()</code> 时发生崩溃的问题。</li>
+          </ul>
+         </dd>
+         </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 25.2.4（2016 年 12 月）<em></em></p>
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 24 或更高版本。</li>
+          </ul>
+        </dd>
+        <dt>Android 模拟器错误修复：</dt>
+        <dd>
+          <ul>
+          <li>修复了在访问已关闭的 GLES 管道时，管道发生崩溃的问题。</li>
+          <li>修复了在加载位置信息期间模拟器关闭时发生的罕见崩溃问题。</li>
+          </ul>
+         </dd>
+         </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 25.2.3（2016 年 11 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 24 或更高版本。</li>
+          </ul>
+        </dd>
+        <dt>添加了新的 <a href="/studio/command-line/sdkmanager"><code translate="no" dir="ltr">sdkmanager</code></a> 命令行工具，用于查看、安装、更新和卸载各个 Android SDK 软件包。</dt>
+        <dt>新的 Android 模拟器功能和错误修复：</dt>
+        <dd>
+          <ul>
+            <li>修复了 <code translate="no" dir="ltr">-gpu guest</code>（<a href="https://code.google.com/p/android/issues/detail?id=227447">问题 227447</a>）。</li>
+            <li>添加了对 WebP 图片解码的支持。</li>
+            <li>添加了对 ETC2 纹理解压缩的支持。</li>
+          </ul>
+         </dd>
+         </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 25.2.2（2016 年 9 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 23 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>新的 Android 模拟器功能：</dt>
+        <dd>
+          <ul>
+            <li>添加了新的 <strong>Virtual</strong> Sensors 和 Cellular > Signal Strength 扩展控件。
+            </li>
+
+            <li>为 <strong>Cellular</strong> > Network type 扩展控件添加了 LTE 选项。
+            </li>
+
+            <li>添加了模拟纵向滑动功能，以便使用鼠标滚轮滚动浏览纵向菜单。
+            </li>
+          </ul>
+         </dd>
+         </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 25.1.6（2016 年 5 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 23 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>为了提高 Android 模拟器的安全性并解决报告的安全漏洞，Android 模拟器控制台现在要求您先进行<a href="/studio/run/emulator-commandline#console-session">身份验证</a>，然后才能输入命令。在以 <code translate="no" dir="ltr">telnet</code> 的方式登录到模拟器实例后，请输入 <code translate="no" dir="ltr">auth <em>auth_token</em></code> 命令。<code translate="no" dir="ltr"><em>auth_token</em></code> 必须与主目录中 <code translate="no" dir="ltr">.emulator_console_auth_token</code> 文件的内容相匹配。
+            </li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 25.0.0（2016 年 4 月）<em></em></p>
+        <dl>
+          <dt><strong>Android Emulator 2.0</strong>：</dt>
+
+          <dd>
+            <ul>
+              <li>性能提升：
+              </li>
+                <ul>
+                  <li>现在，默认情况下，模拟器在 x86 模拟器系统映像上使用 CPU 加速。
+                  </li>
+
+                  <li>添加了 <a href="/training/articles/smp">SMP</a> 支持，在模拟 Android 6.0（API 级别 23）或更高版本时能够利用主机的多核架构，从而产生优于对应实体设备的性能和速度。此外，借助 SMP 支持，您还可以测试专门以多核 Android 设备作为目标设备的应用。
+                  </li>
+
+                  <li>改进了 <a href="/tools/help/adb">Android 调试桥</a>与搭载 Android 5.0（API 级别 21）或更高版本的设备之间的数据和 APK 推送-提取协议。速度最多比使用实体设备快 5 倍。
+                  </li>
+                </ul>
+
+              <li>借助扩展的界面控件和悬浮工具栏，您可以轻松地访问以前只能通过命令行使用的功能，例如进行屏幕截图、调整电池电量、旋转屏幕以及管理虚拟调用。
+              </li>
+
+              <li>上传 KML 文件和 GPX 文件可回放一组自定义位置点。
+              </li>
+
+              <li>通过拖动某个角动态调整模拟器的大小，或者放大模拟器窗口。
+              </li>
+
+              <li>通过将文件拖放到模拟器窗口中，安装 APK 或将媒体文件添加到模拟器的内部 SD 卡。
+              </li>
+
+              <li>模拟多点触控输入。在与模拟器屏幕互动时，按住 <strong>Ctrl</strong> 键（Windown/Linux 上）或 <strong>Command</strong> 键（Mac OSX 上）即可进入多点触控模式。
+             </li>
+
+              <li>Android 模拟器与 Android Studio 2.0 结合使用时效果最佳。要详细了解最新版本的官方 Android IDE 中包含哪些内容，请<a href="/tools/revisions/studio#Revisions">参阅版本说明</a>。
+              </li>
+
+              <li>请阅读相关文档，详细了解如何<a href="/tools/devices/emulator">使用 Android 模拟器</a>。
+              </li>
+            </ul>
+          </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Platform-tools，修订版 23.1.0（2015 年 12 月）<em></em></p>
+        <dl>
+          <dt>
+            一般说明：
+          </dt>
+
+          <dd>
+            <ul>
+              <li>更改了针对 Android SDK Platform-tools 修订版 23.1.0 及更高版本的 Linux 要求：现在需要 64 位 Linux。
+              </li>
+            </ul>
+          </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 24.4.1（2015 年 10 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 23 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了模拟器标题栏隐藏在屏幕外的问题。（<a href="http://code.google.com/p/android/issues/detail?id=178344">问题 178344</a>）</li>
+            <li>通过包含 e2fsprogs 二进制文件让模拟器能够调整用户数据分区的大小。（<a href="http://code.google.com/p/android/issues/detail?id=189030">问题 189030</a>）</li>
+            <li>修复了 32 位 Windows 操作系统上的回归问题，即模拟器无法通过 Android 5.0（API 级别 21）系统映像启动 Android 6.0（API 级别 23）的问题。（<a href="http://code.google.com/p/android/issues/detail?id=188326">问题 188326</a>）</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 24.4.0（2015 年 10 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 23 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>更新了模拟器，以便在新版本可用时显示升级通知。</li>
+            <li>为模拟器添加了发送基本崩溃报告的功能。<em></em>您必须通过 Android Studio 偏好设置选择启用，才能启用崩溃报告传输功能。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 24.3.4（2015 年 8 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 23 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>添加了对 Android 6.0（API 级别 23）平台的支持。</li>
+          </ul>
+        </dd>
+
+        <dt>模拟器：</dt>
+        <dd>
+          <ul>
+            <li>改进了模拟器在多核 Windows 桌面设备上的性能。（<a href="http://b.android.com/101040">问题 101040</a>）</li>
+            <li>添加了对使用 <code translate="no" dir="ltr">-gpu mesa</code> 命令行选项在 Windows 和 Linux 平台上模拟 GPU 的支持。</li>
+            <li>支持运行通过远程桌面服务（包括 Chrome 远程桌面、Windows Terminal Services 和 NoMachine）支持 GPU 模拟功能的模拟器。</li>
+            <li>添加了对屏幕分辨率为 280 dpi 和 360 dpi 的模拟器的支持。</li>
+            <li>改进了对 GLES 2.0 扩展程序的支持。</li>
+            <li>修复了与 GPU 模拟支持有关的几个问题。</li>
+            <li>添加了对在使用 Android 4.4（API 级别 19）及更高版本的模拟器上设置存储空间大小的支持。（<a href="http://b.android.com/75141">问题 75141</a>）</li>
+            <li>修复了在模拟器之间发送较长的短信时出现的问题。（<a href="http://b.android.com/3539">问题 3539</a>）</li>
+            <li>修复了模拟器从位置对象获取错误时间的问题。（<a href="http://b.android.com/27272">问题 27272</a>）</li>
+            <li>添加了在启动模拟器时处理路径和文件名中的异常字符的功能。（<a href="http://b.android.com/35889">问题 35889</a>）</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 24.3.3（2015 年 6 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了在 Ant 编译任务中使用 Eclipse ADT 编译结构时出现的问题。</li>
+            <li>修复了在 Mac OS X 10.8.5 上启动模拟器时出现的问题。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 24.3.2（2015 年 6 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了与 ARM 64 位模拟器相关的问题。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 24.3.1（2015 年 6 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了与 <code translate="no" dir="ltr">root/</code> 和 <code translate="no" dir="ltr">lib/</code> 文件夹相关的问题。</li>
+          </ul>
+          <p class="caution"><strong>注意</strong>：已知此版本包含会阻止编译完成的问题。我们强烈建议您尽快更新到 SDK Tools 24.3.2。</p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 24.3.0（2015 年 6 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了模拟器的一些小问题。</li>
+          </ul>
+          <p class="caution"><strong>注意</strong>：已知此版本包含会阻止编译完成的问题。我们强烈建议您尽快更新到 SDK Tools 24.3.2。</p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 24.2.0（2015 年 5 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了模拟器的一些小问题。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 24.1.2（2015 年 2 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了 Mac OS X 上的 MIPS 系统映像启动失败的问题。</li>
+            <li>修复了在使用 GPU 模拟时出现的 AVD 屏幕截图问题。</li>
+            <li>修复了模拟器系统中的内存泄露问题。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 24.0.2（2014 年 12 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了与使用 Eclipse ADT 从模板创建项目和 Activity 相关的问题。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 24.0.1（2014 年 12 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了 32 位 Windows 系统上的 Java 检测问题。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 24.0.0（2014 年 12 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>添加了对 Android Studio 1.0 和模拟器增强功能的支持。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 23.0.5（2014 年 10 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 23.0.4 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 23.0.4。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了 Windows 32 位的编译问题。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 23.0.4（2014 年 10 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 23.0.4 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 23.0.4。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>针对 Wear 和 TV 修复了 AVD 中有重复设备的问题。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 23.0.2（2014 年 7 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 23.0.2 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 23.0.2。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>添加了之前缺失的 ProGuard <code translate="no" dir="ltr">.bat</code> 文件。</li>
+            <li>添加了之前缺失的 <code translate="no" dir="ltr">proguard-android.txt</code> 文件。</li>
+            <li>已将 <code translate="no" dir="ltr">lombok-ast-0.2.2.jar</code> 文件重命名为 <code translate="no" dir="ltr">lombok-ast.jar</code>，这样一来，应该就可以从命令行运行 Lint。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 23.0.0（2014 年 6 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 19 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 23.0.0 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 23.0.0。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>添加了 Android Wear 工具和系统映像。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.6.4（2014 年 6 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 18 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.6.3 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 22.6.3。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了与 x86 模拟器相关的问题，此问题会导致 Google 地图崩溃。（<a href="http://b.android.com/69385">问题 69385</a>）</li>
+            <li>修复了 OpenGL 的一些小问题。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.6.3（2014 年 4 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 18 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.6.3 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 22.6.3。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了 AVD Manager 允许创建目标 API 级别低于 19 的 Android Wear 虚拟设备的问题。</li>
+            <li>修复了 SDK Manager 中 Android Wear 系统映像的描述。</li>
+          </ul>
+        </dd>
+
+        <dt>已知问题：</dt>
+        <dd>
+          <p>在 AVD Manager 中创建 Android Wear 虚拟设备时，默认情况下可能会选择低于 19 的目标 API 级别。在创建 Android Wear 虚拟设备时，请确保选择目标 API 级别 19。</p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.6.2（2014 年 3 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 18 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.6.2 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 22.6.2。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了在移除使用 Android Wear 系统映像创建的虚拟设备后，SDK Manager 抛出 <code translate="no" dir="ltr">NullPointerException</code> 的问题。（<a href="http://b.android.com/67588">问题 67588</a>）</li>
+            <li>修复了从命令行创建的 Nexus 5 Android 虚拟设备出现的一个问题，即 SD 卡文件系统处于只读状态的问题。</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.6.1（2014 年 3 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 18 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.6.1 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 22.6.1。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了 Android Virtual Device Manager 无法创建新的虚拟设备的问题。（<a href="http://b.android.com/66661">问题 66661</a>）</li>
+            <li><p>修复了与使用 ADT 22.3 或更低版本创建的虚拟设备相关的问题。</p>
+                <p>如果您使用 ADT 22.3 或更低版本创建了 Android 虚拟设备，则 AVD 可能会在 22.6.1 中的 AVD Manager 中列为“已损坏”<em></em>。要解决此问题，请在 AVD Manager 上选择相应虚拟设备，然后点击 <strong>Repair</strong>。</p>
+            </li>
+            <li>修复了在创建虚拟设备时命令行工具出现的问题。（<a href="http://b.android.com/66740">问题 66740</a>）</li>
+            <li>修复了命令行 <code translate="no" dir="ltr">lint</code> 脚本相关的问题。</li>
+          </ul>
+        </dd>
+
+        <dt>已知问题：</dt>
+        <dd>
+          <p>使用 Nexus 5 设备定义创建 Android 虚拟设备时，您必须启用“Use Host GPU”选项<em></em>，否则虚拟设备将无法启动。</p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.6（2014 年 3 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 18 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.6.0 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 22.6.0。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li><p>命令行 <code translate="no" dir="ltr">lint</code> 脚本（在 Windows 平台上为 <code translate="no" dir="ltr">tools\lint.bat</code>，在其他平台上为 <code translate="no" dir="ltr">tools/lint</code>）和 <code translate="no" dir="ltr">ant</code> 编译系统上的  目标失败了，并显示以下错误：</p>
+                <p><code translate="no" dir="ltr">Exception in thread "main" java.lang.NoClassDefFoundError:
+                lombok/ast/AstVisitor</code></p>
+                <p>将文件 <code translate="no" dir="ltr">tools\lib\lombok-ast-0.2.2.jar</code> 重命名为 <code translate="no" dir="ltr">tools\lib\lombok-ast.jar</code> 可以临时解决此问题。我们会尽快发布这些工具的更新版本，并在其中加入此问题的修复程序。</p>
+              </li>
+            <li>添加了对 Java 7 语言功能的支持，例如 multi-catch、try-with-resources 和菱形操作符。这些功能需要 Build Tools 版本 19 或更高版本。try-with-resources 需要 <code translate="no" dir="ltr">minSdkVersion</code> 19；其余的新语言功能需要 <code translate="no" dir="ltr">minSdkVersion</code> 8 或更高版本。</li>
+            <li>添加了新的 Lint 检查：
+              <ul>
+                <li>安全性：
+                  <ul>
+                    <li>查找可能受 <code translate="no" dir="ltr">SecureRandom</code> 漏洞影响的代码。</li>
+                    <li>检查对 <code translate="no" dir="ltr">checkPermission</code> 的调用是否使用返回值。</li>
+                  </ul>
+                </li>
+                <li>检查正式编译版本是否未使用模拟位置信息提供器。</li>
+                <li>查找被 Gradle 编译脚本中的值覆盖的清单值。</li>
+              </ul>
+            </li>
+            <li>修复了 SDK 和编译系统中的一些小问题。</li>
+            <li>模拟器：
+              <ul>
+                <li>修复了模拟器在 Nexus One 和 Nexus S 设备上针对 Android 1.5 立即关闭的问题。（<a href="http://b.android.com/64945">问题 64945</a>）</li>
+                <li>修复了端口号长于 4 位数字的问题。（<a href="http://b.android.com/60024">问题 60024</a>）</li>
+                <li>修复了 Nexus One 和 Nexus S 设备的电池错误。（<a href="http://b.android.com/39959">问题 39959</a>）</li>
+                <li>修复了 Windows 平台上的路径或参数包含空格的问题。（<a href="http://b.android.com/18317">问题 18317</a>）</li>
+                <li>修复了与 Windows 平台上的长路径值相关的问题。（<a href="http://b.android.com/33336">问题 33336</a>）</li>
+                <li>修复了 64 位系统上与 <code translate="no" dir="ltr">-snapshot-list</code> 命令行选项相关的问题。（<a href="http://b.android.com/34233">问题 34233</a>）</li>
+              </ul>
+            </li>
+            <li>修复了与 RenderScript 支持相关的问题。现在需要安装 Build Tools 版本 19.0.3 才能使用 RenderScript 支持模式。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.3（2013 年 10 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 18 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.3.0 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 22.3.0。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>添加了对 Android 4.4（API 级别 19）的支持。</li>
+            <li>修复了 SDK 和编译系统中的一些小问题。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.2.1（2013 年 9 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 16 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.2.1 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 22.2.1。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了模板导致新项目向导挂起的问题。（<a href="http://b.android.com/60149">问题 60149</a>）</li>
+            <li>修复了在使用 Lint 命令行工具时因库依赖项不匹配而导致崩溃的问题。（<a href="http://b.android.com/60190">问题 60190</a>）</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.2（2013 年 9 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 16 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.2 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 22.2。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>更新了编译工具，以允许使用<a href="/tools/support-library/features#v8">支持库</a>中的新功能在旧版 Android 上使用 RenderScript。</li>
+            <li>已将 Systrace 工具移至 <code translate="no" dir="ltr">&gt;sdk&lt;/platform-tools/</code> 目录。</li>
+            <li>已将 OpenGL ES 跟踪器修改为支持 OpenGL ES 3.0。</li>
+            <li>Lint
+              <ul>
+                <li>修复了 Lint 检测不到自定义命名空间的问题。（<a href="http://b.android.com/55673">问题 55673</a>）</li>
+                <li>修复了 XML 报告中包含无效字符的问题。（<a href="http://b.android.com/56205">问题 56205</a>）</li>
+                <li>修复了 Lint 以无头模式运行的命令行执行，以支持编译服务器的执行。（<a href="http://b.android.com/55820">问题 55820</a>）</li>
+              </ul>
+            </li>
+            <li>改进了对 Windows 命令行工具中包含空格的路径名的支持。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.0.5（2013 年 7 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 16 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.0.5 及更高版本结合使用。如果您尚未更新 ADT，请将其更新到 22.0.5。</li>
+            <li>此版本的 SDK Tools 应该与 Android Studio 0.2.x 及更高版本结合使用。</li>
+            <li>如果您是在没有集成开发环境 (IDE) 的情况下进行开发，则必须安装 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了使用 Ant 的 Windows 平台的 RenderScript 编译问题。</li>
+            <li>更新了 <a href="/tools/help/systrace">Systrace</a>，以便与 Android 4.3 平台映像结合使用。</li>
+            <li>修复了 RenderScript 编译器打包的问题。</li>
+            <li>Build Tools 18.0.0 已过时，应改为使用 18.0.1。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.0.4（2013 年 7 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 16 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.0.4 及更高版本结合使用。如果您尚未更新 ADT，请将其更新到 22.0.4。</li>
+            <li>此版本的 SDK Tools 应该与 Android Studio 0.2.x 及更高版本结合使用。</li>
+            <li>如果您是在没有集成开发环境 (IDE) 的情况下进行开发，则必须安装 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了与编译 RenderScript 代码相关的问题。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 22.0.1（2013 年 5 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 16 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.0.1 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 22.0.1。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>修复了与 Lint ServiceCast 检查和完全限定的类名相关的问题。（<a href="http://code.google.com/p/android/issues/detail?id=55403">问题 55403</a>）</li>
+            <li>修复了 Lint ArraySizeDetector 检查的崩溃问题。（<a href="http://code.google.com/p/android/issues/detail?id=54887">问题 54887</a>）</li>
+            <li>修复了 monkeyrunner 工具无法导入标准 python 类的问题。（<a href="http://code.google.com/p/android/issues/detail?id=55632">问题 55632</a>）</li>
+            <li>解决了 DDMS 监视器因未找到类异常而无法打开堆和网络统计信息视图的问题。（<a href="http://code.google.com/p/android/issues/detail?id=55394">问题 55394</a>）</li>
+          </ul>
+
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 22（2013 年 5 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 16 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 22.0.0 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 22.0.0。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+        </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>通过添加基于现有平台工具组件的新编译工具 SDK Component 更改了 SDK 的结构。此更改将编译工具版本与 IDE 版本分离，让您可以更新工具，而无需 IDE 更新。</li>
+            <li>更新了工具，让库能够与使用它们的应用共用相同的软件包名称。</li>
+            <li>更新了 <code translate="no" dir="ltr">draw9patch</code> 工具，让您能够更轻松地更改标记。</li>
+            <li>添加了新的 Lint 检查，包括对布局一致性、<code translate="no" dir="ltr"><a href="/reference/android/widget/RelativeLayout">RelativeLayout</a></code> 同级项、<code translate="no" dir="ltr"><a href="/reference/android/os/Parcel">Parcel</a></code> 创建程序、JavaScript 接口、<code translate="no" dir="ltr"><a href="/reference/android/app/Service">Service</a></code> 投射、数量字符串、清单拼写错误、布局中的屏幕方向标记、9-patch 和图片名称重叠的检查，以及类存在性检查。</li>
+            <li>更新了编译工具，以便使用 BouncyCastle 库对应用进行签名，而不必依赖特定于 Sun JVM 的 API。</li>
+            <li>已将部分 Android 工具发布到 <a href="http://www.maven.org">Maven 中央代码库</a>以协助第三方工具开发者。该代码库中提供了以下工具：<code translate="no" dir="ltr">manifest-merger</code>、<code translate="no" dir="ltr">common/sdk_common</code>、<code translate="no" dir="ltr">ddmlib</code>、<code translate="no" dir="ltr">dvlib</code>、<code translate="no" dir="ltr">layoutlib_api</code>、<code translate="no" dir="ltr">sdklib</code> 和 <code translate="no" dir="ltr">lint</code>。</li>
+          </ul>
+        </dd>
+
+        <dt>修复了以下错误：</dt>
+        <dd>
+          <ul>
+            <li>修复了 SDK 和编译系统中的一些小问题。</li>
+        </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 21.1（2013 年 2 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 16 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 21.1.0 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 21.1.0。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+        </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>改进了当编译系统中的 dex 合并失败时，<code translate="no" dir="ltr">dx</code> 中的错误报告。</li>
+            <li>添加了超过 15 项新的 Lint 检查，包括对替换旧版 API、XML 资源问题、图片资源问题和清单标记的检查。</li>
+            <li>添加了新的 aapt 功能以用于编译资源。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 21.0.1（2012 年 12 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 16 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 21.0.1 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 21.0.1。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+        </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>编译
+              <ul>
+                <li>更新了编译，以检测和处理应用与其依赖的库之间的软件包名称冲突。除非所有库都共用相同的软件包名称，否则，库与库之间不可共用软件包名称。（<a href="http://code.google.com/p/android/issues/detail?id=40152">问题 40152</a>、<a href="http://code.google.com/p/android/issues/detail?id=40273">问题 40273</a>）
+                </li>
+                <li>添加了一个用于停用 dex 合并的标记，以处理合并可能生成损坏的 dex 文件的情况。如果您的项目发生了这种情况，请将以下设置添加到您的 <code translate="no" dir="ltr">project.properties</code> 文件：<code translate="no" dir="ltr">dex.disable.merger=true</code>。此设置会让编译系统还原为不对库进行 dex 预处理的速度较慢的旧版 dex 处理方式。</li>
+              </ul>
+            </li>
+
+            <li>RenderScript
+              <ul>
+                <li>添加了对 <a href="/guide/topics/renderscript/compute#filterscript">Filterscript</a> 编译的支持。</li>
+                <li>添加了新的项目设置，以便将 RenderScript 编译目标与 Android 项目分开进行单独控制。将以下行添加到 <code translate="no" dir="ltr">project.properties</code> 文件会导致系统针对 Android API 级别 17 编译 RenderScript 代码，而包含的应用能够以其他（更低的）API 级别作为目标版本。
+                 <pre class="none" translate="no" dir="ltr">renderscript.target = 17</pre>
+                  以前，RenderScript 编译目标与清单中的 <code translate="no" dir="ltr">android:minSdkVersion</code> 设置相关联。（<a href="http://code.google.com/p/android/issues/detail?id=40487">问题 40487</a>）
+                 </li>
+              </ul>
+            </li>
+
+          </ul>
+        </dd>
+
+        <dt>修复了以下错误：</dt>
+        <dd>
+          <ul>
+            <li>Lint
+              <ul>
+                <li>修正了样式 XML 元素中的 <code translate="no" dir="ltr">0px</code> 值的检查。（<a href="http://code.google.com/p/android/issues/detail?id=39601">问题 39601</a>）
+                 </li>
+                <li>修复了格式化字符串错误标记的问题。（<a href="http://code.google.com/p/android/issues/detail?id=39758">问题 39758</a>）
+                  </li>
+                <li>修复了清单文件中的 <code translate="no" dir="ltr">tools:ignore</code> 指令被 Lint 工具忽略的问题。（<a href="http://code.google.com/p/android/issues/detail?id=40136">问题 40136</a>）
+                 </li>
+                <li>修复了与在条件内标记唤醒锁定释放相关的问题。（<a href="http://code.google.com/p/android/issues/detail?id=40424">问题 40424</a>）
+                  </li>
+                <li>修复了错误报告缺失 <code translate="no" dir="ltr">layout_width</code> 和 <code translate="no" dir="ltr">layout_height</code> XML 字段的问题。（<a href="http://code.google.com/p/android/issues/detail?id=38958">问题 38958</a>）
+                 </li>
+                <li>修复了处理自定义命名空间属性的问题。</li>
+                <li>添加了用于过滤库项目警告的修复程序。</li>
+                <li>移除了在编译前显示与类缺失有关的警告的问题。</li>
+              </ul>
+            </li>
+
+            <li>修复了与 UI Automator Viewer 执行脚本相关的问题，即未设置 Android 工具目录的问题。</li>
+            <li>修复了与 SDK Manager 相关的问题，以便其在启动时能够自动选择最新发布的平台。</li>
+            <li>修复了 Java 查找脚本，以查找目前支持的 Java 版本（1.6 或更高版本）。</li>
+            <li>修复了 ADT Bundle 中的 SDK Manager 启动器，以便在将其放置在 Bundle 的根位置时能够正常启动 SDK Manager 程序。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 21（2012 年 11 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 16 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 21.0.0 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 21.0.0。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+          </ul>
+        </dd>
+
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>编译系统
+              <ul>
+                <li>添加了一个标记，用于为 DEX 文件设置 Jumbo 模式，让 DEX 文件中能够包含更多数量的字符串。<em></em>要启用此模式，请将以下行添加到您项目的 <code translate="no" dir="ltr">project.properties</code> 文件中：
+                  <pre class="none" translate="no" dir="ltr">dex.force.jumbo=true</pre></li>
+                <li>通过对库进行 dex 预处理改进了编译时（JAR 文件和库项目）。</li>
+                <li>更新了编译，以便为仅包含库所需的 ID 的库项目生成 <code translate="no" dir="ltr">R</code> 资源类，从而降低达到 DEX 文件的字段和方法限制的风险。</li>
+                <li>改进了编译，以便让多个编辑功能（代码补全、资源选择器、转到声明）能够正确处理库项目资源。</li>
+              </ul>
+            </li>
+            <li>Lint
+              <ul>
+                <li>针对资源、语言区域设置、布局文件、<code translate="no" dir="ltr"><a href="/reference/android/util/SparseArray">SparseArray</a></code> 和 <code translate="no" dir="ltr"><a href="/reference/android/os/PowerManager.WakeLock">PowerManager.WakeLock</a></code> 的错误使用以及清单问题添加了超过 25 项新的 Lint 规则。</li>
+                <li>更新了报告，以便在要检查的项目列表中包含库项目时，在报告中包含相应库项目中的错误。</li>
+                <li>为 Ant 编译系统添加了新的 <code translate="no" dir="ltr">lint</code> 目标，以便更轻松地与持续编译系统集成。</li>
+                <li>添加了新的 <code translate="no" dir="ltr">--sources</code> 和 <code translate="no" dir="ltr">--classpath</code> 参数，以便指向具有不同目录结构的源代码。</li>
+                <li>改进了 XML 导出功能以支持 <a href="https://wiki.jenkins-ci.org/display/JENKINS/Android+Lint+Plugin">Jenkins Lint 插件</a>。
+                </li>
+                <li>添加了对类文件流分析的支持。</li>
+              </ul>
+            </li>
+            <li>Android 虚拟设备 (AVD)
+              <ul>
+                <li>在 AVD 管理器中添加了<strong>设备定义</strong>标签页，用于配置标准尺寸和 Nexus 虚拟设备。</li>
+                <li>改进了模拟器，使其在启动后具有动态生成的皮肤，并且此皮肤能够反映在 AVD Manager 中配置的实际硬件。</li>
+                <li>借助适用于 Android 虚拟设备的新版 MIPS 系统映像，改进了对在基于 MIPS 的设备上开发 Android 应用的支持。</li>
+              </ul>
+            </li>
+            <li>添加了 <code translate="no" dir="ltr">jobb</code> 工具，用于创建和加密 <a href="/google/play/expansion-files">APK 扩展文件</a>。（<a href="/tools/help/jobb">了解详情</a>）
+            </li><li>改进了 Android JUnit 测试运行程序，让您能够同时在所有连接的设备上运行测试。</li>
+          </ul>
+        </dd>
+
+        <dt>修复了以下错误：</dt>
+        <dd>
+          <ul>
+            <li>修复了清单合并以正确地调整合并清单中的库类。</li>
+          </ul>
+        </dd>
+
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 20.0.3（2012 年 8 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 12 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 20.0.3 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 20.0.3。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+        </ul>
+        </dd>
+        <dt>修复了以下错误：</dt>
+        <dd>
+          <ul>
+            <li>修复了与 SDK Manager 中缓存的下载列表相关的问题。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 20.0.1（2012 年 7 月）<em></em></p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 12 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 20.0.1 及更高版本结合使用。如果您尚未更新 ADT 插件，请将其更新到 20.0.1。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+        </ul>
+        </dd>
+        <dt>修复了以下错误：</dt>
+        <dd>
+          <ul>
+            <li>修复了对编译状态执行的错误检查，此检查会强制地反复重新编译 Java 代码。</li>
+            <li>修复了与运行多个模拟器以及使用 GPU 加速运行多个模拟器相关的问题。</li>
+            <li>改进了大小调整算法，以在缩放的模拟器窗口上实现更好的渲染效果。</li>
+            <li>修复了对不受保护的广播接收器进行的 <code translate="no" dir="ltr">lint</code> 检查中的错误，以忽略不受保护的默认 Android 操作接收器。</li>
+            <li>修复了使用 RenderScript 的项目的编译问题。</li>
+            <li>修复了模拟器中的内存泄露问题。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 20（2012 年 6 月）<em></em></p>
+      <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 12 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 20.0.0 及更高版本结合使用。如果您尚未更新 ADT 插件，我们强烈建议您将其更新到 20.0.0。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+        </ul>
+        </dd>
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>添加了新的 Device Monitor 应用，将各种 Android 调试工具汇总在单个应用中，包括 ddms、traceview、hierarchyviewer 和 Tracer for GLES。（<a href="/tools/help/gltracer">了解详情</a>）</li>
+            <li>添加了新的系统轨迹工具，用于跟踪 Android 系统活动。借助此工具，您可以捕获系统活动切片，以及获取附加信息（可从 <strong>Settings > Developer Options > Monitoring: Enable traces</strong> 添加标签，或通过将特定调用添加到应用代码）。</li>
+
+            <li>编译系统
+              <ul>
+                <li>添加了将库项目清单文件自动合并到包含这些内容的项目的清单中的功能。要启用此功能，请使用 <code translate="no" dir="ltr">manifestmerger.enabled</code> 属性。</li>
+                <li>为 <code translate="no" dir="ltr">aapt -G</code> 标记添加了自动 ProGuard 支持。此更改会导致编译系统生成包含从 XML 文件引用的类（例如自定义视图）的临时 ProGuard <code translate="no" dir="ltr">keep-rules</code> 文件，并会在压缩时将此文件传递给 ProGuard。这样即可在仅使用大型库项目（例如 Android 支持库）的一小部分时大大减小生成的 APK，因为用于保留默认 ProGuard 配置文件中的所有自定义视图的 catch-all 规则也被删除了。</li>
+                <li>添加了在项目中使用的两个 ProGuard 配置文件：<code translate="no" dir="ltr">proguard-android-optimize.txt</code>，用于启用优化；以及 <code translate="no" dir="ltr">proguard-android.txt</code>，用于停用优化。</li>
+              </ul>
+            </li>
+            <li>SDK 管理器
+              <ul>
+                <li>改进了缓存，以减少代码库定义的下载。</li>
+                <li>添加了<strong>工具 > 管理插件网站</strong>选项，让您能够在第三方网站加载速度缓慢的情况下临时停用第三方网站，从而提高性能。</li>
+                <li>添加了针对 SDK Manager 下载缓存的设置（<strong>SDK Manager > 工具 > 选项</strong>）。</li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+        <dt>修复了以下错误：</dt>
+        <dd>
+          <ul>
+            <li>编译
+              <ul>
+                <li>修复了测试项目无法访问已测试项目的完整类路径的问题，包括库项目和第三方 JAR。</li>
+                <li>修复了部署逻辑，现在，包含嵌入式测试的应用可以像测试应用一样进行部署和测试（包括代码覆盖率信息）。</li>
+                <li>修复了对使用库测试项目的 Ant 支持。</li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 19（2012 年 4 月）<em></em></p>
+        <p class="note"><strong>注意</strong>：此 SDK 工具更新仅可通过 <a href="/studio/intro/update">Android SDK 管理器</a>获取。请使用该工具下载和安装此更新。</p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 9 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 18.0.0 及更高版本结合使用。如果您尚未更新 ADT 插件，我们强烈建议您将其更新到 18.0.0。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+        </ul>
+        </dd>
+        <dt>修复了以下错误：</dt>
+        <dd>
+          <ul>
+            <li>修复了一个阻止某些开发者使用 GPU 加速运行模拟器的问题。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 18（2012 年 4 月）<em></em></p>
+        <p class="caution"><strong>重要提示</strong>：要从 Android SDK Manager 下载新的 Android 4.0 系统组件，您必须先将 SDK 工具更新到修订版 14 或更高版本，然后重启 Android SDK Manager。否则，便无法下载 Android 4.0 系统组件。</p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 9 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 18.0.0 及更高版本结合使用。如果您尚未更新 ADT 插件，我们强烈建议您将其更新到 18.0.0。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+        </ul>
+        </dd>
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>更新了 SdkController 应用，以封装传感器和多点触控模拟功能。</li>
+          </ul>
+        </dd>
+        <dt>修复了以下错误：</dt>
+        <dd>
+          <ul>
+            <li>修复了在某些情况下无法获取 <code translate="no" dir="ltr">libs/</code> 文件夹中的某些 JAR 库的 Ant 问题。</li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 17（2012 年 3 月）<em></em></p>
+        <p class="caution"><strong>重要提示</strong>：要从 Android SDK Manager 下载新的 Android 4.0 系统组件，您必须先将 SDK 工具更新到修订版 14 或更高版本，然后重启 Android SDK Manager。否则，便无法下载 Android 4.0 系统组件。</p>
+
+        <dl>
+        <dt>依赖项：</dt>
+        <dd>
+          <ul>
+            <li>Android SDK Platform-Tools 修订版 9 或更高版本。</li>
+            <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 17.0.0 及更高版本结合使用。如果您尚未更新 ADT 插件，我们强烈建议您将其更新到 17.0.0。</li>
+            <li>如果您是在 Eclipse 之外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+        </ul>
+        </dd>
+        <dt>一般说明：</dt>
+        <dd>
+          <ul>
+            <li>模拟器
+              <ul>
+                <li>添加了对硬件加速图形渲染的支持。要使用此功能，您需要安装 Android 级别 15、修订版 3 或更高版本的系统映像。（<a href="/tools/devices/emulator#accel-graphics">了解详情</a>）
+                </li>
+                <li>添加了对在 Windows 和 Mac OS X 上以虚拟模式运行 Android x86 系统映像的支持。（<a href="/tools/devices/emulator#accel-vm">了解详情</a>）<p class="note"><strong>注意</strong>：请使用 Android SDK 管理器下载并安装 x86 系统映像。Android x86 系统映像并非适用于所有 API 级别。</p>
+                </li>
+                <li>添加了对多点触控输入的实验性支持，即让模拟器接收来自通过 USB 共享网络的实体 Android 设备的触控输入。（<a href="http://tools.android.com/tips/hardware-emulation">了解详情</a>）</li>
+              </ul>
+            </li>
+            <li>添加了在 DDMS 中查看应用的实时网络使用情况详情的功能。（<a href="http://tools.android.com/recent/detailednetworkusageinddms">了解详情</a>）</li>
+            <li>ProGuard
+              <ul>
+                <li>已将捆绑的 ProGuard 工具更新到版本 4.7。除了许多新功能之外，此更新修复了一些用户遇到的 <code translate="no" dir="ltr">Conversion to Dalvik format failed with error 1</code> 错误。</li>
+                <li>使用更好的 Android 默认标记更新了默认 <code translate="no" dir="ltr">proguard.cfg</code> 文件。</li>
+                <li>拆分了 ProGuard 配置文件，将特定于项目的标记保留在项目中，并让通用的 Android 标记与工具本身一起进行分发（和更新）。</li>
+              </ul>
+            </li>
+            <li>编译
+              <ul>
+                <li>添加了一项功能，让您能够仅在调试模式下运行某些代码。编译现在会生成一个名为 <code translate="no" dir="ltr">BuildConfig</code> 的类，其中包含根据编译类型自动设置的 <code translate="no" dir="ltr">DEBUG</code> 常量。您可以检查代码中的 (<code translate="no" dir="ltr">BuildConfig.DEBUG</code>) 常量以运行仅调试函数。</li>
+                <li>修复了项目及其库的 libs 文件夹中包含相同的 JAR 文件的问题。（<a href="http://tools.android.com/recent/dealingwithdependenciesinandroidprojects">了解详情</a>）</li>
+                <li>借助库中的自定义属性添加了对自定义视图的支持。使用自定义属性的布局必须使用命名空间 URI <code translate="no" dir="ltr">http://schemas.android.com/apk/res-auto</code>，而不是包含应用软件包名称的 URI。在编译时，此 URI 将替换为特定于应用的 URI。</li>
+              </ul>
+            </li>
+            <li>Lint
+              <ul>
+                <li>更新了 Lint 以检查 Android 应用代码。我们对先前在应用代码中执行基于模式的搜索的 Lint 规则（例如未使用资源检查）进行了重写，以便使用更准确的 Java 样式解析树。</li>
+                <li>添加了对检查库项目的支持。此更改意味着未使用资源检查等规则可正确处理在库项目中声明及在下游项目中引用的资源。</li>
+                <li>添加了使用新的 <code translate="no" dir="ltr">@SuppressLint</code> 注释抑制 Java 代码中的 Lint 警告的功能，以及使用以下新工具抑制 XML 文件中的 Lint 警告的功能：命名空间和忽略属性。（<a href="http://tools.android.com/recent/ignoringlintwarnings">了解详情</a>）</li>
+                <li>新增的 Lint 检查功能：
+                  <ul>
+                    <li>针对要求安装高于支持的最低版本的 Android 版本的 Android API 调用添加了相关检查。当代码封装在系统版本条件中时，您可以使用新的 <code translate="no" dir="ltr">@TargetApi</code> 注释来抑制警告。（<a href="http://tools.android.com/recent/lintapicheck">了解详情</a>）</li>
+                    <li>添加了超过 20 项新的 Lint 规则，包括对<a href="http://tools.android.com/recent/lintperformancechecks">性能</a>、XML 布局、清单和文件处理的检查。</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+        </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 16（2011 年 12 月）<em></em></p>
+        <p class="caution"><strong>重要提示</strong>：要从 Android SDK Manager 下载新的 Android 4.0 系统组件，您必须先将 SDK 工具更新到修订版 14 或更高版本，然后重启 Android SDK Manager。否则，便无法下载 Android 4.0 系统组件。</p>
+
+    <dl>
+    <dt>依赖项：</dt>
+    <dd>
+      <ul>
+        <li>Android SDK Platform-Tools 修订版 9 或更高版本。</li>
+        <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 16.0.0 及更高版本结合使用。如果您尚未更新 ADT 插件，我们强烈建议您将其更新到 16.0.0。</li>
+        <li>如果您是在 Eclipse 以外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+    </ul>
+    </dd>
+    <dt>一般说明：</dt>
+    <dd>
+      <ul>
+        <li>添加了用于检测 Android 项目中的常见错误的 Lint 工具。（<a href="http://tools.android.com/recent/lint">了解详情</a>）</li>
+        <li>添加了传感器模拟支持，让模拟器能够读取实体 Android 设备中的传感器数据。（<a href="http://tools.android.com/recent/sensoremulation">了解详情</a>）</li>
+        <li>添加了对使用网络摄像头在 Mac OS X 上模拟摄像头的支持。</li>
+      </ul>
+    </dd>
+    <dt>修复了以下错误：</dt>
+    <dd>
+      <ul>
+        <li>快照现在适用于 Android 4.0 系统映像。</li>
+        <li>修复了编译文件的几个小问题。（<a href="http://code.google.com/p/android/issues/detail?id=21023">问题 21023</a>、<a href="http://code.google.com/p/android/issues/detail?id=21267">问题 21267</a>、<a href="http://code.google.com/p/android/issues/detail?id=21465">问题 21465</a>、<a href="http://code.google.com/p/android/issues/detail?id=21525">问题 21525</a>）。</li>
+      </ul>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 15（2011 年 10 月）<em></em></p>
+        <p class="caution"><strong>重要提示</strong>：要从 Android SDK Manager 下载新的 Android 4.0 系统组件，您必须先将 SDK 工具更新到修订版 14 或更高版本，然后重启 Android SDK Manager。否则，便无法下载 Android 4.0 系统组件。</p>
+      <dl>
+    <dt>依赖项：</dt>
+    <dd>
+      <ul><li>Android SDK Platform-Tools 修订版 9 或更高版本。</li>
+      <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK 工具应该与 ADT 15.0.0 及更高版本结合使用。如果您尚未更新 <a href="/tools/sdk/eclipse-adt">ADT 插件</a>，我们强烈建议您将其更新到 15.0.0。</li>
+      <li>如果您是在 Eclipse 以外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+    </ul>
+
+    </dd><dt>修复了以下错误：</dt>
+    <dd>
+      <ul>
+        <li>修复了由于网络摄像头检测不当导致 Linux 上的模拟器崩溃的问题（<a href="http://code.google.com/p/android/issues/detail?id=20952">问题 20952</a>）。</li>
+        <li>修复了在使用 <code translate="no" dir="ltr">-wipe-data</code> 参数时模拟器出现的问题。</li>
+        <li>修复了在以 API 级别 11-13 作为目标版本的项目中使用 RenderScript 时出现的编译问题（<a href="http://code.google.com/p/android/issues/detail?id=21006">问题 21006</a>）。</li>
+        <li>修复了在使用 GoogleTV 插件创建 AVD 时出现的问题（<a href="http://code.google.com/p/android/issues/detail?id=20963">问题 20963</a>）。</li>
+        <li>修复了 <code translate="no" dir="ltr">ant test</code>（<a href="http://code.google.com/p/android/issues/detail?id=20979">问题 20979</a>）。</li>
+        <li>修复了 <code translate="no" dir="ltr">android update project</code>（<a href="http://code.google.com/p/android/issues/detail?id=20535">问题 20535</a>）。</li>
+        <li>修复了 DDMS 的新 Logcat 面板中的滚动问题。</li>
+        <li>修复了与 MonkeyRunner 相关的问题（<a href="http://code.google.com/p/android/issues/detail?id=20964">问题 20964</a>）。</li>
+        <li>修复了 SDK 管理器中的问题（<a href="http://code.google.com/p/android/issues/detail?id=20939">问题 20939</a>、<a href="http://code.google.com/p/android/issues/detail?id=20607">问题 20607</a>）。</li>
+      </ul>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 14（2011 年 10 月）<em></em></p>
+        <p class="note"><strong>重要提示</strong>：要从 Android SDK Manager 下载新的 Android 4.0 系统组件，您必须先将 SDK 工具更新到修订版 14，然后重启 Android SDK Manager。否则，便无法下载 Android 4.0 系统组件。</p>
+      <dl>
+    <dt>依赖项：</dt>
+    <dd>
+      <ul><li>Android SDK Platform-Tools 修订版 8 或更高版本。</li>
+      <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK 工具应该与 ADT 14.0.0 及更高版本结合使用。如果您尚未更新 <a href="/tools/sdk/eclipse-adt">ADT 插件</a>，我们强烈建议您将其更新到 14.0.0。</li>
+      <li>如果您是在 Eclipse 以外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</li>
+    </ul>
+
+    </dd><dt>一般说明：</dt>
+    <dd>
+      <ul>
+        <li>为 Android 4.0 或更高版本的平台添加了网络摄像头支持，可在存在一个网络摄像头时模拟后置摄像头，并在存在两个网络摄像头时模拟后置摄像头和前置摄像头。网络摄像头支持仅适用于 Windows 和 Linux。我们会在之后的版本中发布对 Mac 的支持。</li>
+        <li>已将 <code translate="no" dir="ltr">default.properties</code> 改为 <code translate="no" dir="ltr">project.properties</code>，将 <code translate="no" dir="ltr">build.properties</code> 改为 <code translate="no" dir="ltr">ant.properties</code>。必须使用 <code translate="no" dir="ltr">android update project</code> 命令更新使用 Ant 编译的所有现有项目。</li>
+        <li>更改了 Ant <code translate="no" dir="ltr">build.xml</code> 文件以支持对编译系统的改进，并添加和修改了 Ant 命令以支持这些更改。如需查看 Ant 命令列表，请参阅 <a href="/tools/building/building-cmdline#AntReference">Ant 命令参考</a>。</li>
+        <li>更改了库项目的编译方式。</li>
+        <li>改进了增量编译，因而降低了运行资源编译的频率。在您修改字符串或布局时，编译不会再运行（除非您添加新 <code translate="no" dir="ltr">id</code>）；此外，编译也不会再针对每个库项目都运行一次。</li>
+        <li>引入了“PNG 压缩缓存”，它仅在经过修改的 PNG 文件上运行，而不是始终压缩所有现有 PNG 文件。</li>
+        <li>改进了 SDK 管理器界面（<a href="http://tools.android.com/recent/newsdkmanager">了解详情</a>）。</li>
+      </ul>
+      <p>有关编译系统变更以及您需要执行哪些操作以支持这些变更的完整概览，请参阅 <a href="http://tools.android.com/recent/buildchangesinrevision14">Android 工具项目网站</a>。</p>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 13（2011 年 9 月）<em></em></p>
+      <dl>
+    <dt>依赖项：</dt>
+    <dd>
+    <p>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK 工具应该与 ADT 12.0.0 及更高版本结合使用。如果您尚未更新 <a href="/tools/sdk/eclipse-adt">ADT 插件</a>，我们强烈建议您将其更新到 12.0.0。</p>
+
+    <p>如果您是在 Eclipse 以外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</p>
+
+    </dd><dt>一般说明：</dt>
+    <dd>
+      <ul>
+        <li>修复了当路径中包含空格时，Ant（<code translate="no" dir="ltr">dex</code> 步骤）中的编译问题。</li>
+        <li>修复了当路径中包含空格时，模拟器安装中的问题。</li>
+        <li>修复了 AVD 路径中包含空格时的问题。</li>
+        <li>修复了使用模拟器缩放时的渲染问题（<a href="http://code.google.com/p/android/issues/detail?id=18299">了解详情</a>）。</li>
+      </ul>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 12（2011 年 7 月）<em></em></p>
+      <dl>
+    <dt>依赖项：</dt>
+    <dd>
+    <p>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK 工具应该与 ADT 12.0.0 及更高版本结合使用。如果您尚未更新 <a href="/tools/sdk/eclipse-adt">ADT 插件</a>，我们强烈建议您将其更新到 12.0.0。</p>
+
+    <p>如果您是在 Eclipse 以外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</p>
+
+    </dd><dt>一般说明：</dt>
+    <dd>
+      <ul>
+        <li>AVD Manager 和模拟器现在可以使用针对 ARM v7 和 x86 CPU 编译的系统映像。</li>
+      </ul>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 11（2011 年 5 月）<em></em></p>
+      <dl>
+    <dt>依赖项：</dt>
+    <dd>
+    <p>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK 工具应该与 ADT 10.0.1 及更高版本结合使用。如果您尚未更新 <a href="/tools/sdk/eclipse-adt">ADT 插件</a>，我们强烈建议您将其更新到 10.0.1。</p>
+
+    <p>如果您是在 Eclipse 以外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</p>
+
+    </dd><dt>一般说明：</dt>
+    <dd>
+      <ul>
+        <li>更改了杂项模拟器以支持 Android 3.1。</li>
+      </ul>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 10（2011 年 2 月）<em></em></p>
+      <dl>
+    <dt>依赖项：</dt>
+    <dd>
+    <p>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 10.0.0 及更高版本结合使用。安装 SDK 工具 r10 后，我们强烈建议您将 ADT 插件更新到 10.0.0。</p>
+
+    <p>如果您是在 Eclipse 以外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</p>
+
+    </dd><dt>一般说明：</dt>
+    <dd>
+      <ul>
+        <li>这些工具现在可以从您的原生 <code translate="no" dir="ltr">.rs</code> 文件自动生成 Java 编程语言源文件（位于 <code translate="no" dir="ltr">gen</code> 目录中）和字节码（位于 <code translate="no" dir="ltr">res/raw</code> 目录中）。</li>
+      </ul>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 9（2011 年 1 月）<em></em></p>
+      <dl>
+    <dt>依赖项：</dt>
+    <dd>
+    <p>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 9.0.0 及更高版本结合使用。安装 SDK 工具 r9 后，我们强烈建议您将 ADT 插件更新到 9.0.0。</p>
+
+    <p>如果您是在 Eclipse 以外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</p>
+
+    </dd><dt>升级到 SDK 工具 r9：</dt>
+    <dd>
+    <p>如果您要从 SDK 工具 r7 或更低版本升级到 SDK 工具 r9，<code translate="no" dir="ltr">adb</code> 工具的默认安装位置已从 <code translate="no" dir="ltr">&lt;<em>SDK</em>&gt;/tools/adb</code> 更改为<code translate="no" dir="ltr">&lt;<em>SDK</em>&gt;/platform-tools/adb</code>。这意味着您应该将这一新位置添加到 PATH，并修改所有自定义编译脚本以引用新位置。不建议将 <code translate="no" dir="ltr">adb</code> 可执行文件从新位置复制到旧位置，因为 SDK 工具的后续更新会删除此文件。</p>
+    </dd>
+
+    <dt>一般说明：</dt>
+    <dd>
+      <ul>
+        <li>默认的 ProGuard 配置 <code translate="no" dir="ltr">proguard.cfg</code> 现在会忽略以下类：
+          <ul>
+           <li>扩展 <code translate="no" dir="ltr"><a href="/reference/android/preference/Preference">Preference</a></code> 的类</li>
+            <li>扩展 <code translate="no" dir="ltr"><a href="/reference/android/app/backup/BackupAgentHelper">BackupAgentHelper</a></code> 的类</li>
+          </ul>
+        </li>
+        <li>Ant lib 规则现在允许您替换 <code translate="no" dir="ltr">java.encoding</code>、<code translate="no" dir="ltr">java.source</code> 和 <code translate="no" dir="ltr">java.target</code> 属性。</li>
+        <li><code translate="no" dir="ltr">javac</code> Ant 任务的默认编码现为 UTF-8。</li>
+        <li>现在，DDMS 中的 LogCat 视图会正确地显示 UTF-8 字符。</li>
+        <li>SDK 管理器在 Windows 上变得更加可靠。如需详细了解相关改进，请参阅 <a href="http://tools.android.com/recent/sdkmanagerfixes">Android 工具项目网站</a>。</li>
+        <li>抢先了解全新的快照功能：为了缩短模拟器的启动时间，您可以针对系统状态启用快照。然后，模拟器几乎可以立即恢复上次关闭时所处的状态。<strong>注意</strong>：快照功能仍处于积极开发中，可能无法每次都能取得预期效果。</li>
+        <li>修复了阻止 <code translate="no" dir="ltr">draw9patch</code> 运行的缺失 JAR 文件的错误。</li>
+        <li>修复了 Windows 启动脚本 <code translate="no" dir="ltr">hierarchyviewer</code> 和 <code translate="no" dir="ltr">ddms</code> 以支持 <code translate="no" dir="ltr">adb</code> 的新位置。</li>
+        <li>已知的模拟器性能问题：由于 Android 模拟器必须在计算机上模拟 ARM 指令集架构，因此模拟器性能缓慢。我们正在努力解决性能问题，并将在未来版本中进行改进。</li>
+      </ul>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 8（2010 年 12 月）<em></em></p>
+    <dl>
+    <dt>依赖项：</dt>
+    <dd>
+    <p>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 8.0.0 及更高版本结合使用。安装 SDK 工具 r8 后，我们强烈建议您将 ADT 插件更新到 8.0.0。</p>
+
+    <p>如果您是在 Eclipse 以外进行开发，则必须使用 <a href="http://ant.apache.org/">Apache Ant</a> 1.8 或更高版本。</p>
+
+    <p>另请注意，SDK 工具 r8 需要一个名为“Platform-tools”的新 SDK 组件。<em></em>借助这一新的 Platform-tools 组件，所有 SDK 平台（Android 2.1、Android 2.2 等）都可以使用相同（最新）版本的编译工具，例如 <code translate="no" dir="ltr">adb</code>、<code translate="no" dir="ltr">aapt</code>、<code translate="no" dir="ltr">aidl</code> 和 <code translate="no" dir="ltr">dx</code>。要下载 Platform-tools 组件，请使用 <a href="/studio/intro/update">Android SDK 管理器</a>。</p>
+
+    </dd><dt>从 SDK 工具 r7 升级：</dt>
+    <dd>
+    <p>如果您要从较低版本升级至 SDK 工具 r8，请注意，<code translate="no" dir="ltr">adb</code> 工具的默认安装位置已从 <code translate="no" dir="ltr">&lt;<em>SDK</em>&gt;/tools/adb</code> 更改为 <code translate="no" dir="ltr">&lt;<em>SDK</em>&gt;/platform-tools/adb</code>。这意味着您应该将这一新位置添加到 PATH，并修改所有自定义编译脚本以引用新位置。不建议将 <code translate="no" dir="ltr">adb</code> 可执行文件从新位置复制到旧位置，因为 SDK 工具的后续更新会删除此文件。</p>
+    </dd>
+
+    <dt>一般说明：</dt>
+    <dd>
+    <ul>
+    <li>所有 SDK 平台现在都支持库项目。</li>
+    <li>支持 true 调试编译。开发者不再需要将 <code translate="no" dir="ltr">android:debuggable</code> 属性添加到清单中的 <code translate="no" dir="ltr">&lt;application&gt;</code> 代码，编译工具会自动添加属性。在 Eclipse/ADT 中，系统会假定所有增量编译都是调试编译，因此工具会插入 <code translate="no" dir="ltr">android:debuggable="true"</code>。在导出已签名的发布编译时，工具不会添加此属性。在 Ant 中，<code translate="no" dir="ltr">ant debug</code> 命令会自动插入 <code translate="no" dir="ltr">android:debuggable="true"</code> 属性，而 <code translate="no" dir="ltr">ant release</code> 则不会。如果 <code translate="no" dir="ltr">android:debuggable="true"</code> 是手动设置的，则 <code translate="no" dir="ltr">ant release</code> 实际上会执行调试编译，而不是发布编译。</li>
+    <li>发布编译中支持自动 ProGuard。开发者使用 <code translate="no" dir="ltr">android</code> 工具生成 ProGuard 配置文件，然后，编译工具会在编译过程中针对项目资源自动运行 ProGuard。如需了解详情，请参阅 <a href="/tools/help/proguard">ProGuard</a> 文档。</li>
+    <li>新增了可替换的 Ant javac 属性：<code translate="no" dir="ltr">java.encoding</code>、<code translate="no" dir="ltr">java.source</code> 和 <code translate="no" dir="ltr">java.target</code>（默认值分别为“ascii”、“1.5”和“1.5”）。</li>
+    <li>HierarchyViewer 工具的新界面。</li>
+    </ul>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 7（2010 年 9 月）<em></em></p>
+    <dl>
+    <dt>依赖项：</dt>
+    <dd>
+    <p>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 0.9.8 及更高版本结合使用。安装 SDK Tools r7 后，我们强烈建议您将 ADT 插件更新到 0.9.8。</p>
+    </dd>
+
+    <dt>一般说明：</dt>
+    <dd>
+    <ul>
+    <li>添加了对依赖于其他库项目的库项目的支持。</li>
+    <li>添加了对库项目中的 AIDL 文件的支持。</li>
+    <li>添加了对 Ant 编译中用于在正常任务的间隔期间执行任务的以下扩展目标的支持：<code translate="no" dir="ltr">-pre-build</code>、<code translate="no" dir="ltr">-pre-compile</code> 和 <code translate="no" dir="ltr">-post-compile</code>。</li>
+    <li>添加了对“无头”SDK 更新的支持。如需了解详情，请参阅 <code translate="no" dir="ltr">android -h update sdk</code>。</li>
+    <li>修复了 DDMS 中的位置控件，使其能够在所有不使用“.”表示小数点的语言区域正常使用。</li>
+    </ul>
+
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 6（2010 年 5 月）<em></em></p>
+    <dl>
+    <dt>依赖项：</dt>
+    <dd>
+    <p>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 0.9.7 及更高版本结合使用。安装 SDK Tools r6 后，我们强烈建议您将 ADT 插件更新到 0.9.7。</p>
+    </dd>
+
+    <dt>库项目：</dt>
+    <dd>
+    <p>SDK 工具现在支持在开发过程中使用“库项目”；借助此功能，您可以在单独的开发项目中存储共享的 Android 应用代码和资源。<em></em>然后，您可以从其他 Android 项目引用相应库项目，并且在编译时，工具会将共享的代码和资源作为相依应用的一部分。如需详细了解此功能，请参阅<a href="/tools/projects#LibraryProjects">创建和管理项目</a>文档。</p>
+    <p>如果您是在 Eclipse 中进行开发，则 <a href="/tools/sdk/eclipse-adt">ADT</a> 可以提供等效的库项目支持。</p>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 5（2010 年 3 月）<em></em></p>
+    <dl>
+    <dt>依赖项：</dt>
+    <dd><ul>
+    <li>如果您是使用 ADT 在 Eclipse 中进行开发，请注意，此版本的 SDK Tools 应该与 ADT 0.9.6 及更高版本结合使用。安装 SDK Tools r5 后，我们强烈建议您将 ADT 插件更新到 0.9.6。</li>
+    <li>对于 Mac OS 平台，OS X 10.4.x (Tiger) 不再受官方支持。</li>
+    </ul>
+    </dd>
+
+    <dt>SDK 和 AVD Manager：</dt>
+    <dd>
+    <ul>
+    <li>修复了 SDK Updater 的独立版本的 SSL 下载。</li>
+    <li>修复了与 Windows 上的 64 位 JVM 相关的问题。</li>
+    <li>添加了对平台示例组件的支持。</li>
+    <li>改进了对组件之间依赖性的支持。</li>
+    <li>AVD 现在按 API 级别排序。</li>
+    <li>AVD 创建对话框现在强制要求 SD 卡大小的下限为 9MB。</li>
+    <li>防止删除正在运行的 AVD。</li>
+    <li>设置现在会自动保存，而无需点击“应用”。</li>
+    </ul>
+    </dd>
+
+    <dt>模拟器：</dt>
+    <dd>
+    <ul>
+    <li>模拟器现在需要使用 9MB 或更大容量的 SD 卡。</li>
+    </ul>
+    </dd>
+
+    <dt>Layoutopt：</dt>
+    <dd>
+    <ul>
+    <li>修复了 <code translate="no" dir="ltr">layoutopt.bat</code> 以在 Windows 上正确执行。</li>
+    </ul>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK 工具，修订版 4（2009 年 12 月）<em></em></p>
+    <dl>
+    <dt>依赖项：</dt>
+    <dd><p>此版本的 SDK Tools 与 ADT 0.9.5 及更高版本兼容，但与更低版本不兼容。如果您是使用 ADT 在 Eclipse 中进行开发，并在 SDK 中安装了 SDK Tools r4，则<strong>必须</strong>将 ADT 插件更新到版本 0.9.5 或更高版本。</p></dd>
+
+    <dt>一般说明：</dt>
+    <dd>
+    <ul>
+    <li>启动器脚本现在会强制设置 GDK_NATIVE_WINDOW=true（仅限 Linux），以修复 GTK 和 SWT 之间的兼容性问题。</li>
+    </ul>
+    </dd>
+
+    <dt>Android SDK 和 AVD Manager：</dt>
+    <dd>
+    <ul>
+    <li>AVD 启动对话框现在会显示缩放值。</li>
+    <li>针对未指定皮肤名称的旧版 AVD，修复了 AVD 启动时 SDK Manager 中潜在的 NPE。</li>
+    <li>修复了旧版 Java 上的 XML 验证问题。</li>
+    <li>不再强制在 Mac OS X 上使用 Java 1.5。</li>
+    </ul>
+    </dd>
+
+    <dt>模拟器：</dt>
+    <dd>
+    <ul>
+    <li>不再限制系统分区的大小。</li>
+    </ul>
+    </dd>
+
+    <dt>Ant 编译工具：</dt>
+    <dd>
+    <ul>
+    <li>.apk 打包现在会正确地忽略 vi 交换文件和隐藏文件。</li>
+    </ul>
+    </dd>
+    </dl>
+    </section>
+
+    <section class="expandable">
+      <p class="expand-control">SDK Tools，修订版 3（2009 年 10 月）<em></em></p>
+    <dl>
+    <dt>依赖项：</dt>
+    <dd><p>此版本的 SDK Tools 与 ADT 0.9.4 及更高版本兼容，但与更低版本不兼容。如果您是使用 ADT 在 Eclipse 中进行开发，并在 SDK 中安装了 SDK Tools r3，则<strong>必须</strong>将 ADT 插件更新到版本 0.9.4 或更高版本。</p>
+    </dd>
+
+    <dt>Android 工具：</dt>
+    <dd>
+    <ul>
+    <li>添加了新的 <code translate="no" dir="ltr">android create test-project</code> 和 <code translate="no" dir="ltr">android update
+    test-project</code> 命令，以便在主项目和测试项目的位置方面提供更强的灵活性。</li>
+    </ul>
+    </dd>
+
+    <dt>DDMS：</dt>
+    <dd>
+    <ul>
+    <li>添加了一个用于转储正在运行的应用的 HPROF 文件（应用必须能够写入 SD 卡）。</li>
+    <li>用于开始/停止分析正在运行的应用的按钮（应用必须能够写入 SD 卡）。停止后，系统会自动启动 Traceview 以显示跟踪情况。</li>
+    <li>修复了 DDMS、Traceview 和 AVD Mananger/SDK Updater 以在 Mac OS X 10.6 上运行。</li>
+    <li>修复了对运行 32 位帧缓冲区的设备的屏幕截图支持。</li>
+    </ul>
+    </dd>
+
+    <dt>Android SDK 和 AVD Manager：</dt>
+    <dd>
+    <ul>
+    <li>提供了一个新界面，让您能够设置用于控制模拟器皮肤、屏幕大小/密度以及在启动 AVD 时使用的缩放系数的选项。</li>
+    <li>提供了经过改进的 AVD 创建界面，让您能够自定义 AVD 的硬件属性。</li>
+    <li>现在强制执行平台和工具组件之间，以及 SDK 插件和平台之间的依赖关系。</li>
+    </ul>
+    </dd>
+
+    <dt>Layoutopt，一种用于优化布局的新工具：</dt>
+
+    <dd><p>SDK 工具 r3 软件包包含 <code translate="no" dir="ltr">layoutopt</code>，这是一种新的命令行工具，可以帮助您优化布局层次结构。在针对布局文件运行时，此工具会分析其层次结构，并将低效环节和其他潜在问题通知您。此工具还会针对所发现的问题提供简单的解决方案。如需了解其使用方法，请参阅 <a href="/tools/help/layoutopt">layoutopt</a>。</p>
+    </dd>
+    </dl>
+    </section>
+
+
+          </div>
+
+          <div class="devsite-steps">
+    <div class="steps-previous steps-direction">
+    <a href="/studio/releases"
+       class="steps-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-action="Previous step"
+       data-label="/studio/releases">
+            <div class="steps-link-direction">上一页</div>
+      <span class="steps-link-arrow steps-link-arrow-left material-icons" aria-hidden="true">
+        arrow_back
+      </span>
+      <span class="steps-link-title-previous steps-link-title">
+        Android Studio
+      </span>
+    </a>
+  </div>
+      <div class="steps-next steps-direction">
+    <a href="/studio/releases/emulator"
+       class="steps-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-action="Next step"
+       data-label="/studio/releases/emulator">
+            <div class="steps-link-direction">下一页</div>
+      <span class="steps-link-title-next steps-link-title">
+        Android 模拟器
+      </span>
+      <span class="steps-link-arrow steps-link-arrow-right material-icons" aria-hidden="true">
+        arrow_forward
+      </span>
+    </a>
+  </div>
+  </div>
+    
+                   <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+                   
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Content and code samples on this page are subject to the licenses described in the <a href="/license">Content License</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>  <p>Last updated 2020-02-17.</p></devsite-content-footer>
+
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="//developers.google.cn/china/#follow-google-developers-on-wechat"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-modal-toggle="wechat"
+                data-label="Footer WeChat Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="/_static/android/images/logo-wechat.png"
+             alt="微信">
+                微信
+      </a>
+      <div class="devsite-footer-promo-description">在微信上关注“Google Developers”</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//twitter.com/AndroidDev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-label="Footer Twitter Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="/_static/android/images/logo-twitter.svg"
+             alt="Twitter">
+                Twitter
+      </a>
+      <div class="devsite-footer-promo-description">在 Twitter 上关注 @AndroidDev</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//www.youtube.com/user/androiddevelopers"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                       data-label="Footer YouTube Promo"
+       >
+                        <img class="devsite-footer-promo-icon"
+             src="//www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png"
+             alt="YouTube">
+                YouTube
+      </a>
+      <div class="devsite-footer-promo-description">在 YouTube 上访问“Android Developers”频道</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">关于 Android</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Android
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/enterprise/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            Enterprise
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.android.com/security-center/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            安全
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//source.android.com/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            源代码
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">支持</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//issuetracker.google.com/issues/new?component=190923&amp;template=841312"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            报告平台错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//issuetracker.google.com/issues/new?component=192697"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            报告文档错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//support.google.com/googleplay/android-developer"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Google Play support
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://google.qualtrics.com/jfe/form/SV_ewWXIoEVLBcyp7f??reserved=1&amp;utm_source=FooterLink&amp;Q_Language=en&amp;utm_medium=own_srch&amp;utm_campaign=developer.android.com&amp;utm_term=0&amp;utm_content=0&amp;productTag=reg&amp;campaignDate=may19&amp;pType=devel&amp;referral_code=gV420370"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            参加调查研究
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">文档</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/guide"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            开发者指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/design"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            设计指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/reference"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            API 参考
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/samples"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            示例
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/studio/intro"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 5)"           >
+            Android Studio
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="/_static/images/lockup-developers.svg"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developers.google.cn/products/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+                    data-cookie-policy="//policies.google.cn/technologies/cookies"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/license"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer License link"
+         >
+          许可
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/distribute/marketing-tools/brand-guidelines"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Brand guidelines link"
+         >
+          品牌指南
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">通过电子邮件接收资讯和提示</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/newsletter/#subscribe"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   data-cookie-policy="//policies.google.cn/technologies/cookies"
+                  ></devsite-snackbar>
+    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Android \u5f00\u53d1\u8005", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-5831155-3"}]</script>
+<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "language": {"requested": "zh-cn", "served": "zh-cn"}, "projectName": "Android \u5f00\u53d1\u8005", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}, "tags": ["GTM-KMSWPCJ"]}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[3,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android","https://android-dot-google-developers.gonglchuangl.net",null,null,["/_pwa/android/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/favicon.png","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/android/images/lockup.svg","https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
