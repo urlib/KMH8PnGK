@@ -1,0 +1,440 @@
+
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>以及广告 · Project V 官方网站</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script type="text/javascript">
+function inIframe () {
+    try { return window.self !== window.top; } catch (e) { return true; }
+}
+function isValidDomain() {
+    var host = window.location.hostname;
+    var domains = ['v2ray.com', 'github.io', 'mux.cool', 'v2ray.cool', 'archive.org'];
+    for (var dx in domains) {
+        if (host.indexOf(domains[dx]) >= 0) {
+            return true;
+        }
+    }
+    return false;
+}
+if (inIframe() || !isValidDomain()) {
+    window.top.location.href = 'https://www.v2ray.com/';
+}
+        </script>
+<link rel="stylesheet" href="../gitbook/style.css">
+<link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+<link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+<link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+<link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+<link rel="stylesheet" href="../styles/website.css">
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" type="image/png" href="/resources/favicon-152.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" type="image/png" href="/resources/favicon-180.png">
+<link rel="icon" type="image/png" href="/resources/favicon-192.png">
+<link rel="shortcut icon" href="/resources/favicon.ico" type="image/x-icon">
+<link href="https://fonts.loli.net/css?family=Source+Code+Pro:400|Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+<link rel="next" href="../developer/" />
+<link rel="prev" href="tools.html" />
+</head>
+<body>
+<div class="book">
+<div class="book-summary">
+<nav role="navigation">
+<ul class="summary">
+<li class="chapter " data-level="1.1" data-path="../">
+<a href="../">
+Project V
+</a>
+<ul class="articles">
+<li class="chapter " data-level="1.1.1" data-path="../chapter_00/01_versions.html">
+<a href="../chapter_00/01_versions.html">
+版本历史
+</a>
+</li>
+<li class="chapter " data-level="1.1.2" data-path="../chapter_00/workflow.html">
+<a href="../chapter_00/workflow.html">
+使用方式
+</a>
+</li>
+<li class="chapter " data-level="1.1.3" data-path="../chapter_00/install.html">
+<a href="../chapter_00/install.html">
+下载安装
+</a>
+</li>
+<li class="chapter " data-level="1.1.4" data-path="../chapter_00/start.html">
+<a href="../chapter_00/start.html">
+新手上路
+</a>
+</li>
+<li class="chapter " data-level="1.1.5" data-path="../chapter_00/command.html">
+<a href="../chapter_00/command.html">
+命令行参数
+</a>
+</li>
+<li class="chapter " data-level="1.1.6" data-path="../chapter_00/02_donate.html">
+<a href="../chapter_00/02_donate.html">
+捐助支持
+</a>
+</li>
+<li class="chapter " data-level="1.1.7" data-path="../chapter_00/help.html">
+<a href="../chapter_00/help.html">
+寻求帮助
+</a>
+</li>
+<li class="chapter " data-level="1.1.8" data-path="../chapter_00/faq.html">
+<a href="../chapter_00/faq.html">
+常见问题
+</a>
+</li>
+<li class="chapter " data-level="1.1.9">
+<a target="_blank" href="https://steemit.com/@v2ray">
+博客↪
+</a>
+</li>
+<li class="chapter " data-level="1.1.10">
+<a target="_blank" href="https://toutyrater.github.io/">
+白话文教程↪
+</a>
+</li>
+<li class="chapter " data-level="1.1.11">
+<a target="_blank" href="https://guide.v2fly.org/">
+新白话文教程（社区版）↪
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter " data-level="1.2" data-path="../chapter_02/">
+<a href="../chapter_02/">
+配置文件
+</a>
+<ul class="articles">
+<li class="chapter " data-level="1.2.1" data-path="../chapter_02/01_overview.html">
+<a href="../chapter_02/01_overview.html">
+文件格式
+</a>
+</li>
+<li class="chapter " data-level="1.2.2" data-path="../chapter_02/02_protocols.html">
+<a href="../chapter_02/02_protocols.html">
+协议列表
+</a>
+<ul class="articles">
+<li class="chapter " data-level="1.2.2.1" data-path="../chapter_02/protocols/blackhole.html">
+<a href="../chapter_02/protocols/blackhole.html">
+Blackhole
+</a>
+</li>
+<li class="chapter " data-level="1.2.2.2" data-path="../chapter_02/protocols/dns.html">
+<a href="../chapter_02/protocols/dns.html">
+DNS
+</a>
+</li>
+<li class="chapter " data-level="1.2.2.3" data-path="../chapter_02/protocols/dokodemo.html">
+
+<a href="../chapter_02/protocols/dokodemo.html">
+Dokodemo
+</a>
+</li>
+<li class="chapter " data-level="1.2.2.4" data-path="../chapter_02/protocols/freedom.html">
+<a href="../chapter_02/protocols/freedom.html">
+Freedom
+</a>
+</li>
+<li class="chapter " data-level="1.2.2.5" data-path="../chapter_02/protocols/http.html">
+<a href="../chapter_02/protocols/http.html">
+HTTP
+</a>
+</li>
+<li class="chapter " data-level="1.2.2.6" data-path="../chapter_02/protocols/mtproto.html">
+<a href="../chapter_02/protocols/mtproto.html">
+MTProto
+</a>
+</li>
+<li class="chapter " data-level="1.2.2.7" data-path="../chapter_02/protocols/shadowsocks.html">
+<a href="../chapter_02/protocols/shadowsocks.html">
+Shadowsocks
+</a>
+</li>
+<li class="chapter " data-level="1.2.2.8" data-path="../chapter_02/protocols/socks.html">
+<a href="../chapter_02/protocols/socks.html">
+SOCKS
+</a>
+</li>
+<li class="chapter " data-level="1.2.2.9" data-path="../chapter_02/protocols/vmess.html">
+<a href="../chapter_02/protocols/vmess.html">
+VMess
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter " data-level="1.2.3" data-path="../chapter_02/policy.html">
+<a href="../chapter_02/policy.html">
+本地策略
+</a>
+</li>
+<li class="chapter " data-level="1.2.4" data-path="../chapter_02/03_routing.html">
+<a href="../chapter_02/03_routing.html">
+路由配置
+</a>
+</li>
+<li class="chapter " data-level="1.2.5" data-path="../chapter_02/04_dns.html">
+<a href="../chapter_02/04_dns.html">
+DNS 配置
+</a>
+</li>
+<li class="chapter " data-level="1.2.6" data-path="../chapter_02/mux.html">
+<a href="../chapter_02/mux.html">
+Mux 配置
+</a>
+</li>
+<li class="chapter " data-level="1.2.7" data-path="../chapter_02/api.html">
+<a href="../chapter_02/api.html">
+API 配置
+</a>
+</li>
+<li class="chapter " data-level="1.2.8" data-path="../chapter_02/stats.html">
+<a href="../chapter_02/stats.html">
+统计信息
+</a>
+</li>
+<li class="chapter " data-level="1.2.9" data-path="../chapter_02/reverse.html">
+<a href="../chapter_02/reverse.html">
+反向代理
+</a>
+</li>
+<li class="chapter " data-level="1.2.10" data-path="../chapter_02/05_transport.html">
+<a href="../chapter_02/05_transport.html">
+传输配置
+</a>
+<ul class="articles">
+<li class="chapter " data-level="1.2.10.1" data-path="../chapter_02/transport/tcp.html">
+<a href="../chapter_02/transport/tcp.html">
+TCP
+</a>
+</li>
+<li class="chapter " data-level="1.2.10.2" data-path="../chapter_02/transport/mkcp.html">
+<a href="../chapter_02/transport/mkcp.html">
+mKCP
+</a>
+</li>
+<li class="chapter " data-level="1.2.10.3" data-path="../chapter_02/transport/websocket.html">
+<a href="../chapter_02/transport/websocket.html">
+WebSocket
+</a>
+</li>
+<li class="chapter " data-level="1.2.10.4" data-path="../chapter_02/transport/h2.html">
+<a href="../chapter_02/transport/h2.html">
+HTTP/2
+</a>
+</li>
+<li class="chapter " data-level="1.2.10.5" data-path="../chapter_02/transport/domainsocket.html">
+<a href="../chapter_02/transport/domainsocket.html">
+DomainSocket
+</a>
+</li>
+<li class="chapter " data-level="1.2.10.6" data-path="../chapter_02/transport/quic.html">
+<a href="../chapter_02/transport/quic.html">
+QUIC
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter " data-level="1.2.11" data-path="../chapter_02/env.html">
+<a href="../chapter_02/env.html">
+环境变量
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter " data-level="1.3" data-path="tools.html">
+<a href="tools.html">
+神一样的工具们
+</a>
+<ul class="articles">
+<li class="chapter active" data-level="1.3.1" data-path="ads.html">
+<a href="ads.html">
+以及广告
+</a>
+</li>
+</ul>
+</li>
+<li class="chapter " data-level="1.4" data-path="../developer/">
+<a href="../developer/">
+开发人员手册
+</a>
+<ul class="articles">
+<li class="chapter " data-level="1.4.1" data-path="../developer/intro/roadmap.html">
+<a href="../developer/intro/roadmap.html">
+开发计划
+</a>
+</li>
+<li class="chapter " data-level="1.4.2" data-path="../developer/intro/guide.html">
+<a href="../developer/intro/guide.html">
+开发指引
+</a>
+</li>
+<li class="chapter " data-level="1.4.3" data-path="../developer/intro/design.html">
+<a href="../developer/intro/design.html">
+核心设计
+</a>
+</li>
+<li class="chapter " data-level="1.4.4" data-path="../developer/intro/compile.html">
+<a href="../developer/intro/compile.html">
+配置开发环境
+</a>
+</li>
+<li class="chapter " data-level="1.4.5" data-path="../developer/intro/tools.html">
+<a href="../developer/intro/tools.html">
+开发工具
+</a>
+</li>
+<li class="chapter " data-level="1.4.6">
+<span>
+协议细节
+</span>
+<ul class="articles">
+<li class="chapter " data-level="1.4.6.1" data-path="../developer/protocols/vmess.html">
+<a href="../developer/protocols/vmess.html">
+VMess 协议
+</a>
+</li>
+<li class="chapter " data-level="1.4.6.2" data-path="../developer/protocols/mkcp.html">
+<a href="../developer/protocols/mkcp.html">
+mKCP 协议
+</a>
+</li>
+<li class="chapter " data-level="1.4.6.3" data-path="../developer/protocols/muxcool.html">
+<a href="../developer/protocols/muxcool.html">
+Mux.Cool
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="divider"></li>
+<li>
+<a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+本書使用 GitBook 釋出
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+<a class="btn pull-left" href="/awesome/ads.html" target="_blank">
+<img src="/resources/flag_cn.svg" alt="Chinese" height="16">
+</a>
+<a class="btn pull-left" href="/en/awesome/ads.html" target="_blank">
+<img src="/resources/flag_en.svg" alt="English" height="16">
+</a>
+<a class="btn pull-left" href="/ru/awesome/ads.html" target="_blank">
+<img src="/resources/flag_ru.svg" alt="Russian" height="16">
+</a>
+<a class="btn pull-left" href="/ko/awesome/ads.html" target="_blank">
+<img src="/resources/flag_ko.svg" alt="Korean" height="16">
+</a>
+<a class="btn pull-left" href="/fa/awesome/ads.html" target="_blank">
+<img src="/resources/flag_fa.svg" alt="Persian" height="16">
+</a>
+<a class="btn pull-left" href="/vi/awesome/ads.html" target="_blank">
+<img src="/resources/flag_vi.svg" alt="Vietnamese" height="16">
+</a>
+<a class="btn pull-left" href="https://crowdin.com/project/v2ray" target="_blank">
+<img src="/resources/translate.png" alt="Translate" height="16">
+</a>
+</div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<section class="normal markdown-section">
+<h1 id="&#x4E00;&#x4E9B;&#x63A8;&#x5E7F;"><a name="&#x4E00;&#x4E9B;&#x63A8;&#x5E7F;" class="plugin-anchor" href="#&#x4E00;&#x4E9B;&#x63A8;&#x5E7F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x4E9B;&#x63A8;&#x5E7F;</h1>
+<p>&#x4EE5;&#x4E0B;&#x670D;&#x52A1;&#x5747;&#x7531;&#x7B2C;&#x4E09;&#x65B9;&#x63D0;&#x4F9B;&#xFF0C;&#x548C; Project V &#x6CA1;&#x6709;&#x5229;&#x76CA;&#x5173;&#x7CFB;&#xFF0C;&#x4F46;&#x5B83;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x5E2E;&#x52A9;&#x4F60;&#x66F4;&#x597D;&#x5730;&#x4F7F;&#x7528; Project V&#x3002;</p>
+<h2 id="hosting"><a name="hosting" class="plugin-anchor" href="#hosting"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x5EFA;&#x4EE3;&#x7406; </h2>
+<blockquote>
+<p><a href="https://letsencrypt.org/" target="_blank">Let&apos;s Encrypt</a></p>
+</blockquote>
+<p>Let&apos;s Encrypt&#x662F;&#x4E00;&#x4E2A;&#x4E8E;2015&#x5E74;&#x4E09;&#x5B63;&#x5EA6;&#x63A8;&#x51FA;&#x7684;&#x6570;&#x5B57;&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;&#x673A;&#x6784;&#xFF0C;&#x65E8;&#x5728;&#x4EE5;&#x81EA;&#x52A8;&#x5316;&#x6D41;&#x7A0B;&#x6D88;&#x9664;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x548C;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x7684;&#x590D;&#x6742;&#x6D41;&#x7A0B;&#xFF0C;&#x5E76;&#x63A8;&#x5E7F;&#x4F7F;&#x4E07;&#x7EF4;&#x7F51;&#x670D;&#x52A1;&#x5668;&#x7684;&#x52A0;&#x5BC6;&#x8FDE;&#x63A5;&#x65E0;&#x6240;&#x4E0D;&#x5728;&#xFF0C;&#x4E3A;&#x5B89;&#x5168;&#x7F51;&#x7AD9;&#x63D0;&#x4F9B;&#x514D;&#x8D39;&#x7684;SSL/TLS&#x8BC1;&#x4E66;&#x3002;</p>
+<blockquote>
+<p><a href="https://www.vultr.com/?ref=7269307" target="_blank">Vultr</a></p>
+</blockquote>
+<p>Vultr &#x662F;&#x4E00;&#x5BB6;&#x63D0;&#x4F9B;&#x65E5;&#x672C;&#x3001;&#x7F8E;&#x56FD;&#x3001;&#x6B27;&#x6D32;&#x7B49;&#x591A;&#x4E2A;&#x56FD;&#x5BB6;&#x548C;&#x5730;&#x533A;&#x673A;&#x623F;&#x7684; VPS &#x4E3B;&#x673A;&#x5546;&#xFF0C;&#x4EF7;&#x683C;&#x4F4E;&#x81F3; 2.5 &#x7F8E;&#x5143;/&#x6708;&#x3002;Vultr &#x6839;&#x636E;VPS&#x4F7F;&#x7528;&#x5C0F;&#x65F6;&#x6765;&#x8BA1;&#x8D39;&#xFF0C;&#x4F7F;&#x7528;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x5C31;&#x7B97;&#x591A;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x8BA1;&#x8D39;&#x5BF9;&#x5E94;&#x7684;&#x6B3E;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x652F;&#x4ED8;&#x5B9D;&#xFF08;Alipay&#xFF09;&#x4ED8;&#x8D39;&#x3002;</p>
+<blockquote>
+<p><a href="https://www.bluehost.com/track/v2ray/" target="_blank">BlueHost</a></p>
+</blockquote>
+<p>BlueHost&#x4F5C;&#x4E3A;&#x7F8E;&#x56FD;&#x7684;&#x8001;&#x724C;&#x4E3B;&#x673A;&#x5546;&#xFF0C;&#x5728;&#x56FD;&#x5185;&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x53D7;&#x6B22;&#x8FCE;&#x7684;&#x7F8E;&#x56FD;&#x4E3B;&#x673A;&#x4E4B;&#x4E00;&#x3002;&#x4EE5;&#x7A33;&#x5B9A;&#x6027;&#x5F3A;&#x3002;&#x901F;&#x5EA6;&#x5FEB;&#x8457;&#x79F0;&#xFF0C;&#x5728;&#x7AD9;&#x957F;&#x4E2D;&#x7684;&#x53E3;&#x7891;&#x548C;&#x6D41;&#x884C;&#x5EA6;&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x4E4B;&#x9AD8;&#x3002;BlueHost&#x4E3B;&#x673A;&#x5546;&#x4E3A;&#x4E86;&#x5F00;&#x62D3;&#x56FD;&#x5185;&#x5E02;&#x573A;&#xFF0C;&#x81EA;2014&#x5E74;&#x5C31;&#x63A8;&#x51FA;&#x4E86;&#x4E2D;&#x6587;&#x7AD9;&#xFF0C;&#x800C;&#x4E14;&#x4E5F;&#x6781;&#x5927;&#x7684;&#x4E30;&#x5BCC;&#x4E86;&#x4E3B;&#x673A;&#x4EA7;&#x54C1;&#xFF0C;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x5927;&#x591A;&#x6570;&#x7AD9;&#x957F;&#x7684;&#x5EFA;&#x7AD9;&#x9700;&#x6C42;&#x3002;</p>
+<blockquote>
+<p><a href="https://www.cloudns.net/aff/id/244749/" target="_blank">ClouDNS</a></p>
+</blockquote>
+<p>ClouDNS&#x6210;&#x7ACB;&#x4E8E;2010&#x5E74;&#xFF0C;&#x516C;&#x53F8;&#x4F4D;&#x4E8E;&#x4FDD;&#x52A0;&#x5229;&#x4E9A;&#xFF0C;&#x63D0;&#x4F9B;&#x514D;&#x8D39;&#x548C;&#x6536;&#x8D39;&#x7684; DNS &#x6258;&#x7BA1;&#x670D;&#x52A1;&#x3002;</p>
+<blockquote>
+<p><a href="https://bandwagonhost.com/aff.php?aff=44317" target="_blank">Bandwagon</a></p>
+</blockquote>
+<p>&#x8001;&#x724C; VPS &#x9500;&#x552E;&#x5546;&#xFF0C;&#x4EF7;&#x683C;&#x4F4E;&#x5EC9;&#xFF0C;&#x6027;&#x4EF7;&#x6BD4;&#x9AD8;&#x3002;</p>
+<h2 id="vpn"><a name="vpn" class="plugin-anchor" href="#vpn"><i class="fa fa-link" aria-hidden="true"></i></a>VPN</h2>
+<blockquote>
+<p><a href="http://babydriver.me/" target="_blank">BabyDriver</a></p>
+</blockquote>
+<p>&#x652F;&#x6301; V2Ray &#x7684; VPN &#x670D;&#x52A1;&#x3002;&#x4F18;&#x60E0;&#x7801;&#xFF1A;bcb518</p>
+<blockquote>
+<p><a href="https://xn--i2ru8q2qg.com/" target="_blank">&#x55B5;&#x5E15;&#x65AF;</a></p>
+</blockquote>
+<p>V2Ray &#x5C0F;&#x8303;&#x56F4;&#x5185;&#x6D4B;&#x4E2D;&#x3002;</p>
+<blockquote>
+<p><a href="https://xn--sjt174g.com/" target="_blank">&#x84DD;&#x5CB8;</a></p>
+</blockquote>
+<p>&#x57FA;&#x4E8E; V2Ray &#x7684;&#x7F51;&#x7EDC;&#x52A0;&#x901F;&#x670D;&#x52A1;&#x3002;&#x4F18;&#x60E0;&#x7801;&#xFF1A;v2ray</p>
+<blockquote>
+<p><a href="http://v2net.org/" target="_blank">V2Net</a></p>
+</blockquote>
+<p>&#x63D0;&#x4F9B;&#x5C08;&#x5C6C;&#x5BA2;&#x6236;&#x7AEF;&#x7684;V2Ray&#x670D;&#x52D9;&#x3002;9&#x6298;&#x4FC3;&#x92B7;&#x4EE3;&#x78BC;: v2ray.com</p>
+<blockquote>
+<p><a href="https://niconode.co/" target="_blank">NicoNode</a></p>
+</blockquote>
+<p>&#x652F;&#x6301; V2Ray &#x7684;&#x7F51;&#x7EDC;&#x52A0;&#x901F;&#x6539;&#x5584;&#x670D;&#x52A1;&#x3002;&#x4E13;&#x5C5E;&#x4FC3;&#x9500;&#x4EE3;&#x7801;&#xFF1A;V2RAYNOW</p>
+<h2 id="crypto"><a name="crypto" class="plugin-anchor" href="#crypto"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x5B57;&#x8D27;&#x5E01; </h2>
+<blockquote>
+<p><a href="https://localbitcoins.com/?ch=khtm" target="_blank">LocalBitcoins</a></p>
+</blockquote>
+<p>&#x7EBF;&#x4E0B;&#x4EA4;&#x6613;&#x6BD4;&#x7279;&#x5E01;</p>
+<blockquote>
+<p><a href="https://www.coincola.com/mobile/signup?ref=QAcvfy2g" target="_blank">CoinCola</a></p>
+</blockquote>
+<p>CoinCola &#x662F;&#x9999;&#x6E2F;&#x573A;&#x5916;&#x4EA4;&#x6613;&#x5E73;&#x53F0;&#xFF0C;&#x652F;&#x6301;&#x7B80;&#x4F53;&#x4E2D;&#x6587;&#x754C;&#x9762;&#xFF0C;&#x4E70;&#x5356;&#x65B9;&#x51E0;&#x4E4E;&#x90FD;&#x662F;&#x56FD;&#x4EBA;&#x3002;&#x7F51;&#x9875;&#x548C;APP&#x5747;&#x64CD;&#x4F5C;&#x6D41;&#x7545;&#x3002;&#x8BA2;&#x5355;&#x4F7F;&#x7528;&#x652F;&#x4ED8;&#x5B9D;&#x3001;&#x7F51;&#x94F6;&#x3001;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#xFF0C;&#x50CF;&#x6DD8;&#x5B9D;&#x8D2D;&#x7269;&#x4E00;&#x6837;&#x4E70;&#x5356;&#x6BD4;&#x7279;&#x5E01;&#x3002;&#x73B0;&#x652F;&#x6301;BTC&#x3001;ETH&#x3001;BCH&#x3001;USDT&#x7B49;&#x8D27;&#x5E01;&#x3002;</p>
+<blockquote>
+<p><a href="https://www.binance.com/?ref=35382451" target="_blank">&#x5E01;&#x5B89;</a></p>
+</blockquote>
+<p>&#x6570;&#x5B57;&#x8D27;&#x5E01;&#x4EA4;&#x6613;&#x6240;</p>
+<blockquote>
+<p><a href="https://www.coinex.com/account/signup?refer_code=r3fmp" target="_blank">Coinex</a></p>
+</blockquote>
+<p>&#x6570;&#x5B57;&#x8D27;&#x5E01;&#x4EA4;&#x6613;&#x6240;</p>
+<blockquote>
+<p><a href="https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18" target="_blank">CoinPayment</a></p>
+</blockquote>
+<p>&#x5728;&#x7EBF;&#x6570;&#x5B57;&#x8D27;&#x5E01;&#x94B1;&#x5305;</p>
+</section>
+</div>
+</div>
+</div>
+</div>
+<script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"refcn":"awesome/ads","refen":"awesome/ads","title":"以及广告","level":"1.3.1","depth":2,"next":{"title":"开发人员手册","level":"1.4","depth":1,"path":"developer/README.md","ref":"developer/README.md","articles":[{"title":"开发计划","level":"1.4.1","depth":2,"path":"developer/intro/roadmap.md","ref":"developer/intro/roadmap.md","articles":[]},{"title":"开发指引","level":"1.4.2","depth":2,"path":"developer/intro/guide.md","ref":"developer/intro/guide.md","articles":[]},{"title":"核心设计","level":"1.4.3","depth":2,"path":"developer/intro/design.md","ref":"developer/intro/design.md","articles":[]},{"title":"配置开发环境","level":"1.4.4","depth":2,"path":"developer/intro/compile.md","ref":"developer/intro/compile.md","articles":[]},{"title":"开发工具","level":"1.4.5","depth":2,"path":"developer/intro/tools.md","ref":"developer/intro/tools.md","articles":[]},{"title":"协议细节","level":"1.4.6","depth":2,"ref":"","articles":[{"title":"VMess 协议","level":"1.4.6.1","depth":3,"path":"developer/protocols/vmess.md","ref":"developer/protocols/vmess.md","articles":[]},{"title":"mKCP 协议","level":"1.4.6.2","depth":3,"path":"developer/protocols/mkcp.md","ref":"developer/protocols/mkcp.md","articles":[]},{"title":"Mux.Cool","level":"1.4.6.3","depth":3,"path":"developer/protocols/muxcool.md","ref":"developer/protocols/muxcool.md","articles":[]}]}]},"previous":{"title":"神一样的工具们","level":"1.3","depth":1,"path":"awesome/tools.md","ref":"awesome/tools.md","articles":[{"title":"以及广告","level":"1.3.1","depth":2,"path":"awesome/ads.md","ref":"awesome/ads.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-search","-lunr","-highlight","-sharing","mermaid-gb3","anchors","ga","prism","prism-themes","hints"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-73620536-1"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"],"lang":{"objc":"objectivec","shell":"bash","text":"textile","plain":"textile"}},"mermaid-gb3":{},"anchors":{},"prism-themes":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Project V 官方网站","language":"zh","gitbook":"*"},"file":{"path":"awesome/ads.md","mtime":"2019-12-09T02:03:16.155Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-09T02:05:14.919Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+<script src="../gitbook/gitbook.js"></script>
+<script src="../gitbook/theme.js"></script>
+<script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+</body>
+</html>
